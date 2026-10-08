@@ -23,7 +23,7 @@ export default async function ProjectPage({params}: Props) {
   const next = projects[(projects.indexOf(project) + 1) % projects.length];
   return <><Header/><main id="conteudo" className="case-page">
     <section className="container case-header">
-      <Link className="back-link" href="/#projetos"><span aria-hidden="true">←</span> Todos os projetos</Link>
+      <a className="back-link" href={asset("/#projetos")}><span aria-hidden="true">←</span> Todos os projetos</a>
       <p className="eyebrow">{project.category}</p>
       <h1>{project.name}</h1>
       <p className="case-intro">{project.description}</p>
@@ -40,6 +40,6 @@ export default async function ProjectPage({params}: Props) {
         <section className="stage-note"><p className="eyebrow">Situação do projeto</p><p>{project.stage}</p></section>
       </div>
     </section>
-    <section className="container next-project"><div><p className="eyebrow">Continue explorando</p><Link href={"/projetos/"+next.slug+"/"}>{next.name} <span aria-hidden="true">↗</span></Link></div><Link className="text-link" href="/#contato">Conversar sobre um projeto</Link></section>
+    <section className="container next-project"><div><p className="eyebrow">Continue explorando</p><Link href={"/projetos/"+next.slug+"/"}>{next.name} <span aria-hidden="true">↗</span></Link></div><a className="text-link" href={asset("/#contato")}>Conversar sobre um projeto</a></section>
   </main><Footer/></>;
 }

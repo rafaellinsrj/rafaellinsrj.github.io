@@ -10,16 +10,16 @@ export default function Header() {
           <span>Rafael Lins Gaspar<small>Desenvolvedor Fullstack</small></span>
         </Link>
         <nav aria-label="Navegação principal">
-          <Link href="/#projetos">Projetos</Link>
-          <Link href="/#sobre">Sobre</Link>
-          <Link href="/#contato">Contato</Link>
+          <a href={asset("/#projetos")}>Projetos</a>
+          <a href={asset("/#sobre")}>Sobre</a>
+          <a href={asset("/#contato")}>Contato</a>
           <a className="nav-cv" href={asset("/curriculo-rafael-lins-gaspar.pdf")} download>Baixar currículo</a>
         </nav>
       </div>
       <nav className="mobile-nav container" aria-label="Navegação no celular">
-        <Link href="/#projetos">Projetos</Link>
-        <Link href="/#sobre">Sobre</Link>
-        <Link href="/#contato">Contato</Link>
+        <a href={asset("/#projetos")}>Projetos</a>
+        <a href={asset("/#sobre")}>Sobre</a>
+        <a href={asset("/#contato")}>Contato</a>
       </nav>
     </header>
   );
