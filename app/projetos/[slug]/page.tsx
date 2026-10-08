@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectCover from "@/components/ProjectCover";
 import {projects} from "@/lib/projects";
+import {asset} from "@/lib/paths";
 
 type Props = {params: Promise<{slug: string}>};
 export const dynamicParams = false;
@@ -26,9 +27,10 @@ export default async function ProjectPage({params}: Props) {
       <p className="eyebrow">{project.category}</p>
       <h1>{project.name}</h1>
       <p className="case-intro">{project.description}</p>
-      <div className="case-meta"><div><span>Minha atuação</span><strong>{project.role}</strong></div><div><span>Estágio do projeto</span><strong>{project.status}</strong></div></div>
+      <div className="case-actions">{project.url && <a className="button primary" href={project.url} target="_blank" rel="noreferrer">Visitar site <span aria-hidden="true">↗</span></a>}<a className="button secondary" href={asset(project.image)} target="_blank" rel="noreferrer">Ampliar tela <span aria-hidden="true">↗</span></a></div>
+      <div className="case-meta"><div><span>Minha atuação</span><strong>{project.role}</strong></div><div><span>Apresentação</span><strong>{project.status}</strong></div></div>
     </section>
-    <div className="container case-visual"><ProjectCover project={project} detail/>{project.imageCaption && <p className="image-caption">{project.imageCaption}</p>}</div>
+    <div className="container case-visual"><a className="case-image-link" href={asset(project.image)} target="_blank" rel="noreferrer" aria-label={"Ampliar tela de " + project.name}><ProjectCover project={project} detail/></a>{project.imageCaption && <p className="image-caption">{project.imageCaption}</p>}</div>
     <section className="container case-content">
       <aside className="case-sidebar"><p className="eyebrow">Tecnologias</p><ul className="tech-list">{project.tech.map(t=><li key={t}>{t}</li>)}</ul></aside>
       <div className="case-main">

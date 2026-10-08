@@ -8,11 +8,11 @@ Portfólio pessoal de desenvolvimento fullstack, produtos com IA e liderança t�
 ## Conteúdo
 
 - Apresentação profissional, currículo para download e contato.
-- Oito estudos de projeto: Certame, Hyre, The Moneta Post, Bioo, FiveX Solutions, ZapPop, Presto PDF e Devkit.
+- Onze estudos de projeto: Certame, Hyre, The Moneta Post, Bioo, FiveX Solutions, ZapPop, Presto PDF, Devkit, LMM Capital, Lins Payments e Lins UP Now.
 - Seleção de sites institucionais e experimentos de produto.
 - Experiência, tecnologias e formação acadêmica.
 
-As descrições identificam o estágio e o alcance de cada projeto. FiveX é um trabalho acadêmico coletivo. ZapPop apresenta implantação e customização de uma base Atendechat. A captura da Certame usa dados de demonstração.
+As descrições identificam o estágio e o alcance de cada projeto. FiveX é um trabalho acadêmico coletivo. ZapPop apresenta implantação e customização de uma base Atendechat. As capturas identificam páginas publicadas e versões locais. O endereço linspayments.com.br apresenta o Lins UP Now, em modo de simulação.
 
 ## Desenvolvimento
 
@@ -39,7 +39,7 @@ O build gera o site estático em `out/`. Não é necessário um servidor Node.js
 - `lib/projects.ts`: conteúdo e tecnologias de cada projeto.
 - `components/`: cabeçalho, rodapé e capas.
 - `app/globals.css`: estilos e adaptação para celulares.
-- `public/`: foto, captura de demonstração, ícone e currículo.
+- `public/`: foto, capturas dos projetos, ícone e currículo.
 
 As fontes Manrope e IBM Plex Mono são distribuídas localmente com o site. Não há formulário que armazene dados de visitantes, rastreamento próprio ou dependência de banco de dados.
 
@@ -53,4 +53,4 @@ O projeto aceita `NEXT_PUBLIC_BASE_PATH` para publicação sob um subdiretório;
 
 Este repositório contém apenas a implementação do portfólio e seus materiais públicos. Os sistemas apresentados têm seus próprios repositórios, contextos e direitos. A presença de um projeto no portfólio não implica disponibilização de seu código ou uma licença sobre sua marca.
 
-Foto e currículo: Rafael Lins Gaspar. A imagem da Certame é uma captura de interface com dados ilustrativos.
+Foto e currículo: Rafael Lins Gaspar. As telas foram capturadas nos sites públicos ou em cópias locais dos projetos. A relação de imagens e origens está em docs/screenshots.json. Números presentes nas interfaces não são apresentados como resultados profissionais comprovados.

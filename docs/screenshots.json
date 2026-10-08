@@ -1,0 +1,164 @@
+[
+  {
+    "project": "Certame",
+    "image": "/images/screens/certame.jpg",
+    "source": "https://certame.app/",
+    "caption": "Captura do site publicado em certame.app."
+  },
+  {
+    "project": "Hyre",
+    "image": "/images/screens/hyre.jpg",
+    "source": "https://hyre.global/",
+    "caption": "Página pública de apresentação da Hyre."
+  },
+  {
+    "project": "The Moneta Post",
+    "image": "/images/screens/moneta.jpg",
+    "source": "https://themonetapost.com/",
+    "caption": "Página inicial do portal publicado, com conteúdo editorial."
+  },
+  {
+    "project": "Bioo",
+    "image": "/images/screens/local-bioo.jpg",
+    "source": "local",
+    "caption": "Página de apresentação de uma versão anterior da Bioo, executada localmente."
+  },
+  {
+    "project": "FiveX Solutions",
+    "image": "/images/screens/fivex.jpg",
+    "source": "https://fivex.solutions/",
+    "caption": "Site acadêmico publicado da equipe FiveX Solutions."
+  },
+  {
+    "project": "ZapPop",
+    "image": "/images/screens/local-zappop.jpg",
+    "source": "local",
+    "caption": "Captura local do site de apresentação do ZapPop."
+  },
+  {
+    "project": "Presto PDF",
+    "image": "/images/screens/local-prestopdf.jpg",
+    "source": "local",
+    "caption": "Captura local da página de ferramentas do Presto PDF."
+  },
+  {
+    "project": "Devkit",
+    "image": "/images/screens/local-devkit.jpg",
+    "source": "local",
+    "caption": "Captura local das ferramentas do Devkit."
+  },
+  {
+    "project": "LMM Capital",
+    "image": "/images/screens/local-lmm.jpg",
+    "source": "local",
+    "caption": "Página institucional executada localmente a partir dos arquivos do projeto."
+  },
+  {
+    "project": "Lins Payments",
+    "image": "/images/screens/lins-global.jpg",
+    "source": "https://linspayments.com/",
+    "caption": "Captura da página pública em linspayments.com."
+  },
+  {
+    "project": "Lins UP Now",
+    "image": "/images/screens/lins-br.jpg",
+    "source": "https://linspayments.com.br/",
+    "caption": "Captura de linspayments.com.br, que atualmente apresenta o Lins UP Now. Os valores exibidos são de simulação."
+  },
+  {
+    "project": "CGM Marcenaria",
+    "image": "/images/screens/cgm.jpg",
+    "source": "https://www.cgmmarcenaria.com.br/",
+    "caption": "Captura do site publicado"
+  },
+  {
+    "project": "Via Manzoni",
+    "image": "/images/screens/local-viamanzoni.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  },
+  {
+    "project": "Arlene Zerbini",
+    "image": "/images/screens/arlene.jpg",
+    "source": "https://psicanalista.arlenezerbini.com/",
+    "caption": "Captura do site publicado"
+  },
+  {
+    "project": "Dra. Vitória Féo",
+    "image": "/images/screens/local-vitoria.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  },
+  {
+    "project": "Site Fácil",
+    "image": "/images/screens/sitefacil.jpg",
+    "source": "https://sitefacil.pro/",
+    "caption": "Captura do site publicado"
+  },
+  {
+    "project": "Caio Andaluz",
+    "image": "/images/screens/caio.jpg",
+    "source": "https://caioandaluzadvogado.com.br/",
+    "caption": "Captura do site publicado"
+  },
+  {
+    "project": "Autista Social",
+    "image": "/images/screens/autistasocial.jpg",
+    "source": "https://autistasocial.com.br/",
+    "caption": "Captura do site publicado"
+  },
+  {
+    "project": "Datera",
+    "image": "/images/screens/local-datera.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  },
+  {
+    "project": "TikTak",
+    "image": "/images/screens/local-tiktak.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  },
+  {
+    "project": "Qriar",
+    "image": "/images/screens/local-qriar.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  },
+  {
+    "project": "Sortea",
+    "image": "/images/screens/local-sortea.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  },
+  {
+    "project": "Somma",
+    "image": "/images/screens/local-somma.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  },
+  {
+    "project": "Currículo",
+    "image": "/images/screens/local-cv.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  },
+  {
+    "project": "Vrum",
+    "image": "/images/screens/local-vrum.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  },
+  {
+    "project": "Plink",
+    "image": "/images/screens/local-plink.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  },
+  {
+    "project": "Lotta",
+    "image": "/images/screens/local-lotta.jpg",
+    "source": "local",
+    "caption": "Captura da versão local"
+  }
+]

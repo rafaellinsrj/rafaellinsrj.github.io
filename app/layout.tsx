@@ -18,5 +18,5 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({children}:{children:React.ReactNode}) {
-  return <html lang="pt-BR"><body><a className="skip-link" href="#conteudo">Ir para o conteúdo</a>{children}</body></html>;
+  return <html lang="pt-BR" data-scroll-behavior="smooth"><body><a className="skip-link" href="#conteudo">Ir para o conteúdo</a>{children}</body></html>;
 }

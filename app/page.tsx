@@ -5,13 +5,17 @@ import ProjectCover from "@/components/ProjectCover";
 import {projects, websites, experiments} from "@/lib/projects";
 import {asset} from "@/lib/paths";
 
+const featuredSlugs = ["certame", "hyre", "moneta", "bioo", "lmm", "lins-payments"];
+const featuredProjects = featuredSlugs.map(slug => projects.find(p => p.slug === slug)!);
+const moreProjects = projects.filter(p => !featuredSlugs.includes(p.slug));
+
 const experience = [
-  ["Certame", "CTO e sócio", "jun/2026 — atual"],
-  ["The Moneta Post", "Fundador", "mai/2026 — atual"],
-  ["Hyre", "Fundador e CEO", "ago/2025 — atual"],
-  ["Vero Markets", "CTO", "abr/2026 — out/2026"],
-  ["Swiss Private", "COO e CTO", ""],
-  ["Rio Tec Tecnologia e Serviços", "CTO e sócio", "2014 — 2017"]
+  ["Certame", "CTO e sócio"],
+  ["The Moneta Post", "Fundador"],
+  ["Hyre", "Fundador e CEO"],
+  ["Vero Markets", "CTO"],
+  ["Swiss Private", "COO e CTO"],
+  ["Rio Tec Tecnologia e Serviços", "CTO e sócio"]
 ];
 
 export default function Home() {
@@ -38,8 +42,8 @@ export default function Home() {
     </section>
     <div className="stack-band"><div className="container"><span>Tecnologias no meu trabalho</span><p>Python<span>/</span>FastAPI<span>/</span>React<span>/</span>TypeScript<span>/</span>PostgreSQL</p></div></div>
     <section id="projetos" className="section container">
-      <div className="section-heading"><div><p className="eyebrow">Projetos selecionados</p><h2>Produto, código e contexto.</h2></div><p>Conheça minha atuação, as escolhas técnicas e o estágio de cada projeto.</p></div>
-      <div className="project-grid">{projects.slice(0,4).map((p,i)=>
+      <div className="section-heading"><div><p className="eyebrow">Projetos selecionados</p><h2>Produto, código e contexto.</h2></div><p>Telas dos projetos, minha participação e as escolhas técnicas por trás de cada produto.</p></div>
+      <div className="project-grid">{featuredProjects.map((p,i)=>
         <article className="project-card" key={p.slug}>
           <Link className="project-card-link" href={"/projetos/" + p.slug + "/"} aria-label={"Conhecer o projeto " + p.name}>
             <ProjectCover project={p} index={i}/>
@@ -49,26 +53,48 @@ export default function Home() {
       )}</div>
     </section>
     <section className="section extended-section">
-      <div className="container"><div className="section-heading"><div><p className="eyebrow">Outras frentes</p><h2>Da integração à experimentação.</h2></div><p>Atendimento, agentes inteligentes e ferramentas que resolvem tarefas do dia a dia.</p></div>
-        <div className="project-list">{projects.slice(4).map((p,i)=>
-          <Link className="project-row" href={"/projetos/" + p.slug + "/"} key={p.slug}>
-            <span className="row-number" aria-hidden="true">{String(i+5).padStart(2,"0")}</span>
-            <div><h3>{p.name}</h3><p>{p.description}</p></div>
-            <span className="row-category">{p.status}</span>
-            <span className="row-arrow" aria-hidden="true">↗</span>
-          </Link>
+      <div className="container"><div className="section-heading"><div><p className="eyebrow">Outras frentes</p><h2>Da integração à experimentação.</h2></div><p>Atendimento, agentes inteligentes, simulação de operações e ferramentas para o navegador.</p></div>
+        <div className="more-project-grid">{moreProjects.map(p=>
+          <article className="project-card compact-project" key={p.slug}>
+            <Link className="project-card-link" href={"/projetos/" + p.slug + "/"}>
+              <ProjectCover project={p}/>
+              <div className="project-info"><p className="eyebrow">{p.category}</p><h3>{p.name}<span className="card-arrow" aria-hidden="true">↗</span></h3><p>{p.description}</p><div className="project-card-bottom"><span className="status">{p.status}</span><span className="case-label">Ver projeto</span></div></div>
+            </Link>
+          </article>
         )}</div>
       </div>
     </section>
     <section className="section container client-section">
       <div className="section-heading"><div><p className="eyebrow">Sites e presença digital</p><h2>Diferentes negócios.<br/>Cada um com sua identidade.</h2></div><p>Projetos para profissionais e empresas, com foco em apresentação de serviços, conteúdo e contato.</p></div>
-      <div className="website-grid">{websites.map((p)=><article className="website-card" key={p.name}><p className="eyebrow">{p.kind}</p><h3>{p.name}</h3><p>{p.text}</p><span className="website-tech">{p.tech}</span></article>)}</div>
-      <details className="lab-details"><summary><span>Mais experimentos de produto<span className="summary-subtitle">Calculadoras, datas, conversores e ferramentas web</span></span><span className="details-plus" aria-hidden="true">+</span></summary><div className="lab-body"><p className="lab-note">Protótipos e implementações do meu acervo. Esta seleção apresenta a proposta de cada ferramenta, sem pressupor operação pública ativa.</p><div className="lab-grid">{experiments.map(p=><article key={p.name}><h3>{p.name}</h3><p>{p.text}</p></article>)}</div></div></details>
+      <div className="website-grid">{websites.map(p=>
+        <article className="website-card" key={p.slug}>
+          <a className="website-image" href={asset(p.image)} target="_blank" rel="noreferrer" aria-label={"Ampliar tela de " + p.name}>
+            <img src={asset(p.image)} width="1440" height="1000" alt={"Tela do site " + p.name} loading="lazy"/>
+            <span className="enlarge-label">Ampliar tela <span aria-hidden="true">↗</span></span>
+          </a>
+          <div className="website-info"><p className="eyebrow">{p.kind}</p><h3>{p.name}</h3><p>{p.text}</p>
+            <div className="website-bottom"><span className="website-tech">{p.tech}</span>{p.url
+              ? <a className="small-link" href={p.url} target="_blank" rel="noreferrer" aria-label={"Visitar site de " + p.name}>Visitar site ↗</a>
+              : <span className="capture-label">Captura local</span>}</div>
+          </div>
+        </article>
+      )}</div>
+      <details className="lab-details">
+        <summary><span>Mais ferramentas e experimentos<span className="summary-subtitle">Datas, conversores, sorteios, currículos e calculadoras</span></span><span className="details-plus" aria-hidden="true">+</span></summary>
+        <div className="lab-body"><p className="lab-note">Interfaces capturadas a partir das versões locais dos projetos. Selecione uma tela para ampliar.</p>
+          <div className="lab-grid">{experiments.map(p=>
+            <article key={p.name}>
+              <a href={asset(p.image)} target="_blank" rel="noreferrer" className="lab-image" aria-label={"Ampliar tela de " + p.name}><img src={asset(p.image)} alt={"Interface de " + p.name} width="1440" height="1000" loading="lazy"/><span aria-hidden="true">↗</span></a>
+              <h3>{p.name}</h3><p>{p.text}</p>
+            </article>
+          )}</div>
+        </div>
+      </details>
     </section>
     <section id="sobre" className="section about-section">
       <div className="container about-grid">
         <div><p className="eyebrow">Sobre mim</p><h2>Tecnologia com<br/>experiência de gestão.</h2><p className="wide-copy">Minha trajetória reúne desenvolvimento fullstack, criação de produtos e liderança como CTO e COO. Essa combinação me ajuda a relacionar arquitetura, operação e necessidades de negócio.</p><p className="about-extra">Trabalho com aplicações web, APIs, integrações e produtos apoiados por IA. Atualmente aprofundo essa formação no curso de Inteligência Artificial da Unifeso.</p><p className="location-note">Já morei em Curitiba e tenho disponibilidade para retornar mediante contratação.</p></div>
-        <div className="experience-panel"><h3>Experiência selecionada</h3><div className="experience-list">{experience.map(([company,role,date])=><div className="experience-row" key={company}><div><strong>{company}</strong><span>{role}</span></div>{date&&<span className="experience-date">{date}</span>}</div>)}</div><a className="text-link" href={asset("/curriculo-rafael-lins-gaspar.pdf")} download>Trajetória completa no currículo <span aria-hidden="true">↓</span></a></div>
+        <div className="experience-panel"><h3>Experiência selecionada</h3><div className="experience-list">{experience.map(([company,role])=><div className="experience-row" key={company}><div><strong>{company}</strong><span>{role}</span></div></div>)}</div><a className="text-link" href={asset("/curriculo-rafael-lins-gaspar.pdf")} download>Trajetória completa no currículo <span aria-hidden="true">↓</span></a></div>
       </div>
     </section>
     <section className="section container">
@@ -81,7 +107,7 @@ export default function Home() {
       <div className="education-grid">
         <div><p className="eyebrow">Formação acadêmica</p><h3>Inteligência Artificial</h3><p>Unifeso · 2º período · On-line<br/><span className="education-status">Em andamento</span></p></div>
         <div><h3>Gestão Estratégica de Negócios</h3><p>Pós-graduação · Fundação Getulio Vargas</p><h3>Engenharia de Produção</h3><p>Universidade Veiga de Almeida</p></div>
-        <div><h3>Formação complementar</h3><p>The Science and Implications of Generative AI · Harvard Kennedy School, 2024</p><p>Gestão de Processos e Melhoria Contínua · FGV, 2023</p><p className="language-note">Português nativo · Inglês intermediário</p></div>
+        <div><h3>Formação complementar</h3><p>The Science and Implications of Generative AI · Harvard Kennedy School</p><p>Gestão de Processos e Melhoria Contínua · FGV</p><p className="language-note">Português nativo · Inglês intermediário</p></div>
       </div>
     </section>
     <section id="contato" className="section contact-section">
