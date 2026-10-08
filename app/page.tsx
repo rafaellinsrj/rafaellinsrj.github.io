@@ -22,27 +22,23 @@ export default function Home() {
   return <><Header/><main id="conteudo">
     <section className="hero container">
       <div className="hero-copy">
-        <p className="eyebrow"><span className="small-rule"/>Fullstack · Produtos com IA</p>
-        <h1>Desenvolvo produtos<br/>digitais <span>de ponta<br className="desktop-br"/> a ponta.</span></h1>
-        <p className="hero-description">Sou Rafael Lins Gaspar. Conecto desenvolvimento de software, inteligência artificial e experiência em gestão para transformar ideias em aplicações.</p>
+        <p className="hero-author"><img src={asset("/images/rafael-lins.jpg")} width="40" height="40" alt=""/>Rafael Lins Gaspar</p>
+        <h1>Produtos digitais.<br/><span>De ponta a ponta.</span></h1>
+        <p className="hero-description">Desenvolvimento fullstack, inteligência artificial e visão de negócio. Transformo ideias em aplicações, da arquitetura à experiência de uso.</p>
         <div className="hero-actions">
-          <a className="button primary" href="#projetos">Conheça os projetos <span aria-hidden="true">↓</span></a>
-          <a className="text-link" href="https://www.linkedin.com/in/rlins/" target="_blank" rel="noreferrer">Meu LinkedIn <span aria-hidden="true">↗</span></a>
+          <a className="button primary" href="#projetos">Conheça os projetos <span aria-hidden="true">↗</span></a>
+          <a className="button secondary" href="https://www.linkedin.com/in/rlins/" target="_blank" rel="noreferrer">Meu LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <aside className="profile-card" aria-label="Apresentação de Rafael">
-        <div className="profile-top"><img src={asset("/images/rafael-lins.jpg")} width="160" height="160" alt="Rafael Lins Gaspar"/><span className="profile-monogram" aria-hidden="true">RL</span></div>
-        <div className="profile-details">
-          <p className="eyebrow">Rafael Lins Gaspar</p>
-          <h2>Visão de negócio.<br/>Execução técnica.</h2>
-          <p>Do backend à interface, com experiência em liderança técnica e operação de produtos.</p>
-          <div className="profile-place"><span>Teresópolis, RJ</span><span>Disponível para mudança para Curitiba</span></div>
-        </div>
-      </aside>
+      <Link href="/projetos/certame/" className="hero-workspace" aria-label="Explorar o projeto Certame">
+        <div className="workspace-bar"><span><span className="signal-dot"/>Projeto em destaque</span><span>Certame <span aria-hidden="true">↗</span></span></div>
+        <div className="workspace-screen"><img src={asset("/images/screens/certame.jpg")} alt="Página pública da Certame, projeto de campanhas beneficentes" width="1440" height="1000"/></div>
+        <div className="workspace-footer"><span>Da interface às regras de negócio.</span><span className="code-label">Python / FastAPI / React</span></div>
+      </Link>
     </section>
-    <div className="stack-band"><div className="container"><span>Tecnologias no meu trabalho</span><p>Python<span>/</span>FastAPI<span>/</span>React<span>/</span>TypeScript<span>/</span>PostgreSQL</p></div></div>
+    <div className="stack-band container"><p>Tecnologias que conectam as etapas.</p><div className="technology-tiles">{["Python", "FastAPI", "React", "TypeScript", "PostgreSQL"].map(tech=><div key={tech}>{tech}</div>)}</div></div>
     <section id="projetos" className="section container">
-      <div className="section-heading"><div><p className="eyebrow">Projetos selecionados</p><h2>Produto, código e contexto.</h2></div><p>Telas dos projetos, minha participação e as escolhas técnicas por trás de cada produto.</p></div>
+      <div className="section-heading"><div><p className="eyebrow">Projetos selecionados</p><h2>Produto, código<br/>e <span>contexto.</span></h2></div><p>Telas dos projetos, minha participação e as escolhas técnicas por trás de cada produto.</p></div>
       <div className="project-grid">{featuredProjects.map((p,i)=>
         <article className="project-card" key={p.slug}>
           <Link className="project-card-link" href={"/projetos/" + p.slug + "/"} aria-label={"Conhecer o projeto " + p.name}>
@@ -53,7 +49,7 @@ export default function Home() {
       )}</div>
     </section>
     <section className="section extended-section">
-      <div className="container"><div className="section-heading"><div><p className="eyebrow">Outras frentes</p><h2>Da integração à experimentação.</h2></div><p>Atendimento, agentes inteligentes, simulação de operações e ferramentas para o navegador.</p></div>
+      <div className="container"><div className="section-heading"><div><p className="eyebrow">Outras frentes</p><h2>Da integração<br/>à experimentação.</h2></div><p>Atendimento, agentes inteligentes, simulação de operações e ferramentas para o navegador.</p></div>
         <div className="more-project-grid">{moreProjects.map(p=>
           <article className="project-card compact-project" key={p.slug}>
             <Link className="project-card-link" href={"/projetos/" + p.slug + "/"}>
@@ -65,7 +61,7 @@ export default function Home() {
       </div>
     </section>
     <section className="section container client-section">
-      <div className="section-heading"><div><p className="eyebrow">Sites e presença digital</p><h2>Diferentes negócios.<br/>Cada um com sua identidade.</h2></div><p>Projetos para profissionais e empresas, com foco em apresentação de serviços, conteúdo e contato.</p></div>
+      <div className="section-heading"><div><p className="eyebrow">Sites e presença digital</p><h2>Diferentes negócios.<br/>Identidades próprias.</h2></div><p>Projetos para profissionais e empresas, com foco em apresentação de serviços, conteúdo e contato.</p></div>
       <div className="website-grid">{websites.map(p=>
         <article className="website-card" key={p.slug}>
           <a className="website-image" href={asset(p.image)} target="_blank" rel="noreferrer" aria-label={"Ampliar tela de " + p.name}>
@@ -93,12 +89,17 @@ export default function Home() {
     </section>
     <section id="sobre" className="section about-section">
       <div className="container about-grid">
-        <div><p className="eyebrow">Sobre mim</p><h2>Tecnologia com<br/>experiência de gestão.</h2><p className="wide-copy">Minha trajetória reúne desenvolvimento fullstack, criação de produtos e liderança como CTO e COO. Essa combinação me ajuda a relacionar arquitetura, operação e necessidades de negócio.</p><p className="about-extra">Trabalho com aplicações web, APIs, integrações e produtos apoiados por IA. Atualmente aprofundo essa formação no curso de Inteligência Artificial da Unifeso.</p><p className="location-note">Já morei em Curitiba e tenho disponibilidade para retornar mediante contratação.</p></div>
-        <div className="experience-panel"><h3>Experiência selecionada</h3><div className="experience-list">{experience.map(([company,role])=><div className="experience-row" key={company}><div><strong>{company}</strong><span>{role}</span></div></div>)}</div><a className="text-link" href={asset("/curriculo-rafael-lins-gaspar.pdf")} download>Trajetória completa no currículo <span aria-hidden="true">↓</span></a></div>
+        <aside className="profile-card" aria-label="Apresentação de Rafael">
+          <div className="profile-top"><img src={asset("/images/rafael-lins.jpg")} width="1144" height="1280" alt="Rafael Lins Gaspar" loading="lazy"/></div>
+          <div className="profile-details"><p className="eyebrow">Rafael Lins Gaspar</p><h3>Visão de negócio.<br/>Execução técnica.</h3><p>Desenvolvimento fullstack e liderança de produtos digitais.</p><p className="profile-place">Teresópolis, RJ</p></div>
+        </aside>
+        <div className="about-copy"><p className="eyebrow">Sobre mim</p><h2>Tecnologia com<br/>experiência de gestão.</h2><p className="wide-copy">Minha trajetória reúne desenvolvimento fullstack, criação de produtos e liderança como CTO e COO. Essa combinação me ajuda a relacionar arquitetura, operação e necessidades de negócio.</p><p className="about-extra">Trabalho com aplicações web, APIs, integrações e produtos apoiados por IA. Atualmente aprofundo essa formação no curso de Inteligência Artificial da Unifeso.</p><p className="location-note">Já morei em Curitiba e tenho disponibilidade para retornar mediante contratação.</p>
+          <div className="experience-panel"><h3>Experiência selecionada</h3><div className="experience-list">{experience.map(([company,role])=><div className="experience-row" key={company}><strong>{company}</strong><span>{role}</span></div>)}</div><a className="text-link" href={asset("/curriculo-rafael-lins-gaspar.pdf")} download>Trajetória completa no currículo <span aria-hidden="true">↓</span></a></div>
+        </div>
       </div>
     </section>
     <section className="section container">
-      <div className="section-heading"><div><p className="eyebrow">Base técnica</p><h2>Construir. Integrar. Evoluir.</h2></div></div>
+      <div className="section-heading"><div><p className="eyebrow">Base técnica</p><h2>Construir. Integrar.<br/><span>Evoluir.</span></h2></div></div>
       <div className="skills-grid">
         <div><span className="skill-number">01 / BACKEND E DADOS</span><h3>A estrutura do produto</h3><p>Python, FastAPI, Pydantic, SQLAlchemy, Node.js, PHP/Laravel, PostgreSQL, MySQL, Redis e Celery.</p></div>
         <div><span className="skill-number">02 / FRONTEND E INTEGRAÇÕES</span><h3>A experiência em uso</h3><p>React, Next.js, TypeScript, TanStack Query, Tailwind CSS, APIs REST, OAuth2, webhooks e APIs de IA.</p></div>

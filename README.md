@@ -41,7 +41,7 @@ O build gera o site estático em `out/`. Não é necessário um servidor Node.js
 - `app/globals.css`: estilos e adaptação para celulares.
 - `public/`: foto, capturas dos projetos, ícone e currículo.
 
-As fontes Manrope e IBM Plex Mono são distribuídas localmente com o site. Não há formulário que armazene dados de visitantes, rastreamento próprio ou dependência de banco de dados.
+As fontes Inter e IBM Plex Mono são distribuídas localmente com o site. Não há formulário que armazene dados de visitantes, rastreamento próprio ou dependência de banco de dados.
 
 ## Publicação
 
