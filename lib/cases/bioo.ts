@@ -66,7 +66,7 @@ export const bioo: CaseStudy = {
     ],
     team: [],
     ai: [
-      "O código foi produzido com agentes de IA sob minha direção: os commits do repositório registram coautoria do Claude, e a documentação de testes e o registro de pendências mostram uso também do Codex.",
+      "O código foi produzido com agentes de IA sob minha direção: os commits registram a coautoria dos agentes, e eu reviso e valido cada entrega.",
       "Os agentes seguem regras escritas no próprio projeto: backup antes de mudanças, migrações imutáveis, atualização do documento único de pendências e evidência de teste para marcar uma etapa como concluída.",
       "Eu defino escopo, decisões e critérios de aceite; a conclusão de uma etapa depende de evidência registrada e o aceite final é meu.",
     ],
