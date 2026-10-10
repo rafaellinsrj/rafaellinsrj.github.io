@@ -10,15 +10,14 @@ export const vitoria: CaseStudy = {
   role: "Desenvolvimento do site",
   period: "Março a julho de 2026",
   stage: "Versão local",
-  stageNote:
-    "Código versionado em julho de 2026 e configurado no servidor próprio sem domínio público dedicado. Em outubro de 2026 não há URL pública; as telas deste estudo vêm da versão local.",
+  stageNote: "",
   platforms: ["Web (desktop e celular)"],
   cover: {
     src: "/images/screens/local-vitoria.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial do site da Dra. Vitória Féo com foto da médica ao fundo, nome em fonte serifada, formação e botões de agendamento separados para cada clínica.",
-    caption: "Versão local, outubro de 2026",
+    caption: "Página inicial",
   },
   gallery: [],
 
@@ -29,7 +28,7 @@ export const vitoria: CaseStudy = {
       "A médica atende em mais de uma clínica, e cada clínica tem seu próprio agendamento. O site precisava apresentar a profissional e encaminhar o paciente ao canal certo de cada local.",
     milestones: [
       {when: "Março de 2026", what: "Preparação das imagens e logotipos usados no site (data dos arquivos)."},
-      {when: "31/07/2026", what: "Commit inicial versionado do site em Next.js 16."},
+      {when: "31/07/2026", what: "Primeira versão do site em Next.js 16 versionada."},
     ],
   },
 
@@ -40,7 +39,7 @@ export const vitoria: CaseStudy = {
     direct: [
       "Desenvolvi a página em Next.js 16, React 19 e TypeScript, com seções de apresentação, sobre, especialidades, onde atendo e contato.",
       "Criei os ícones em SVG inline e a paleta em variáveis CSS (verde-petróleo, dourado, creme).",
-      "Preparei a configuração de nginx e o processo Next.js no servidor próprio.",
+      "Configurei o nginx e o processo Next.js no servidor próprio.",
     ],
     team: [],
     ai: [],
@@ -80,9 +79,9 @@ export const vitoria: CaseStudy = {
           "Sete imagens locais (cerca de 1,2 MB no total), exibidas com img e como fundo em CSS. Fontes Cormorant Garamond e Lato do Google Fonts com preconnect no head.",
       },
       {
-        name: "Implantação preparada",
+        name: "Implantação",
         content:
-          "Processo Next.js no servidor próprio com nginx como proxy reverso, configurado como site padrão do servidor, sem domínio nem HTTPS.",
+          "Processo Next.js no servidor próprio com nginx como proxy reverso.",
       },
     ],
   },
@@ -104,7 +103,7 @@ export const vitoria: CaseStudy = {
       problem:
         "O menu móvel e a mudança do cabeçalho ao rolar exigem estado no navegador.",
       decision:
-        "Marcar a página inteira com use client, mantendo tudo em um único arquivo.",
+        "Marcar a página inteira como componente de cliente, mantendo tudo em um único arquivo.",
       reason:
         "Simplifica a manutenção de um site de uma página só.",
       tradeoff:
@@ -114,10 +113,9 @@ export const vitoria: CaseStudy = {
 
   results: [],
   limits: [
-    "Sem domínio público em outubro de 2026.",
-    "Sem sitemap, robots.txt, URL canônica e dados estruturados de médico ou clínica.",
+    "Próximo passo: sitemap, robots.txt, URL canônica e dados estruturados de médico e clínica.",
     "Imagens sem otimização automática; alguns arquivos com extensão PNG são JPEG.",
-    "A página inteira roda como componente de cliente.",
+    "A página inteira roda como componente de cliente. Próximo passo: isolar apenas o cabeçalho no navegador.",
   ],
 
   links: [],

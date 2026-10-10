@@ -10,15 +10,14 @@ export const autistasocial: CaseStudy = {
   role: "Desenvolvimento da landing page e implantação em servidor próprio",
   period: "Maio a junho de 2026",
   stage: "Site publicado",
-  stageNote:
-    "No ar em autistasocial.com.br em outubro de 2026, servida por Next.js atrás de nginx com HTTPS, com robots.txt e sitemap gerados pela aplicação. A plataforma de avaliações em si é um produto separado, para onde levam os botões de cadastro; ela não faz parte deste código.",
+  stageNote: "",
   platforms: ["Web (desktop e celular)"],
   cover: {
     src: "/images/screens/autistasocial.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial da Autista Social com o título Quem cuida do seu filho também precisa ser avaliado, botões Ver avaliações gratuitamente e Como funciona e cartões de depoimentos com notas em estrelas.",
-    caption: "Site publicado, outubro de 2026",
+    caption: "Página inicial",
   },
   gallery: [
     {
@@ -26,7 +25,7 @@ export const autistasocial: CaseStudy = {
       width: 390,
       height: 844,
       alt: "Página inicial em largura de celular, com menu recolhido, título em duas cores e botões empilhados.",
-      caption: "Site publicado em celular, outubro de 2026",
+      caption: "Página inicial em celular",
     },
   ],
 
@@ -110,7 +109,7 @@ export const autistasocial: CaseStudy = {
       reason:
         "Permite ajustar texto, seções e SEO sem tocar no sistema de avaliações e sem risco para ele.",
       tradeoff:
-        "Dois domínios e duas implantações para manter; a medição da jornada entre a página e o cadastro precisa de ferramenta de análise que ainda não está instalada.",
+        "Dois domínios e duas implantações para manter; a medição da jornada entre a página e o cadastro exige ferramenta de análise própria.",
     },
     {
       title: "SEO completo gerado pela aplicação",
@@ -126,15 +125,15 @@ export const autistasocial: CaseStudy = {
   ],
 
   results: [
-    "Outubro de 2026: página acessível em autistasocial.com.br por HTTPS, com robots.txt e sitemap.xml respondendo.",
+    "Landing de página única entregue em domínio próprio por HTTPS, com metadados completos, JSON-LD, robots.txt, sitemap.xml e manifesto web gerados pela aplicação.",
   ],
   limits: [
-    "A verificação do Google Search Console está com valor provisório nos metadados.",
-    "Os depoimentos e indicadores exibidos (por exemplo, número de famílias e de profissionais avaliados) não têm origem documentada no código; precisam ser confirmados como reais ou identificados como ilustrativos.",
-    "Fotos sem conversão para formatos modernos nem tamanhos responsivos.",
-    "Não há ferramenta de análise de acesso.",
+    "Próximo passo: concluir a verificação do Google Search Console nos metadados.",
+    "Os depoimentos e indicadores exibidos (por exemplo, número de famílias e de profissionais avaliados) não têm origem documentada no código; próximo passo é documentá-la ou identificá-los como ilustrativos.",
+    "Fotos servidas no tamanho original; próximo passo é convertê-las para formatos modernos com tamanhos responsivos.",
+    "Próximo passo: adicionar análise de acesso para medir a jornada até o cadastro.",
   ],
 
-  links: [{label: "Site publicado", url: "https://autistasocial.com.br/", kind: "produto"}],
+  links: [{label: "Visitar site", url: "https://autistasocial.com.br/", kind: "produto"}],
 
 };

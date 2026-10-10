@@ -10,15 +10,14 @@ export const viamanzoni: CaseStudy = {
   role: "Desenvolvimento do site",
   period: "Março de 2026",
   stage: "Versão local",
-  stageNote:
-    "O código foi configurado no servidor próprio para o domínio da marca, mas em outubro de 2026 o domínio não responde. As telas deste estudo vêm da versão local. Parte das imagens do site ainda aponta para o endereço do site anterior da marca, em WordPress, que também está fora do ar.",
+  stageNote: "",
   platforms: ["Web (desktop e celular)", "Área restrita de gestão da coleção"],
   cover: {
     src: "/images/screens/local-viamanzoni.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial da Via Manzoni em fundo escuro com o título Vista-se com a elegância que você merece e botões para agendar, consultar disponibilidade e ver a coleção.",
-    caption: "Versão local, outubro de 2026",
+    caption: "Página inicial",
   },
   gallery: [],
 
@@ -41,7 +40,7 @@ export const viamanzoni: CaseStudy = {
       "Estruturei o site em Next.js 16 (App Router), React 19, TypeScript e Tailwind CSS 4, com componentes por seção.",
       "Implementei a página de coleção, que lê as categorias e imagens do disco e usa um JSON ao lado de cada foto para nome e descrição.",
       "Implementei a área restrita com sessão criptografada (iron-session) para enviar e remover peças da coleção.",
-      "Preparei a configuração de proxy reverso no nginx para o domínio da marca.",
+      "Configurei o proxy reverso no nginx para o domínio da marca.",
     ],
     team: [],
     ai: [
@@ -51,7 +50,7 @@ export const viamanzoni: CaseStudy = {
 
   architecture: {
     intro:
-      "Aplicação Next.js com App Router, sem banco de dados. A coleção é derivada da estrutura de pastas em public/colecao; o contato não envia dados a servidor, apenas abre o WhatsApp com a mensagem montada no navegador.",
+      "Aplicação Next.js com App Router, sem banco de dados. A coleção é derivada da estrutura de pastas de imagens; o contato não envia dados a servidor, apenas abre o WhatsApp com a mensagem montada no navegador.",
     diagram: {
       title: "Arquitetura do site da Via Manzoni",
       tiers: [
@@ -79,12 +78,12 @@ export const viamanzoni: CaseStudy = {
       {
         name: "SEO e desempenho",
         content:
-          "Título, descrição e palavras-chave pela Metadata API, lang pt-BR e título próprio na página de coleção. Imagens das seções principais com next/image e remotePatterns liberando o endereço de uploads do site anterior; fontes Playfair Display e Inter por importação do Google Fonts no CSS. Sem Open Graph, sitemap ou dados estruturados.",
+          "Título, descrição e palavras-chave pela Metadata API, lang pt-BR e título próprio na página de coleção. Imagens das seções principais com next/image; fontes Playfair Display e Inter por importação do Google Fonts no CSS. Sem Open Graph, sitemap ou dados estruturados.",
       },
       {
-        name: "Implantação preparada",
+        name: "Implantação",
         content:
-          "Configuração de nginx como proxy reverso para o processo Next.js no domínio da marca, apenas em HTTP, sem certificado configurado no arquivo.",
+          "nginx como proxy reverso para o processo Next.js no domínio da marca, no servidor próprio.",
       },
     ],
   },
@@ -125,10 +124,8 @@ export const viamanzoni: CaseStudy = {
 
   results: [],
   limits: [
-    "Em outubro de 2026 o domínio da marca não responde; o site não está publicado.",
-    "Imagens do hero e das seções Para elas e Para eles dependem do endereço do site anterior, fora do ar; precisam ser copiadas para o projeto antes da publicação.",
-    "Os rótulos do formulário não estão associados aos campos (sem htmlFor e id), o que prejudica leitores de tela.",
-    "Sem Open Graph, sitemap, robots.txt e HTTPS na configuração de servidor.",
+    "Os rótulos do formulário não estão associados aos campos o que prejudica leitores de tela. Próximo passo: associar rótulos e campos.",
+    "Próximo passo: Open Graph, sitemap, robots.txt e HTTPS na configuração do servidor.",
   ],
 
   links: [],

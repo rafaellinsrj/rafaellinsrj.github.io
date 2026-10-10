@@ -10,15 +10,14 @@ export const cgm: CaseStudy = {
   role: "Desenvolvimento do site e implantação em servidor próprio",
   period: "Março de 2026",
   stage: "Site publicado",
-  stageNote:
-    "No ar em cgmmarcenaria.com.br em outubro de 2026, servido por Next.js atrás de nginx com HTTPS. A área restrita para gerenciar as fotos do portfólio existe no código; a troca do JSON por banco de dados e armazenamento externo de imagens, descrita no README como Fase 2, não foi implementada.",
+  stageNote: "",
   platforms: ["Web (desktop e celular)", "Área restrita de gestão do portfólio"],
   cover: {
     src: "/images/screens/cgm.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial da CGM Marcenaria com o título O preferido pelos shoppings, botões para WhatsApp e portfólio e números de apresentação da empresa.",
-    caption: "Site publicado, outubro de 2026",
+    caption: "Página inicial, outubro de 2026",
   },
   gallery: [
     {
@@ -26,14 +25,14 @@ export const cgm: CaseStudy = {
       width: 1440,
       height: 1000,
       alt: "Página de portfólio completo com filtros por categoria (reforma administrativa, bancos, playground, balcão e outras) e grade de fotos de obras.",
-      caption: "Site publicado, página de portfólio, outubro de 2026",
+      caption: "Página de portfólio, outubro de 2026",
     },
     {
       src: "/images/cases/cgm/home-celular.jpg",
       width: 390,
       height: 844,
       alt: "Página inicial em largura de celular, com menu recolhido, título centralizado e botões empilhados.",
-      caption: "Site publicado em celular, outubro de 2026",
+      caption: "Página inicial em celular, outubro de 2026",
     },
   ],
 
@@ -116,7 +115,7 @@ export const cgm: CaseStudy = {
     {
       title: "Camada de acesso ao portfólio separada dos componentes",
       problem:
-        "O portfólio começaria com dados estáticos, mas havia a intenção de migrar para banco de dados e armazenamento de imagens externo.",
+        "O portfólio começa com dados estáticos, mas a fonte de dados precisava poder mudar para banco de dados e armazenamento externo de imagens sem refazer as páginas.",
       decision:
         "Concentrar a leitura dos dados em uma camada única e passar os itens aos componentes por propriedades.",
       reason:
@@ -127,7 +126,7 @@ export const cgm: CaseStudy = {
     {
       title: "Gestão de fotos sem banco de dados",
       problem:
-        "O cliente precisava incluir fotos de novas obras sem pedir alteração de código, mas a estrutura de banco e armazenamento externo ainda não se justificava.",
+        "O cliente precisava incluir fotos de novas obras sem pedir alteração de código, mas uma estrutura de banco e armazenamento externo não se justificava para o volume do portfólio.",
       decision:
         "Criar uma área restrita com sessão criptografada que grava as imagens em pastas por categoria e atualiza o JSON do portfólio.",
       reason:
@@ -144,20 +143,20 @@ export const cgm: CaseStudy = {
       reason:
         "Remove a etapa de formulário e a necessidade de backend para receber mensagens.",
       tradeoff:
-        "O site não registra quantos contatos gera; a medição depende do próprio WhatsApp ou de uma ferramenta de análise ainda não instalada.",
+        "O site não registra quantos contatos gera; a medição fica com o próprio WhatsApp.",
     },
   ],
 
   results: [
-    "Outubro de 2026: site acessível em cgmmarcenaria.com.br, com a página inicial e a página de portfólio respondendo por HTTPS e servidas pré-renderizadas.",
+    "Site institucional entregue em cgmmarcenaria.com.br: página inicial, página de portfólio com cerca de 100 fotos por categoria e área restrita de gestão de fotos, servidos por HTTPS e pré-renderizados.",
   ],
   limits: [
-    "Sem sitemap, robots.txt e dados estruturados de empresa local.",
     "Fotos enviadas pela área restrita dependem de novo build para aparecer no site, porque o JSON é incorporado na compilação.",
-    "A migração para banco de dados e armazenamento externo de imagens (Fase 2 do README) é intenção, não implementação.",
-    "Não há ferramenta de análise de acesso nem medição de contatos.",
+    "Próximo passo: sitemap, robots.txt e dados estruturados de empresa local.",
+    "Próximo passo: levar o portfólio para banco de dados e armazenamento externo de imagens, aproveitando a camada de acesso já isolada.",
+    "Próximo passo: ferramenta de análise de acesso e medição de contatos.",
   ],
 
-  links: [{label: "Site publicado", url: "https://www.cgmmarcenaria.com.br/", kind: "produto"}],
+  links: [{label: "Visitar site", url: "https://www.cgmmarcenaria.com.br/", kind: "produto"}],
 
 };

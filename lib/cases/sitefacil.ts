@@ -10,15 +10,14 @@ export const sitefacil: CaseStudy = {
   role: "Desenvolvimento do site, do formulário de briefing e do painel interno",
   period: "Março a agosto de 2026",
   stage: "Site publicado",
-  stageNote:
-    "No ar em sitefacil.pro em outubro de 2026, com a página inicial, o catálogo de modelos e o formulário de briefing acessíveis por HTTPS. O painel interno de briefings existe no código e é restrito por login.",
+  stageNote: "",
   platforms: ["Web (desktop e celular)", "Painel interno de briefings"],
   cover: {
     src: "/images/screens/sitefacil.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial da Site Fácil em fundo escuro com o título Sua empresa merece um site de verdade, botões Começar agora e Ver modelos e indicadores de apresentação.",
-    caption: "Site publicado, outubro de 2026",
+    caption: "Página inicial",
   },
   gallery: [
     {
@@ -26,21 +25,21 @@ export const sitefacil: CaseStudy = {
       width: 1440,
       height: 1000,
       alt: "Formulário de briefing com seções de dados pessoais e tipo de site (landing page, institucional, e-commerce, portfólio, blog), com campos vazios.",
-      caption: "Site publicado, formulário de briefing, outubro de 2026",
+      caption: "Formulário de briefing",
     },
     {
       src: "/images/cases/sitefacil/modelos.jpg",
       width: 1440,
       height: 1000,
       alt: "Catálogo de modelos com cartões de templates de código aberto, categoria, tecnologias e links para demonstração e repositório.",
-      caption: "Site publicado, catálogo de modelos, outubro de 2026",
+      caption: "Catálogo de modelos",
     },
     {
       src: "/images/cases/sitefacil/home-celular.jpg",
       width: 390,
       height: 844,
       alt: "Página inicial em largura de celular, com menu recolhido, botões empilhados e botão flutuante de WhatsApp.",
-      caption: "Site publicado em celular, outubro de 2026",
+      caption: "Página inicial em celular",
     },
   ],
 
@@ -52,7 +51,7 @@ export const sitefacil: CaseStudy = {
     milestones: [
       {when: "28/03/2026", what: "Versão inicial com serviços, portfólio, processo, diferenciais, catálogo de modelos, formulário de briefing e painel interno."},
       {when: "28/05/2026", what: "Inclusão do Autista Social no portfólio."},
-      {when: "05/08/2026", what: "Inclusão do site de advocacia Caio Andaluz no portfólio."},
+      {when: "05/08/2026", what: "Inclusão de um site de advocacia no portfólio."},
     ],
   },
 
@@ -156,16 +155,16 @@ export const sitefacil: CaseStudy = {
   ],
 
   results: [
-    "Outubro de 2026: site acessível em sitefacil.pro, com página inicial, catálogo de modelos e formulário de briefing respondendo por HTTPS.",
-    "O portfólio do site lista projetos publicados, entre eles CGM Marcenaria, Arlene Zerbini, Autista Social e Caio Andaluz.",
+    "Site em sitefacil.pro com página inicial, catálogo de modelos e formulário de briefing servidos por HTTPS, e painel interno de briefings restrito por login.",
+    "O portfólio do site lista projetos publicados, entre eles CGM Marcenaria, Autista Social e um site de advocacia.",
   ],
   limits: [
-    "Briefings em arquivos, sem banco de dados, histórico ou notificação automática de novo pedido.",
-    "Sem sitemap, robots.txt e dados estruturados.",
+    "Briefings em arquivos, sem banco de dados, histórico ou notificação automática de novo pedido. Próximo passo: migrar para banco de dados se o volume crescer.",
+    "Próximo passo: sitemap, robots.txt e dados estruturados.",
     "A página inicial inteira é um componente de cliente, o que aumenta o JavaScript enviado ao navegador.",
     "Os indicadores exibidos no site (projetos entregues, prazo médio) são texto comercial e não foram verificados neste estudo.",
   ],
 
-  links: [{label: "Site publicado", url: "https://sitefacil.pro/", kind: "produto"}],
+  links: [{label: "Visitar site", url: "https://sitefacil.pro/", kind: "produto"}],
 
 };

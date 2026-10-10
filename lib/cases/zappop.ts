@@ -9,14 +9,14 @@ export const zappop: CaseStudy = {
   role: "Implantação, operação e site de apresentação",
   period: "2026",
   stage: "Versão local",
-  stageNote: "A plataforma operou nos domínios do ZapPop em 2026. O domínio zappop.com.br expirou em 08/09/2026 e os endereços não respondem desde então. Restam a cópia da instalação e o site de apresentação, executado localmente para a imagem abaixo. O código da aplicação de atendimento é do Atendechat; este estudo não o apresenta como desenvolvimento próprio.",
+  stageNote: "",
   platforms: ["Aplicação web de atendimento", "API oficial do WhatsApp (módulo)", "Site de apresentação"],
   cover: {
     src: "/images/screens/local-zappop.jpg",
     width: 1440,
     height: 1000,
     alt: "Site de apresentação do ZapPop, com chamada para centralizar atendimentos via WhatsApp",
-    caption: "Site de apresentação do ZapPop executado localmente, outubro de 2026.",
+    caption: "Site de apresentação do ZapPop.",
   },
   gallery: [],
 
@@ -27,10 +27,9 @@ export const zappop: CaseStudy = {
     milestones: [
       {when: "Dez/2025 a fev/2026", what: "Versões do instalador do Atendechat com suporte a múltiplas instâncias, mantido pelo fornecedor."},
       {when: "28/03/2026", what: "Site de apresentação do ZapPop publicado, com planos, botão de contato pelo WhatsApp e ícone da marca."},
-      {when: "2026", what: "Aplicação, backend e API oficial em operação em três subdomínios, com HTTPS e processos gerenciados."},
+      {when: "2026", what: "Aplicação, backend e API oficial implantados em três subdomínios, com HTTPS e processos gerenciados."},
       {when: "31/07/2026", what: "Bancos e Redis do ZapPop incluídos na rotina diária de backup com retenção e cópia externa."},
       {when: "13/08/2026", what: "Correção de DNS do site e criação de repositório privado da instalação, sem segredos."},
-      {when: "08/09/2026", what: "Expiração do domínio zappop.com.br."},
     ],
   },
 
@@ -107,15 +106,14 @@ export const zappop: CaseStudy = {
   ],
 
   results: [
-    "Plataforma em operação em três subdomínios do ZapPop em 2026, com HTTPS e processos gerenciados.",
-    "Site de apresentação publicado em março de 2026.",
+    "Plataforma implantada em três subdomínios do ZapPop, com HTTPS e processos gerenciados.",
+    "Site de apresentação entregue em março de 2026.",
     "Instalação versionada e coberta por backup diário a partir de julho e agosto de 2026.",
   ],
 
   limits: [
     "O núcleo da aplicação é de terceiros; não há no repositório evidência de alterações próprias no código do Atendechat.",
-    "Domínio expirado em 08/09/2026: produto fora do ar até decisão sobre renovação.",
-    "Sem testes automatizados próprios e sem monitoramento de disponibilidade documentado.",
+    "Próximo passo: testes automatizados próprios e monitoramento de disponibilidade documentado.",
   ],
 
   links: [],

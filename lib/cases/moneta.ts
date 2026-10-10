@@ -11,15 +11,14 @@ export const moneta: CaseStudy = {
   organization: "The Moneta Post",
   period: "mai/2026 – atual",
   stage: "Em produção",
-  stageNote:
-    "Site público no ar nas edições pt, es e en, com matérias publicadas pelo pipeline automatizado e distribuídas em redes sociais e newsletter. Módulos novos entram desligados por feature flag e só são ativados com aprovação do fundador; algumas integrações seguem em validação (por exemplo, envio ao TikTok depende de consentimento manual no painel e não entra no reenvio automático).",
+  stageNote: "",
   platforms: ["Web (site público em 3 idiomas)", "Painel administrativo", "Pipeline de dados e IA", "Redes sociais e newsletter"],
   cover: {
     src: "/images/cases/moneta/home.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial da edição Brasil do The Moneta Post, com seletor de idioma PT/ES/EN, menu de editorias, faixa de cotações e destaques do dia",
-    caption: "Site publicado, edição Brasil, outubro de 2026",
+    caption: "Edição Brasil",
   },
   gallery: [
     {
@@ -27,21 +26,21 @@ export const moneta: CaseStudy = {
       width: 1440,
       height: 1000,
       alt: "Página de matéria da editoria Tecnologia & IA, com título, linha fina, botões de compartilhamento, vídeo da matéria e lista de mais lidas",
-      caption: "Site publicado, página de matéria, outubro de 2026",
+      caption: "Página de matéria",
     },
     {
       src: "/images/cases/moneta/es.jpg",
       width: 1440,
       height: 1000,
       alt: "Página inicial da edição América Latina em espanhol, com editorias e cotações regionais próprias",
-      caption: "Site publicado, edição América Latina, outubro de 2026",
+      caption: "Edição América Latina",
     },
     {
       src: "/images/cases/moneta/mobile.jpg",
       width: 390,
       height: 844,
       alt: "Página inicial em tela de celular, com menu de editorias rolável e barra de navegação inferior",
-      caption: "Site publicado, versão para celular, outubro de 2026",
+      caption: "Versão para celular",
     },
   ],
 
@@ -67,7 +66,7 @@ export const moneta: CaseStudy = {
       "Defini o produto, a linha editorial, as regras de estilo e neutralidade e os critérios de conteúdo sensível que o sistema aplica.",
       "Estruturei o plano de produção em etapas com portões de aprovação, nos quais nenhuma etapa avança sem minha validação.",
       "Decidi a arquitetura de IA multi-provedor, as regras de escolha de modelo (qualidade parecida, vence o mais barato) e os limites de custo.",
-      "Defini as políticas de operação: módulos novos desligados por padrão, backup antes de mudança em produção e reativação controlada após falhas de crédito.",
+      "Defini as políticas de operação: módulos novos atrás de feature flag com ativação aprovada, backup antes de mudança em produção e reativação controlada após falhas de crédito.",
     ],
     direct: [
       "Concebi e construí a plataforma completa: site público, painel administrativo, API e pipeline editorial.",
@@ -135,7 +134,7 @@ export const moneta: CaseStudy = {
       {
         name: "Distribuição",
         content:
-          "Publicação em Instagram, Facebook e Threads (APIs da Meta), X, YouTube e TikTok, com fila de rascunhos, reenvio controlado e expiração. Newsletter diária por edição com Listmonk e envio pelo Resend, incluindo tratamento de devoluções.",
+          "Publicação em Instagram, Facebook e Threads (APIs da Meta), X, YouTube e TikTok, com fila de rascunhos, reenvio controlado e descarte de rascunhos vencidos. Newsletter diária por edição com Listmonk e envio pelo Resend, incluindo tratamento de devoluções.",
       },
       {
         name: "Dados",
@@ -198,11 +197,11 @@ export const moneta: CaseStudy = {
       problem:
         "APIs de redes sociais impõem cotas diárias, limites de requisição e erros passageiros. Repetir sem critério duplica posts; não repetir perde publicações; repetir tarde demais publica notícia velha.",
       decision:
-        "Posts que falham ficam como rascunho e são reenviados por uma rotina separada, que só toca rascunhos com mais de 20 minutos (para não disputar um envio em andamento) e os expira após 24 horas, ou 48 horas no YouTube, cuja cota zera em outro fuso. Ao detectar cota estourada, a rodada para de chamar o YouTube. Ao voltar o crédito de IA, o que estava parado na distribuição expira antes de religar.",
+        "Posts que falham ficam como rascunho e são reenviados por uma rotina separada, que só toca rascunhos com mais de 20 minutos (para não disputar um envio em andamento) e os descarta após 24 horas, ou 48 horas no YouTube, cuja cota zera em outro fuso. Ao detectar cota estourada, a rodada para de chamar o YouTube. Ao voltar o crédito de IA, o que estava parado na distribuição é descartado antes de religar.",
       reason:
         "Garante que nenhum post seja duplicado e que conteúdo vencido não seja publicado, mantendo o máximo de entregas possível.",
       tradeoff:
-        "Alguns posts expiram sem sair quando a falha dura mais que a janela; o TikTok ficou fora do reenvio automático por exigir consentimento a cada envio.",
+        "Alguns posts são descartados sem sair quando a falha dura mais que a janela; o TikTok ficou fora do reenvio automático por exigir consentimento a cada envio.",
       learning:
         "A guarda de 20 minutos nasceu de um incidente real de post duplicado no Instagram, causado por duas rotinas reenviando o mesmo rascunho.",
     },
@@ -211,11 +210,11 @@ export const moneta: CaseStudy = {
       problem:
         "Um pipeline que publica sozinho transforma qualquer bug em conteúdo público em poucos minutos.",
       decision:
-        "Módulos novos entram no código desligados por feature flag; a ativação é uma decisão separada, registrada e aprovada por mim. O plano de produção avança por etapas com portões assinados, e mudanças em produção exigem backup do banco antes.",
+        "Módulos novos entram no código atrás de feature flag; a ativação é uma decisão separada, registrada e aprovada por mim. O plano de produção avança por etapas com portões assinados, e mudanças em produção exigem backup do banco antes.",
       reason:
         "Separa entrega técnica de risco editorial e permite desligar uma função sem novo deploy.",
       tradeoff:
-        "Mais configuração para gerenciar e funções prontas que esperam aprovação antes de gerar valor.",
+        "Mais configuração para gerenciar e um passo extra entre a entrega técnica e o uso.",
     },
   ],
 
@@ -223,7 +222,7 @@ export const moneta: CaseStudy = {
     title: "Do feed à publicação (fluxo com dados sintéticos)",
     steps: [
       "A coleta lê os feeds RSS das fontes da edição e agrupa notícias parecidas por similaridade de embeddings.",
-      "O agendador escolhe a pauta do horário pela editoria prevista e pela pontuação do grupo, por exemplo uma decisão de juros com três veículos confirmando.",
+      "O agendador escolhe a pauta do horário pela editoria do horário e pela pontuação do grupo, por exemplo uma decisão de juros com três veículos confirmando.",
       "Um modelo extrai os fatos e outro escreve a matéria no idioma da edição, escolhido pela avaliação de qualidade e custo.",
       "O verificador, em outro provedor, audita fatos, neutralidade e risco; problema grave gera uma reescrita e nova auditoria.",
       "A revisão de língua corrige ortografia e pontuação e é descartada se alterar números, nomes ou parágrafos.",
@@ -236,11 +235,11 @@ export const moneta: CaseStudy = {
     {entity: "Verificação", fields: "matéria, juiz (provedor e modelo), nota, problemas por gravidade, decisão (publicar, regenerar, descartar)"},
     {entity: "Decisão de modelo", fields: "tarefa, idioma, cadeia original, cadeia efetiva, motivo (melhor recompensa, explorando), resultado"},
     {entity: "Métrica de modelo", fields: "tarefa, idioma ou tema, provedor, modelo, recompensa média, amostras"},
-    {entity: "Post social", fields: "matéria, rede, edição, status (rascunho, publicado, erro, expirado), identificador externo"},
+    {entity: "Post social", fields: "matéria, rede, edição, status (rascunho, publicado, erro, descartado), identificador externo"},
   ],
 
   results: [
-    "Site público em produção desde 2026 nas edições Brasil, América Latina e internacional, com matérias publicadas pelo pipeline automatizado (verificado no site em outubro de 2026).",
+    "Site público nas edições Brasil, América Latina e internacional, com matérias publicadas pelo pipeline automatizado.",
     "Repositório com cerca de 700 commits entre julho e outubro de 2026, 77 migrations de banco e mais de 200 arquivos de teste executados no CI.",
     "Distribuição integrada em seis redes sociais e newsletter diária por edição, com vídeos e carrosséis gerados automaticamente.",
     "Escolha de modelo e custo de IA rastreáveis: cada decisão de roteamento e cada custo de chamada ficam registrados no banco.",
@@ -248,11 +247,10 @@ export const moneta: CaseStudy = {
 
   limits: [
     "A qualidade editorial depende dos portões e da avaliação automática; a supervisão humana é por auditoria e amostragem, não matéria a matéria.",
-    "Algumas integrações dependem de aprovações das plataformas (por exemplo, revisão de aplicativos e permissões avançadas) e seguem com funções limitadas até lá.",
     "Os embeddings dependem de um único provedor; trocar exige reprocessar os vetores gravados.",
     "A operação roda em um único servidor; alta disponibilidade e separação de ambientes de processamento são próximos passos.",
   ],
 
-  links: [{label: "Site publicado", url: "https://themonetapost.com/", kind: "produto"}],
+  links: [{label: "Site", url: "https://themonetapost.com/", kind: "produto"}],
 
 };

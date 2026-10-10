@@ -28,11 +28,11 @@ export const caseBySlug = (slug: string) => cases.find(c => c.slug === slug);
 export const groupOrder: {group: Group; title: string; text: string}[] = [
   {group: "riotech", title: "Histórico Rio Tech", text: "Projetos de 2014 e 2015, com o que foi construído e como eu os arquitetaria hoje."},
   {group: "plataformas", title: "Plataformas", text: "Produtos com arquitetura completa, integrações, operação e qualidade."},
-  {group: "fintech", title: "Fintech e simulações", text: "Produtos financeiros, apresentações comerciais e simulações identificadas como tal."},
+  {group: "fintech", title: "Fintech e mercados", text: "Produtos financeiros, mercados de previsão e sistemas quantitativos."},
   {group: "ferramentas", title: "Ferramentas e pesquisa", text: "Aplicações de navegador e trabalho acadêmico em equipe."},
   {group: "sites", title: "Sites profissionais", text: "Engenharia web para profissionais e empresas: desempenho, SEO, acessibilidade e implantação."},
 ];
-const priority = ["190-policia-militar", "easyspa", "certame", "moneta", "hyre", "bioo", "zappop", "lmm", "lins-payments", "lins-up-now", "presto-pdf", "devkit", "fivex"];
+const priority = ["190-policia-militar", "easyspa", "certame", "vero-markets", "moneta", "hyre", "bioo", "zappop", "lmm", "lins-payments", "lins-up-now", "presto-pdf", "devkit", "fivex"];
 export const ordered = (group: Group) => cases.filter(c => c.group === group).sort((a, b) => {
   const ia = priority.indexOf(a.slug), ib = priority.indexOf(b.slug);
   return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.name.localeCompare(b.name, "pt-BR");

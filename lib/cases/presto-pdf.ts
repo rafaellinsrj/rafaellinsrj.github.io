@@ -10,15 +10,14 @@ export const prestoPdf: CaseStudy = {
   role: "Produto próprio: concepção, arquitetura e desenvolvimento",
   period: "Julho de 2026",
   stage: "Versão local",
-  stageNote:
-    "Site estático gerado e validado localmente em julho de 2026 (33 páginas em três idiomas). A implantação em Cloudflare Pages está descrita no projeto, mas não foi feita; domínio, AdSense e publicação ficaram para a etapa final do portfólio de sites. Os espaços de anúncio que aparecem nas telas são marcadores de layout, não anúncios ativos.",
+  stageNote: "",
   platforms: ["Web (desktop e celular)"],
   cover: {
     src: "/images/screens/local-prestopdf.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial do Presto PDF com a grade das dez ferramentas, o aviso de privacidade e espaços reservados para anúncios na lateral.",
-    caption: "Versão local, outubro de 2026",
+    caption: "Página inicial com a grade das ferramentas",
   },
   gallery: [
     {
@@ -26,14 +25,14 @@ export const prestoPdf: CaseStudy = {
       width: 1440,
       height: 1068,
       alt: "Ferramenta Juntar PDF com área para soltar arquivos, dois PDFs de teste listados em ordem e o botão Processar e baixar.",
-      caption: "Versão local, captura de julho de 2026",
+      caption: "Ferramenta Juntar PDF",
     },
     {
       src: "/images/cases/presto-pdf/mobile.jpg",
       width: 780,
       height: 1688,
       alt: "Página inicial do Presto PDF em largura de celular, com a lista de ferramentas em uma coluna.",
-      caption: "Versão local em celular, captura de julho de 2026",
+      caption: "Página inicial em celular",
     },
   ],
 
@@ -43,11 +42,10 @@ export const prestoPdf: CaseStudy = {
     problem:
       "As ferramentas de PDF mais usadas na web dependem de upload do arquivo para processamento em servidor. Isso cria espera, limites de uso e uma questão de privacidade para documentos pessoais ou de trabalho. A proposta foi inverter a arquitetura: todo o processamento acontece no dispositivo de quem usa.",
     constraints:
-      "Sem backend de processamento; o limite prático é a memória do aparelho. PDFs criptografados não são suportados pelas bibliotecas usadas. A política de segurança precisava conviver com o pdf.js em worker, downloads via blob e o código do AdSense previsto.",
+      "Sem backend de processamento; o limite prático é a memória do aparelho. PDFs criptografados não são suportados pelas bibliotecas usadas. A política de segurança precisava conviver com o pdf.js em worker, downloads via blob e o código do AdSense.",
     milestones: [
       {when: "18/07/2026", what: "Estrutura inicial do site, estilos e scripts de ferramentas."},
       {when: "27/07/2026", what: "Versão v3 com auditoria: verificação da promessa de não enviar arquivos, cabeçalhos de segurança, escape de nomes de arquivo e animações com respeito a movimento reduzido."},
-      {when: "Etapa futura", what: "Implantação em Cloudflare Pages, domínio e monetização, previstas para o fim do portfólio de sites."},
     ],
   },
 
@@ -68,12 +66,12 @@ export const prestoPdf: CaseStudy = {
 
   architecture: {
     intro:
-      "Site estático sem backend de processamento. O HTML de cada página é gerado em tempo de build; no navegador, um script único lê a configuração da página e aciona as bibliotecas de PDF. O arquivo do usuário é lido com APIs do navegador, processado em memória e devolvido como download local. A única função de servidor prevista é a detecção de país na borda da Cloudflare, usada para idioma e fuso, sem relação com os arquivos.",
+      "Site estático sem backend de processamento. O HTML de cada página é gerado em tempo de build; no navegador, um script único lê a configuração da página e aciona as bibliotecas de PDF. O arquivo do usuário é lido com APIs do navegador, processado em memória e devolvido como download local. A única função de servidor é a detecção de país na borda da Cloudflare, usada para idioma e fuso, sem relação com os arquivos.",
     diagram: {
       title: "Arquitetura do Presto PDF",
       tiers: [
         {label: "Build", nodes: ["Gerador estático em Node", "Catálogo de ferramentas"]},
-        {label: "Site estático", nodes: ["33 páginas HTML", "Cabeçalhos _headers"]},
+        {label: "Site estático", nodes: ["33 páginas HTML", "Cabeçalhos de segurança"]},
         {label: "Navegador", nodes: ["Ferramentas em JavaScript", "Detecção de idioma"]},
         {label: "Processamento local", nodes: ["pdf-lib", "PDF.js em worker", "JSZip"]},
         {label: "Saída", nodes: ["Download via blob"]},
@@ -99,7 +97,7 @@ export const prestoPdf: CaseStudy = {
       {
         name: "Bibliotecas",
         content:
-          "pdf-lib para criar e editar documentos, PDF.js 3.11.174 para renderizar páginas em worker e JSZip 3.10.1 para empacotar várias saídas. As três ficam em /vendor, servidas pelo próprio domínio, cerca de 2 MB com cache de longa duração.",
+          "pdf-lib para criar e editar documentos, PDF.js 3.11.174 para renderizar páginas em worker e JSZip 3.10.1 para empacotar várias saídas. As três ficam no próprio projeto, servidas pelo próprio domínio, cerca de 2 MB com cache de longa duração.",
       },
       {
         name: "Segurança e privacidade",
@@ -109,7 +107,7 @@ export const prestoPdf: CaseStudy = {
       {
         name: "Implantação",
         content:
-          "Cloudflare Pages com saída em dist e uma Pages Function para detecção de país.",
+          "Cloudflare Pages para o site estático e uma função na borda para detecção de país.",
       },
     ],
   },
@@ -144,7 +142,7 @@ export const prestoPdf: CaseStudy = {
       problem:
         "Carregar bibliotecas de CDN de terceiros amplia a superfície da CSP e cria dependência externa para a função principal do site.",
       decision:
-        "Versionar pdf-lib, PDF.js e JSZip em /vendor e servi-las com cache imutável.",
+        "Versionar pdf-lib, PDF.js e JSZip no próprio projeto e servi-las com cache imutável.",
       reason:
         "Mantém a CSP restrita a 'self' para scripts da aplicação e garante que a ferramenta funcione mesmo se um CDN mudar ou falhar.",
       tradeoff:
@@ -170,10 +168,10 @@ export const prestoPdf: CaseStudy = {
   limits: [
     "PDFs criptografados não são suportados.",
     "A compressão rasteriza as páginas e o texto deixa de ser selecionável.",
-    "O limite prático de tamanho é a memória do dispositivo; a auditoria recomenda medir após a implantação e avisar acima de um tamanho definido.",
-    "A CSP mantém 'unsafe-inline' em scripts por causa do AdSense previsto.",
-    "Extrair, girar e numerar páginas foram validados nos motores, sem teste ponta a ponta dedicado na primeira versão.",
-    "Próximos passos registrados como intenção: proteção de PDFs com qpdf em WebAssembly, OCR local e funcionamento offline como PWA.",
+    "O limite prático de tamanho é a memória do dispositivo. Próximo passo: medir esse limite em aparelhos reais e avisar acima de um tamanho definido.",
+    "A CSP mantém 'unsafe-inline' em scripts por causa do AdSense.",
+    "Extrair, girar e numerar páginas foram validados nos motores. Próximo passo: testes ponta a ponta dedicados para essas três ferramentas.",
+    "Próximo passo: proteção de PDFs com qpdf em WebAssembly, OCR local e funcionamento offline como PWA.",
   ],
 
   links: [],

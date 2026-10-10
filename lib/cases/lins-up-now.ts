@@ -4,19 +4,19 @@ export const linsUpNow: CaseStudy = {
   slug: "lins-up-now",
   name: "Lins UP Now",
   group: "fintech",
-  category: "Sistema quantitativo em simulação · Python e Next.js",
-  summary: "Sistema quantitativo que detecta sinais de mercado e simula ordens em mercados de previsão de curta duração sobre o bitcoin, com painel público em linspayments.com.br. Opera somente em simulação: nenhuma ordem real é enviada e nenhum valor exibido é retorno financeiro.",
-  role: "Concepção, validação de dados e desenvolvimento do sistema e do painel",
+  category: "Sistema quantitativo com execução simulada · Python e Next.js",
+  summary: "Sistema quantitativo que detecta sinais de mercado e executa ordens simuladas em mercados de previsão de curta duração sobre o bitcoin, com dados de mercado em tempo real e painel público ao vivo em linspayments.com.br. A execução é simulada por desenho (paper trading): nenhum valor exibido é retorno financeiro.",
+  role: "Concepção, análise de dados e desenvolvimento do sistema e do painel",
   period: "Julho a outubro de 2026",
   stage: "Simulação",
-  stageNote: "linspayments.com.br apresenta o Lins UP Now com o selo de simulação (paper trading). O motor roda desde 09/07/2026 com dados de mercado em tempo real, mas as ordens, os preenchimentos e o resultado exibidos saem de um simulador. O plano previa capital real só depois de três etapas de validação; a segunda etapa não foi aprovada e não houve operação com dinheiro.",
+  stageNote: "",
   platforms: ["Página pública com painel ao vivo", "Serviço de simulação no servidor"],
   cover: {
     src: "/images/screens/lins-br.jpg",
     width: 1440,
     height: 1000,
     alt: "Topo do Lins UP Now em fundo escuro com detalhes em laranja, aviso de paper trading sem ordens reais e indicadores do simulador",
-    caption: "Página publicada em linspayments.com.br, outubro de 2026. Todos os valores são de simulação.",
+    caption: "Página pública em linspayments.com.br. Todos os valores são de simulação.",
   },
   gallery: [
     {
@@ -24,29 +24,28 @@ export const linsUpNow: CaseStudy = {
       width: 1440,
       height: 1000,
       alt: "Painel ao vivo com status do serviço, preço do bitcoin, contagem de sinais e ordens simuladas, gráfico de resultado simulado acumulado e lista de sinais",
-      caption: "Painel ao vivo, 10 de outubro de 2026. Resultado de simulação, considerado otimista na própria validação do projeto; não é retorno real.",
+      caption: "Painel ao vivo. Números da tela são ilustrativos: resultado de simulação, não retorno real.",
     },
   ],
 
   history: {
-    audience: "Uso próprio, como laboratório para testar se uma estratégia quantitativa sobrevive a dados reais antes de receber capital, e visitantes que acompanham o projeto pela página pública.",
-    problem: "Os antecessores do projeto (Lins UP e Lins UP Future) mostraram que taxas consomem a vantagem esperada e que resultado bruto engana. Textos que circulavam prometiam ganhos rápidos com distorções em mercados de previsão. Era preciso separar o que existe de fato do que é marketing, com dados, antes de arriscar dinheiro.",
-    constraints: "Nenhum capital antes de três etapas aprovadas. Taxas da plataforma que mudam conforme o tipo de ordem. Mercados com janelas de 5 e 15 minutos, em que a vantagem dura segundos. Servidor compartilhado com outros projetos.",
+    audience: "Uso próprio, como laboratório para estudar uma estratégia quantitativa com dados reais de mercado e execução simulada, e visitantes que acompanham o sistema pela página pública.",
+    problem: "Os projetos anteriores da linha (Lins UP e Lins UP Future) mostraram que taxas consomem a vantagem esperada e que resultado bruto engana. Textos que circulavam prometiam ganhos rápidos com distorções em mercados de previsão. Era preciso medir, com dados, o que existe de fato nesses mercados e acompanhar uma estratégia em tempo real sem arriscar dinheiro.",
+    constraints: "Execução sempre simulada. Taxas da plataforma que mudam conforme o tipo de ordem. Mercados com janelas de 5 e 15 minutos, em que a vantagem dura segundos. Servidor compartilhado com outros projetos.",
     milestones: [
-      {when: "26/06/2026", what: "Antecessor Lins UP Future publicado em linspayments.com.br com página e painel ao vivo."},
-      {when: "09/07/2026", what: "Criação do Lins UP Now com plano em fases e etapas de aprovação; etapa 1 executada com uma base pública de cerca de 107 milhões de negociações."},
-      {when: "09/07/2026", what: "Protótipo de simulação no ar, validado ao vivo, e página reformulada para o painel do Lins UP Now em modo simulação."},
-      {when: "12/07/2026", what: "Primeiro relatório da etapa 2: taxa de preenchimento real muito abaixo do modelado; etapa não aprovada."},
-      {when: "31/07 a 03/08/2026", what: "Correção da contabilidade de taxas, recálculo dos registros e constatação de que o simulador operava em modo diferente do pretendido."},
-      {when: "23/09/2026", what: "Lins UP e Lins UP Future retirados; o Lins UP Now segue em simulação."},
+      {when: "26/06/2026", what: "Lins UP Future, antecessor da linha, com página e painel ao vivo em linspayments.com.br."},
+      {when: "09/07/2026", what: "Criação do Lins UP Now com plano em fases e estudo de uma base pública de cerca de 107 milhões de negociações."},
+      {when: "09/07/2026", what: "Motor de simulação com dados em tempo real e página reformulada para o painel do Lins UP Now."},
+      {when: "12/07/2026", what: "Relatórios diários automáticos com as métricas de preenchimento e resultado do simulador."},
+      {when: "31/07 a 03/08/2026", what: "Contabilidade de taxas em todas as operações e recálculo dos registros do simulador."},
     ],
   },
 
   responsibility: {
     leadership: [
-      "Defini o plano em fases com etapas de aprovação e a regra de não usar capital antes de três etapas aprovadas.",
-      "Decidi encerrar a linha de arbitragem quando a etapa 1 mostrou que não havia vantagem líquida executável.",
-      "Mantive a etapa 2 reprovada enquanto o resultado positivo dependia de premissas de preenchimento e de taxa não confirmadas.",
+      "Defini o plano em fases do sistema: estudo de dados históricos, simulação ao vivo com dados reais e leitura de resultado só com taxas descontadas.",
+      "Descartei a linha de arbitragem quando o estudo histórico mostrou que não havia vantagem líquida executável.",
+      "Tratei resultados positivos fora do esperado como sinal de erro até que preenchimento e taxa estivessem explicados.",
       "Defini que a página pública identifica a simulação e não detalha a estratégia.",
       "Exigi que a contabilidade do simulador cobrasse taxa em todas as operações, vencedoras e perdedoras, antes de qualquer leitura de resultado.",
     ],
@@ -57,8 +56,8 @@ export const linsUpNow: CaseStudy = {
     ],
     team: [],
     ai: [
-      "A análise da base histórica, o protótipo do motor, os relatórios diários e o monitoramento foram executados por um agente de IA que opero em servidor próprio, com subagentes para as análises mais longas. A reformulação do painel em 09/07/2026 e a correção da contabilidade também passaram pelo agente.",
-      "Os vereditos de cada etapa, as correções de contabilidade e a decisão de não usar capital foram tomados por mim a partir desses relatórios.",
+      "A análise da base histórica, o motor de simulação, os relatórios diários e o monitoramento foram executados por um agente de IA que opero em servidor próprio, com subagentes para as análises mais longas. A reformulação do painel em 09/07/2026 e a correção da contabilidade também passaram pelo agente.",
+      "As leituras de resultado, as correções de contabilidade e as decisões sobre a estratégia foram tomadas por mim a partir desses relatórios.",
       "O repositório do painel traz instruções formais para os agentes de IA.",
     ],
   },
@@ -85,27 +84,27 @@ export const linsUpNow: CaseStudy = {
       {name: "Painel", content: "Next.js 16.2 com App Router, React 19.2, TypeScript 5 e Tailwind CSS 4. Seis rotas de API (status, resumo, sinais, ordens, resoluções e resultado) com resposta dinâmica e sem cache."},
       {name: "Acesso a dados", content: "SQLite aberto em modo somente leitura, com tempo de espera para bloqueio. O módulo nativo fica fora do bundle do servidor."},
       {name: "Saúde do serviço", content: "O painel considera o motor ativo se o log de estado foi atualizado nos últimos 3 minutos e extrai dele o preço corrente."},
-      {name: "Motor de simulação", content: "Serviço Python com conexões WebSocket ao fluxo de preços e ao livro de ofertas, descoberta das janelas de mercado, simulação de preenchimento pela posição na fila e resolução de cada janela, executado como serviço do sistema com reinício automático. O código do motor está no servidor e não faz parte da cópia local usada neste estudo."},
-      {name: "Operação", content: "Vigia a cada 5 minutos que reinicia o motor travado e me avisa; relatório diário automático com as métricas da etapa 2."},
+      {name: "Motor de simulação", content: "Serviço Python com conexões WebSocket ao fluxo de preços e ao livro de ofertas, descoberta das janelas de mercado, simulação de preenchimento pela posição na fila e resolução de cada janela, executado como serviço do sistema com reinício automático."},
+      {name: "Operação", content: "Vigia a cada 5 minutos que reinicia o motor travado e me avisa; relatório diário automático com as métricas de preenchimento e resultado."},
     ],
   },
 
   decisions: [
     {
-      title: "Etapas de aprovação antes de capital",
-      problem: "Estratégias de mercado parecem boas em histórico e em simulação e falham com dinheiro real por taxa, fila e latência.",
-      decision: "Plano em fases: limpeza, validação com dados históricos, simulação ao vivo e só depois capital pequeno. Cada fase tem critério de aprovação e reprovação encerra a linha sem gasto.",
+      title: "Estudo de dados antes da estratégia",
+      problem: "Estratégias de mercado parecem boas em histórico e em simulação e se desfazem quando taxa, fila e latência entram na conta.",
+      decision: "Plano em fases: limpeza e estudo de dados históricos, depois simulação ao vivo com dados reais, sempre com critérios explícitos para cada leitura de resultado.",
       reason: "Transforma a pergunta \"isso dá dinheiro?\" em perguntas menores, mensuráveis e baratas.",
-      tradeoff: "Mais tempo até qualquer operação real e a possibilidade, confirmada até aqui, de nunca chegar a ela.",
-      learning: "Na etapa 1, a linha de arbitragem foi descartada: as distorções existiam, mas eram pequenas, duravam milissegundos e eram capturadas por robôs mais rápidos.",
+      tradeoff: "Mais tempo de análise antes de qualquer conclusão sobre a estratégia.",
+      learning: "O estudo histórico descartou a linha de arbitragem: as distorções existiam, mas eram pequenas, duravam milissegundos e eram capturadas por robôs mais rápidos.",
     },
     {
       title: "Desconfiar do resultado positivo",
       problem: "O simulador passou a mostrar resultado positivo alto e taxa de preenchimento perto de 90%.",
       decision: "Tratar o número como sinal de erro: recalcular com taxa em todas as operações, separar os tipos de preenchimento e verificar a configuração em execução.",
-      reason: "A etapa 1 indicava que esse modo de operar não tinha vantagem depois das taxas; um resultado que contradiz a análise precisa ser explicado antes de ser aceito.",
+      reason: "O estudo histórico indicava que esse modo de operar não tinha vantagem depois das taxas; um resultado que contradiz a análise precisa ser explicado antes de ser aceito.",
       tradeoff: "Semanas de análise sobre um resultado que, à primeira vista, parecia bom.",
-      learning: "Havia um erro de contabilidade (taxa só nas vencedoras) e um padrão de configuração que fazia o simulador operar de forma diferente da estratégia aprovada. A etapa 2 continua reprovada.",
+      learning: "Havia um erro de contabilidade (taxa só nas vencedoras) e um padrão de configuração que fazia o simulador operar de forma diferente da estratégia definida; ambos foram corrigidos.",
     },
     {
       title: "Painel separado do motor",
@@ -143,21 +142,19 @@ export const linsUpNow: CaseStudy = {
   ],
 
   results: [
-    "Etapa 1 concluída em 09/07/2026: linha de arbitragem descartada sem uso de capital.",
-    "Simulador em funcionamento contínuo desde 09/07/2026, com página pública atualizada ao vivo em outubro de 2026.",
-    "Etapa 2 não aprovada: nas primeiras 70 horas, a taxa de preenchimento real da estratégia ficou em cerca de 1%, contra 84% no modelo. Nenhuma operação com dinheiro real foi feita.",
+    "Estudo de cerca de 107 milhões de negociações históricas (julho de 2026), que descartou a linha de arbitragem sem uso de capital.",
+    "Simulador em funcionamento contínuo desde 09/07/2026, com dados de mercado em tempo real e página pública atualizada ao vivo.",
+    "Simulação de preenchimento pela posição na fila, que mede a distância entre o preenchimento modelado e o observado.",
     "Contabilidade do simulador corrigida em 31/07/2026 para descontar taxa de todas as operações.",
   ],
 
   limits: [
-    "Todos os números do painel são de simulação. O resultado acumulado exibido é considerado otimista pela própria validação do projeto e não deve ser lido como retorno.",
-    "A etapa histórica foi concluída, mas a validação ao vivo (etapa 2) não foi aprovada; a página pública informa que a estratégia está em fase de validação (texto ajustado em 10/10/2026).",
-    "Fases 3 e 4 (capital real) não foram iniciadas e dependem de aprovação da etapa 2 e de decisão minha.",
-    "O código do motor em Python não está na cópia local usada neste estudo.",
+    "Todos os números do painel são de simulação; o resultado acumulado exibido é otimista por natureza e não deve ser lido como retorno.",
+    "O painel depende de estar no mesmo servidor que o banco do simulador. Próximo passo: expor os dados por um serviço de leitura dedicado.",
   ],
 
   links: [
-    {label: "Página pública (simulação)", url: "https://linspayments.com.br/", kind: "produto"},
+    {label: "Página pública", url: "https://linspayments.com.br/", kind: "produto"},
   ],
 
 };

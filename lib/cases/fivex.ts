@@ -10,14 +10,14 @@ export const fivex: CaseStudy = {
   organization: "Grupo FiveX Solutions · Unifeso",
   period: "Setembro de 2026",
   stage: "Projeto acadêmico",
-  stageNote: "Site estático publicado em fivex.solutions desde 03/09/2026. É trabalho de disciplina, feito em grupo de cinco alunos; não é produto comercial nem tem usuários além de professores, colegas e visitantes.",
+  stageNote: "",
   platforms: ["Web (site estático)", "PDF do trabalho"],
   cover: {
     src: "/images/screens/fivex.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial do site FiveX Solutions, com título sobre os cinco alunos do grupo, botões para o estudo de caso e para o PDF",
-    caption: "Site acadêmico publicado em fivex.solutions, outubro de 2026.",
+    caption: "Página inicial do site acadêmico em fivex.solutions, outubro de 2026.",
   },
   gallery: [
     {
@@ -25,14 +25,14 @@ export const fivex: CaseStudy = {
       width: 1440,
       height: 1000,
       alt: "Abertura do estudo de caso Sistemas Multiagentes, com a pergunta Qual arquitetura cada situação pede, botão para baixar o PDF e atalhos para as quatro arquiteturas",
-      caption: "Abertura do estudo de caso no site publicado, outubro de 2026.",
+      caption: "Abertura do estudo de caso, outubro de 2026.",
     },
     {
       src: "/images/cases/fivex/agente-objetivos.jpg",
       width: 1440,
       height: 1000,
       alt: "Simulador de agente baseado em objetivos: grade com obstáculos, rota traçada por busca em largura até a entrega e etapas da solução ao lado",
-      caption: "Situação 2, agente baseado em objetivos: busca em largura com obstáculos editáveis. Site publicado, outubro de 2026.",
+      caption: "Situação 2, agente baseado em objetivos: busca em largura com obstáculos editáveis. Outubro de 2026.",
     },
   ],
 
@@ -112,7 +112,7 @@ export const fivex: CaseStudy = {
     },
     {
       title: "Exportação estática e zero dependência externa",
-      problem: "O site precisava ficar no ar sem custo de servidor de aplicação e sem quebrar por serviço de terceiros.",
+      problem: "O site precisava ser servido sem custo de servidor de aplicação e sem quebrar por serviço de terceiros.",
       decision: "Exportação estática do Next.js e fontes autohospedadas, sem chamadas a serviços externos.",
       reason: "Hospedagem simples, carregamento previsível e nenhum dado do visitante enviado a terceiros.",
       tradeoff: "Nenhum recurso dinâmico, como formulário ou contagem de acessos.",
@@ -131,7 +131,7 @@ export const fivex: CaseStudy = {
   },
 
   results: [
-    "Site publicado em fivex.solutions desde 03/09/2026, com o estudo de caso e o PDF do trabalho.",
+    "Site em fivex.solutions com a página do grupo, o estudo de caso e o PDF do trabalho, entregue em 03/09/2026.",
     "Quatro simuladores funcionando no navegador, um para cada arquitetura de agente.",
     "Conteúdo do site e do PDF gerado da mesma fonte.",
   ],
@@ -139,8 +139,6 @@ export const fivex: CaseStudy = {
   limits: [
     "Trabalho acadêmico: não houve teste com usuários nem medição de aprendizagem dos leitores.",
     "Simuladores didáticos com parâmetros fixos; não representam sistemas multiagentes de produção.",
-    "Sem repositório público; o código foi entregue em pacote.",
-    "A página do grupo prevê novos projetos a cada semestre.",
   ],
 
   links: [

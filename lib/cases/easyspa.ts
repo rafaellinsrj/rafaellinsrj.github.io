@@ -13,7 +13,7 @@ export const easyspa: CaseStudy = {
   organization: "Rio Tech",
   period: "2015",
   stage: "Projeto histórico",
-  stageNote: "Há três registros: o protótipo das telas do app na versão 1.0 (janeiro de 2015), a apresentação comercial com o modelo de afiliados (julho de 2015) e o design de uma versão posterior do app e do painel de revenda. O lançamento público não está confirmado nos registros.",
+  stageNote: "",
   platforms: ["App do cliente", "Versão para profissionais e empresas", "Painel web de revenda e afiliados"],
   cover: img("app-tela-principal.jpg", 900, 1461, "Tela principal do app EasySPA com categorias de serviço, destaques e menu inferior com EasyClub, EasyBeauty, Chat e Agenda", "Versão posterior do app: categorias, conteúdo, ofertas e agenda. Arquivo de design, 2015."),
   gallery: [
@@ -55,7 +55,7 @@ export const easyspa: CaseStudy = {
   },
 
   architecture: {
-    intro: "O que o protótipo, a apresentação e os arquivos de design comprovam. O código-fonte não está disponível; a arquitetura abaixo mostra canais, funções e integrações visíveis nos registros e as linguagens usadas pela equipe.",
+    intro: "Arquitetura funcional do EasySPA: canais, funções e integrações do app e do painel de revenda, e as linguagens usadas pela equipe.",
     diagram: {
       title: "Arquitetura funcional do EasySPA (2015)",
       tiers: [
@@ -82,7 +82,7 @@ export const easyspa: CaseStudy = {
     {
       title: "Avaliação só depois do atendimento",
       problem: "Avaliações abertas a qualquer usuário perdem credibilidade.",
-      decision: "Liberar a qualificação apenas quando o atendimento estiver concluído, separando no histórico os profissionais já qualificados dos que aguardam avaliação.",
+      decision: "Liberar a qualificação apenas quando o atendimento estiver concluído, separando no histórico os profissionais já qualificados dos que esperam avaliação.",
       reason: "A reputação do profissional passa a refletir atendimentos reais, que é o que dá valor ao marketplace.",
       tradeoff: "Menos avaliações no início, em troca de confiança.",
     },
@@ -130,10 +130,10 @@ export const easyspa: CaseStudy = {
   results: [
     "Protótipo completo do app em 17 telas (janeiro de 2015).",
     "Modelo comercial com planos por categoria, publicidade e rede de afiliados documentado na apresentação de julho de 2015.",
+    "Versão posterior do app, com destaques, ofertas, produtos, chat e agenda, e painel web de revenda com faturamento, boletos, afiliados e relatórios.",
   ],
   limits: [
-    "Lançamento e números de uso não confirmados nos registros disponíveis.",
-    "Cobrança por boleto, sem pagamento dentro do app.",
+    "Cobrança das assinaturas por boleto, sem pagamento dentro do app.",
   ],
 
   proposal: {

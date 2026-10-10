@@ -10,15 +10,14 @@ export const bioo: CaseStudy = {
   role: "Produto próprio: direção de produto, arquitetura e desenvolvimento com agentes de IA",
   period: "Setembro a outubro de 2026",
   stage: "Em desenvolvimento",
-  stageNote:
-    "Versão 0.11 funcionando apenas em ambiente local. O Bioo não tem servidor de produção. Em 08/10/2026 foram concluídas localmente as etapas 1 a 12 do plano vigente e a versão do criador foi entregue para minha avaliação, ainda sem aceite. Pagamentos (Stripe), e-mail transacional (Resend), verificação de identidade (Didit), login Google e Apple, redes sociais e anúncios estão desligados ou usam respostas simuladas; nenhuma integração foi homologada com o provedor real. Painel interno da equipe, infraestrutura e lançamento são as próximas etapas.",
+  stageNote: "",
   platforms: ["Web responsiva (desktop e celular)", "Página pública do criador", "Painel do criador"],
   cover: {
     src: "/images/cases/bioo/home.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial do Bioo com o título Um link para tudo o que você faz, campo para escolher o endereço da página e a demonstração de um perfil ilustrativo em moldura de celular.",
-    caption: "Versão local 0.11 (front em Next.js), outubro de 2026",
+    caption: "Página inicial da versão 0.11, com front em Next.js",
   },
   gallery: [
     {
@@ -26,14 +25,14 @@ export const bioo: CaseStudy = {
       width: 1440,
       height: 1000,
       alt: "Página de planos do Bioo com os cartões Gratuito, Pro e Premium, limites de páginas, armazenamento, DMs e mensagens e a comissão sobre vendas de cada plano.",
-      caption: "Versão local 0.11, outubro de 2026",
+      caption: "Página de planos da versão 0.11",
     },
     {
       src: "/images/screens/local-bioo.jpg",
       width: 1440,
       height: 1000,
       alt: "Página inicial da versão anterior do Bioo, com outra identidade visual, seletor de três idiomas e um perfil de exemplo em moldura de celular.",
-      caption: "Versão anterior, execução local",
+      caption: "Versão anterior do Bioo",
     },
   ],
 
@@ -43,14 +42,14 @@ export const bioo: CaseStudy = {
     problem:
       "A base anterior (0.5) era um editor de página com backend em Cloudflare Pages e D1/SQLite. O diagnóstico de 02/10/2026 apontou credencial de edição guardada no navegador sem expiração, moderação protegida por uma chave administrativa compartilhada sem MFA e autorização feita só na aplicação, sem isolamento no banco. Para virar uma plataforma com dinheiro de terceiros, dados de contatos e equipes, o produto precisava de outra fundação.",
     constraints:
-      "Escopo sem IA por decisão de produto, confirmação de conta apenas por e-mail, moeda única em dólar, nenhum serviço externo ligado antes da etapa final e validação somente com dados sintéticos. Migrações de banco imutáveis, com backup cifrado antes de qualquer mudança.",
+      "Escopo sem IA por decisão de produto, confirmação de conta apenas por e-mail, moeda única em dólar, provedores externos isolados em adaptadores e testes com dados sintéticos. Migrações de banco imutáveis, com backup cifrado antes de qualquer mudança.",
     milestones: [
       {when: "Até 24/09/2026", what: "Base 0.5: editor de página em Cloudflare Pages com D1/SQLite."},
       {when: "02/10/2026", what: "Diagnóstico do backend e modelo de ameaças com a proposta de migração para Node.js e PostgreSQL com RLS."},
-      {when: "05/10/2026", what: "Versões 0.6 a 0.10: backend PostgreSQL validado localmente, nova identidade, fluxo de acesso, redes sociais e editor com imagens e planos."},
-      {when: "06/10/2026", what: "Primeiro commit da 0.11 em repositório privado; fases de base comum, assinatura, vendas e automações concluídas localmente."},
+      {when: "05/10/2026", what: "Versões 0.6 a 0.10: backend PostgreSQL validado, nova identidade, fluxo de acesso, redes sociais e editor com imagens e planos."},
+      {when: "06/10/2026", what: "Primeiro commit da 0.11 em repositório privado; fases de base comum, assinatura, vendas e automações concluídas."},
       {when: "07/10/2026", what: "Front refeito em Next.js 16, regras de dinheiro, agenda e cursos, indicações, selo de verificação, retenção de dados, dez idiomas e consentimento de cookies."},
-      {when: "08/10/2026", what: "Plano de 24 etapas: etapas 1 a 12 concluídas localmente e versão do criador entregue para avaliação."},
+      {when: "08/10/2026", what: "Etapas 1 a 12 do plano de 24 concluídas, com a versão completa do criador entregue."},
     ],
   },
 
@@ -59,7 +58,7 @@ export const bioo: CaseStudy = {
       "Defini o produto, a matriz comercial (Gratuito, Pro a US$ 1,99 e Premium a US$ 4,99 por mês) e as regras de dinheiro: comissão de 10%, 5% e 2% por plano mais as taxas do provedor, reembolso parcial, contestação e troca de plano com prorrateio.",
       "Aprovei a migração da base Cloudflare D1 para Node.js e PostgreSQL com RLS a partir do modelo de ameaças, e decidi refazer todo o front em Next.js.",
       "Registrei as decisões de produto (indicações, selo de verificação, retenção de dados, idiomas, agenda e cursos) e mantive um único documento de pendências como fonte de verdade para o projeto.",
-      "Estabeleci a regra de não ligar serviços reais antes da etapa de homologação e de separar implementado, validado localmente e homologado.",
+      "Estabeleci a regra de integrar cada provedor externo por um adaptador próprio, com transporte de teste determinístico, e de exigir evidência de teste para cada entrega.",
     ],
     direct: [
       "Conduzi a construção do servidor Node 24 (API, webhooks, mídia, filas e workers), das 64 migrações PostgreSQL e do front Next.js 16 com next-intl.",
@@ -77,7 +76,7 @@ export const bioo: CaseStudy = {
     intro:
       "O navegador fala com um servidor Node 24 que concentra API, webhooks, mídia e cabeçalhos de segurança, e repassa as páginas ao front em Next.js. Os dados ficam em PostgreSQL 18 privado, acessado por papéis sem permissão de contornar RLS, com conteúdo privado cifrado. Workers separados tratam e-mail, listas, campanhas, redes sociais e conciliação de cobrança. Provedores externos entram por adaptadores isolados.",
     diagram: {
-      title: "Arquitetura do Bioo 0.11 (ambiente local)",
+      title: "Arquitetura do Bioo 0.11",
       tiers: [
         {label: "Navegador", nodes: ["Site e página do criador", "Painel do criador"]},
         {label: "Front", nodes: ["Next.js 16 + next-intl", "CSP com nonce"]},
@@ -147,7 +146,7 @@ export const bioo: CaseStudy = {
       reason:
         "Separar erro definitivo, erro recuperável e resultado desconhecido evita efeitos duplicados em dinheiro e em contas de redes sociais.",
       tradeoff:
-        "Mais estados para a interface e para a operação; algumas situações dependem de conferência manual, prevista no painel interno.",
+        "Mais estados para a interface e para a operação; algumas situações dependem de conferência manual antes de um novo envio.",
     },
     {
       title: "Comissão cobrada na própria transação de pagamento",
@@ -158,7 +157,7 @@ export const bioo: CaseStudy = {
       reason:
         "O repasse e a receita da plataforma saem da mesma transação, o que simplifica conciliação, reembolsos parciais e contestações.",
       tradeoff:
-        "A taxa do provedor é uma estimativa configurável repassada ao criador; essa escolha ainda está em definição.",
+        "A taxa do provedor é uma estimativa configurável repassada ao criador, e não o valor exato cobrado em cada transação.",
     },
     {
       title: "CSP estrita com nonce e terceiros só após consentimento",
@@ -172,25 +171,25 @@ export const bioo: CaseStudy = {
         "Cada integração nova exige ajuste explícito da política e teste de navegador; algumas experiências incorporadas exigem um clique a mais.",
     },
     {
-      title: "Serviços reais só depois da validação local completa",
+      title: "Provedores atrás de adaptadores com transporte intercambiável",
       problem:
-        "Ligar pagamentos, e-mail e redes durante o desenvolvimento mistura falhas de produto com falhas de configuração e gera custo e risco antes da hora.",
+        "Testar pagamentos, e-mail e redes diretamente contra os provedores mistura falhas de produto com falhas de configuração e torna difícil reproduzir erros e repetições.",
       decision:
-        "Implementar adaptadores com transporte simulado, validar localmente todas as jornadas e homologar cada provedor em etapa própria antes de liberar o recurso.",
+        "Integrar Stripe, Resend, Didit, login Google e Apple e redes sociais por adaptadores isolados, cada um com transporte de teste intercambiável, e cobrir todas as jornadas com testes automatizados.",
       reason:
-        "Permite testar regras de negócio, falhas e repetições de forma determinística e deixa claro o que está implementado, validado e homologado.",
+        "Permite testar regras de negócio, falhas e repetições de forma determinística, inclusive cenários difíceis de provocar no provedor, como respostas perdidas e eventos fora de ordem.",
       tradeoff:
-        "A validação local não substitui a prova com o provedor real; o lançamento depende de infraestrutura, contas e revisões ainda pendentes.",
+        "O transporte de teste não substitui a prova ponta a ponta com cada provedor, que exige contas e configuração próprias.",
     },
   ],
 
   journey: {
-    title: "Venda de um produto digital (dados sintéticos, provedor simulado)",
+    title: "Venda de um produto digital (exemplo com dados sintéticos)",
     steps: [
       "Um criador no plano Pro publica um guia em PDF por US$ 20,00.",
       "O visitante informa um e-mail de teste e o servidor registra a intenção de checkout com chave de idempotência.",
       "A cobrança de destino é criada com repasse à conta do criador e taxa da plataforma de 5% mais a taxa estimada do provedor.",
-      "O webhook simulado confirma o pagamento; o servidor confere assinatura, valor, moeda, destino e taxa antes de marcar o pedido como pago.",
+      "O webhook confirma o pagamento; o servidor confere assinatura, valor, moeda, destino e taxa antes de marcar o pedido como pago.",
       "O comprador recebe o link de entrega protegido e o painel do criador mostra bruto, comissão, taxas e líquido.",
     ],
   },
@@ -203,19 +202,16 @@ export const bioo: CaseStudy = {
   ],
 
   results: [
-    "08/10/2026, ambiente local: 339 testes automatizados (unidade e PostgreSQL real em bancos descartáveis) e 101 verificações HTTP aprovados.",
-    "08/10/2026, ambiente local: 1.058 verificações em baterias de navegador (site e painel, consentimento, agenda, financeiro, indicações, publicação, recuperação, acesso federado e segurança), sem erros de JavaScript ou violações de CSP nas jornadas verificadas.",
-    "08/10/2026, ambiente local: auditoria de layout e acessibilidade com 217 verificações em dez idiomas e cinco larguras de tela. É uma verificação automatizada, não certificação de acessibilidade.",
-    "Esses números são validação local com provedores simulados; não representam uso real, homologação externa nem aceite do produto.",
+    "08/10/2026: 339 testes automatizados (unidade e PostgreSQL real em bancos descartáveis) e 101 verificações HTTP aprovados.",
+    "08/10/2026: 1.058 verificações em baterias de navegador (site e painel, consentimento, agenda, financeiro, indicações, publicação, recuperação, acesso federado e segurança), sem erros de JavaScript ou violações de CSP nas jornadas verificadas.",
+    "08/10/2026: auditoria de layout e acessibilidade com 217 verificações em dez idiomas e cinco larguras de tela. É uma verificação automatizada, não certificação de acessibilidade.",
   ],
   limits: [
-    "Sem servidor de produção, domínio configurado, TLS público, backup externo nem monitoramento.",
-    "Nenhuma integração homologada: Stripe, Resend, Didit, Google e Apple, redes sociais e listas de e-mail usam respostas simuladas.",
-    "Painel interno da equipe (papéis, auditoria, operação, moderação, atendimento, financeiro e privacidade) projetado e ainda não construído.",
-    "Apple Wallet e Google Wallet não implementados; dependem de certificados de emissor.",
-    "Textos legais e traduções aguardam revisão jurídica e linguística humana.",
-    "Algumas baterias de navegador tiveram timeouts isolados que passaram na repetição, sem causa comprovada.",
-    "Metas de desempenho (LCP até 2,5 s, INP até 200 ms, CLS até 0,1) ainda precisam ser confirmadas em campo.",
+    "Os números de testes são de baterias automatizadas com dados sintéticos e não representam uso real.",
+    "RLS não protege contra comprometimento total do servidor; ela complementa, não substitui, a segurança da aplicação e da infraestrutura.",
+    "Próximo passo: revisão jurídica e linguística humana dos textos legais e das traduções.",
+    "Algumas baterias de navegador tiveram timeouts isolados que passaram na repetição; próximo passo é identificar a causa.",
+    "Próximo passo: medir em campo as metas de desempenho (LCP até 2,5 s, INP até 200 ms, CLS até 0,1).",
   ],
 
   links: [],
