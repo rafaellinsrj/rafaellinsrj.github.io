@@ -9,8 +9,8 @@ export const viewport: Viewport = {themeColor:"#111111", colorScheme:"dark"};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rafaellinsrj.github.io"),
-  title: {default:"Rafael Lins Gaspar | Desenvolvedor Fullstack", template:"%s | Rafael Lins Gaspar"},
-  description:"Portfólio de Rafael Lins Gaspar: aplicações web, produtos com IA, integrações e desenvolvimento fullstack com Python, FastAPI, React e TypeScript.",
+  title: {default:"Rafael Lins Gaspar | Chief Technology Officer", template:"%s | Rafael Lins Gaspar"},
+  description:"Rafael Lins Gaspar, Chief Technology Officer: liderança em tecnologia, arquitetura de software, inteligência artificial e criação de produtos digitais.",
   icons:{icon:asset("/favicon.svg")},
   openGraph: {type:"website", locale:"pt_BR", siteName:"Rafael Lins Gaspar"},
   robots:{index:true,follow:true}

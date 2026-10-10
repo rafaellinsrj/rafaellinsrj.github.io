@@ -1,16 +1,16 @@
 # Rafael Lins Gaspar · Portfólio
 
-Portfólio pessoal de desenvolvimento fullstack, produtos com IA e liderança técnica.
+Portfólio executivo de tecnologia: liderança como CTO, arquitetura de software, produtos com IA e estudos de caso técnicos.
 
 **Site:** https://rafaellinsrj.github.io  
 **LinkedIn:** https://www.linkedin.com/in/rlins/
 
 ## Conteúdo
 
-- Apresentação profissional, currículo para download e contato.
-- Onze estudos de projeto: Certame, Hyre, The Moneta Post, Bioo, FiveX Solutions, ZapPop, Presto PDF, Devkit, LMM Capital, Lins Payments e Lins UP Now.
-- Seleção de sites institucionais e experimentos de produto.
-- Experiência, tecnologias e formação acadêmica.
+- Posicionamento como CTO, experiência executiva com linha do tempo e caso do setor jurídico (anônimo).
+- Vinte estudos de caso técnicos, cada um com página própria: história, responsabilidade, arquitetura documentada, decisões, resultados, limites e galeria.
+- Projetos históricos da Rio Tech (190 e EasySPA) com a seção "Como eu arquitetaria hoje", identificada como proposta.
+- Sem currículo para download: a trajetória está no próprio site.
 
 As descrições identificam o estágio e o alcance de cada projeto. FiveX é um trabalho acadêmico coletivo. ZapPop apresenta implantação e customização de uma base Atendechat. As capturas identificam páginas publicadas e versões locais. O endereço linspayments.com.br apresenta o Lins UP Now, em modo de simulação.
 
@@ -35,11 +35,15 @@ O build gera o site estático em `out/`. Não é necessário um servidor Node.js
 ## Estrutura
 
 - `app/page.tsx`: página inicial.
-- `app/projetos/[slug]/page.tsx`: páginas de projeto geradas no build.
-- `lib/projects.ts`: conteúdo e tecnologias de cada projeto.
-- `components/`: cabeçalho, rodapé e capas.
+- `app/projetos/[slug]/page.tsx`: página técnica de cada estudo de caso, gerada no build.
+- `lib/case-types.ts`: modelo de dados de um estudo de caso.
+- `lib/cases/<slug>.ts`: conteúdo de cada estudo de caso; `lib/cases/index.ts` é gerado por `node scripts/gen-cases-index.mjs`.
+- `lib/experience.ts`: trajetória profissional (datas iguais ao LinkedIn).
+- `components/case/`: diagrama de arquitetura, galeria ampliável e card.
+- `components/Icon.tsx`: ícones SVG da biblioteca Lucide (licença ISC).
+- `scripts/qa.mjs` e `scripts/capture.mjs`: conferências do site gerado (links, imagens, emojis, currículo, títulos, rolagem horizontal e capturas).
 - `app/globals.css`: estilos e adaptação para celulares.
-- `public/`: foto, capturas dos projetos, ícone e currículo.
+- `public/`: foto, capturas dos projetos e ícone.
 
 As fontes Inter e IBM Plex Mono são distribuídas localmente com o site. Não há formulário que armazene dados de visitantes, rastreamento próprio ou dependência de banco de dados.
 
@@ -53,4 +57,4 @@ O projeto aceita `NEXT_PUBLIC_BASE_PATH` para publicação sob um subdiretório;
 
 Este repositório contém apenas a implementação do portfólio e seus materiais públicos. Os sistemas apresentados têm seus próprios repositórios, contextos e direitos. A presença de um projeto no portfólio não implica disponibilização de seu código ou uma licença sobre sua marca.
 
-Foto e currículo: Rafael Lins Gaspar. As telas foram capturadas nos sites públicos ou em cópias locais dos projetos. A relação de imagens e origens está em docs/screenshots.json. Números presentes nas interfaces não são apresentados como resultados profissionais comprovados.
+Foto: Rafael Lins Gaspar. As telas foram capturadas nos sites públicos ou em cópias locais dos projetos. A origem de cada imagem e afirmação fica em notas internas, fora do repositório público. Números presentes nas interfaces não são apresentados como resultados profissionais comprovados.
