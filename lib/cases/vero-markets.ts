@@ -52,6 +52,7 @@ export const veroMarkets: CaseStudy = {
     milestones: [
       {when: "abr/2026", what: "Início como CTO: desenho da arquitetura, infraestrutura em nuvem separando aplicação e serviço de custódia, e base do produto."},
       {when: "mai/2026", what: "API dedicada para formadores de mercado em uso por um robô externo; decisões de segurança registradas em ADRs (escopo de tokens entre aplicativo e painel, direitos de dados da LGPD)."},
+      {when: "jun/2026", what: "Lançamento público da plataforma na versão 1.0, com negociação, depósitos e saques."},
       {when: "jun/2026", what: "Adoção do livro único complementar por resultado, versionamento semântico com publicação contínua, interface completa em 20 idiomas, aba Ao Vivo com estatísticas de jogos e importação automática de mercados esportivos."},
       {when: "jun/2026", what: "Casamento de ordens em duas fases com fila dedicada e resolução automática de mercados esportivos e de mercados gerais com apoio de IA."},
       {when: "jul/2026", what: "Blindagem de conservação de valor na raiz do motor, com invariante, alerta em tempo real e auditoria diária; motor de casamento em Go executado em paralelo ao motor principal para comparação."},
@@ -79,7 +80,7 @@ export const veroMarkets: CaseStudy = {
     ],
     ai: [
       "Cerca de um terço dos commits do repositório foi feito por um agente de IA operado por mim em servidor próprio; o restante foi assinado por mim.",
-      "O repositório mantém um documento de contexto dedicado a agentes de codificação (como Claude Code), com arquitetura, regras de conservação e procedimentos de implantação.",
+      "O repositório mantém um documento de contexto dedicado aos agentes de IA de codificação, com arquitetura, regras de conservação e procedimentos de implantação.",
       "Diagnósticos e relatórios de implementação gerados por agentes (por exemplo, a migração para o livro único) passaram por minha revisão antes de qualquer subida; decisões de arquitetura, de risco e de produção foram minhas.",
       "Dentro do produto, a IA é usada em pontos delimitados: tradução de mercados e notícias para 20 idiomas e apoio à resolução de mercados não esportivos, sempre com validação por fontes.",
     ],

@@ -93,7 +93,7 @@ export const certame: CaseStudy = {
       "Equipe de desenvolvimento e parceiro de tecnologia sob minha coordenação técnica, com nomes preservados.",
     ],
     ai: [
-      "O desenvolvimento é feito com agentes de codificação (Claude Code e outros) sob minha direção; o repositório tem instruções formais que obrigam os agentes à leitura da arquitetura, do padrão de segurança e do estado atual antes de qualquer alteração.",
+      "O desenvolvimento é feito com agentes de IA de codificação sob minha direção; o repositório tem instruções formais que obrigam os agentes à leitura da arquitetura, do padrão de segurança e do estado atual antes de qualquer alteração.",
       "Eu defino escopo e arquitetura, reviso as entregas e aprovo cada subida; mudanças destrutivas exigem plano, rollback e aprovação humana antes de executar.",
       "Os agentes registram cada etapa em diários de execução e corrigem defeitos com teste automático; a conclusão de um chamado de QA é feita por outra pessoa, não por quem corrigiu.",
     ],
