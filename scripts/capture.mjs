@@ -5,9 +5,9 @@ import fs from "node:fs";
 const base = "http://127.0.0.1:4310";
 const outDir = new URL("../docs/interno/capturas/", import.meta.url).pathname;
 fs.mkdirSync(outDir, {recursive: true});
-const slugs = fs.readdirSync(new URL("../out/projetos/", import.meta.url)).filter(s => !s.includes("."));
-const pages = ["/", ...slugs.map(s => `/projetos/${s}/`)];
-const shots = new Set(["/", "/projetos/190-policia-militar/", "/projetos/certame/", "/projetos/moneta/", "/projetos/easyspa/", "/projetos/cgm/"]);
+const slugs = fs.readdirSync(new URL("../out/projetos/", import.meta.url)).filter(s => !s.includes(".") && fs.statSync(new URL("../out/projetos/" + s, import.meta.url)).isDirectory());
+const pages = ["/", "/experiencia/", "/projetos/", "/sobre/", "/contato/", ...slugs.map(s => `/projetos/${s}/`)];
+const shots = new Set(["/", "/experiencia/", "/projetos/", "/sobre/", "/projetos/190-policia-militar/", "/projetos/certame/", "/projetos/moneta/", "/projetos/easyspa/", "/projetos/cgm/"]);
 const chrome = spawn("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", ["--headless=new", "--remote-debugging-port=9333", "--user-data-dir=/tmp/claude-qa-chrome", "--hide-scrollbars", "about:blank"], {stdio: "ignore"});
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let wsUrl;
@@ -28,7 +28,7 @@ for (const [w, h, mobile] of [[1280, 800, false], [390, 844, true], [320, 640, t
     const r = await evalJs(`(async()=>{document.querySelectorAll('img[loading=lazy]').forEach(i=>i.loading='eager'); await new Promise(r=>setTimeout(r,400)); const sw=document.documentElement.scrollWidth; const wide=[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth+1).slice(0,3).map(e=>e.tagName+'.'+(e.className||'').toString().split(' ')[0]); return {sw, iw: innerWidth, wide, h: document.documentElement.scrollHeight}})()`);
     if (r.sw > r.iw) problems.push(`${w}px ${p}: rolagem horizontal (${r.sw} > ${r.iw}) ${r.wide.join(", ")}`);
     if (shots.has(p) && w !== 320) {
-      const name = (p === "/" ? "inicio" : p.split("/")[2]) + (mobile ? "-celular" : "-desktop") + ".png";
+      const name = (p === "/" ? "inicio" : p.split("/").filter(Boolean).pop()) + (mobile ? "-celular" : "-desktop") + ".png";
       const clipH = Math.min(r.h, mobile ? 3200 : 2600);
       const shot = await send("Page.captureScreenshot", {format: "png", captureBeyondViewport: true, clip: {x: 0, y: 0, width: w, height: clipH, scale: 1}});
       fs.writeFileSync(outDir + name, Buffer.from(shot.data, "base64"));

@@ -65,10 +65,10 @@ export default async function CasePage({params}: Props) {
   ];
   const n = (id: string) => String(toc.findIndex(t => t[0] === id) + 1).padStart(2, "0");
 
-  return <><Header/><main id="conteudo" className="case-page">
+  return <><Header current="projetos"/><main id="conteudo" className="case-page">
     <section className="container case-header">
       <nav className="breadcrumbs" aria-label="Você está em">
-        <ol><li><Link href="/">Início</Link></li><li><a href={asset("/#projetos")}>Projetos</a></li><li aria-current="page">{item.name}</li></ol>
+        <ol><li><Link href="/">Início</Link></li><li><Link href="/projetos/">Projetos</Link></li><li aria-current="page">{item.name}</li></ol>
       </nav>
       <p className="eyebrow">{item.category}</p>
       <h1>{item.name}</h1>
@@ -157,7 +157,7 @@ export default async function CasePage({params}: Props) {
 
     <section className="container next-project">
       <div><p className="eyebrow">Próximo estudo de caso</p><Link href={"/projetos/" + next.slug + "/"}>{next.name} <Icon name="arrow-up-right" size={28}/></Link></div>
-      <a className="text-link" href={asset("/#projetos")}><Icon name="arrow-left"/> Todos os projetos</a>
+      <Link className="text-link" href="/projetos/"><Icon name="arrow-left"/> Todos os projetos</Link>
     </section>
   </main><Footer/></>;
 }
