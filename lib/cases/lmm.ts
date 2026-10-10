@@ -48,11 +48,7 @@ export const lmm: CaseStudy = {
       "Configurei a operação: PM2, nginx com HTTPS e backup diário consistente do SQLite enviado para outro servidor.",
     ],
     team: [],
-    ai: [
-      "Parte dos commits do repositório é assinada por um agente de IA que opero em servidor próprio, com ajustes de lote e tempo limite, registro de patrimônio e defesa em mercado suspenso.",
-      "O diagnóstico da origem da divergência de patrimônio foi feito com apoio de um agente de IA; a hipótese de soma zero, a contenção e a decisão de corrigir na Vero foram minhas.",
-      "Um módulo do robô usava a API da OpenAI e busca de notícias (Tavily) para gerar comentários nos mercados.",
-    ],
+    ai: [],
   },
 
   architecture: {

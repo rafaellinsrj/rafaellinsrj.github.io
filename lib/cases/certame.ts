@@ -85,18 +85,14 @@ export const certame: CaseStudy = {
     ],
     direct: [
       "Estruturei a consolidação das bases anteriores em um monorepo único e versionado, com migrações encadeadas.",
-      "Implementei, com agentes de IA sob minha direção, o backend FastAPI, o checkout Pix idempotente, o motor de sorteio v2, a trilha de auditoria encadeada, os atestados assinados e a fila de ancoragem on-chain.",
+      "Implementei o backend FastAPI, o checkout Pix idempotente, o motor de sorteio v2, a trilha de auditoria encadeada, os atestados assinados e a fila de ancoragem on-chain.",
       "Operei a implantação no servidor com Docker Compose, backups, janelas de subida fora dos horários de sorteio e conferência de dados antes e depois de cada versão.",
       "Coordenei os roteiros de QA ponta a ponta e validei pessoalmente os fluxos de compra, sorteio, verificação e painéis.",
     ],
     team: [
       "Equipe de desenvolvimento e parceiro de tecnologia sob minha coordenação técnica, com nomes preservados.",
     ],
-    ai: [
-      "O desenvolvimento é feito com agentes de IA de codificação sob minha direção; o repositório tem instruções formais que obrigam os agentes à leitura da arquitetura, do padrão de segurança e do estado atual antes de qualquer alteração.",
-      "Eu defino escopo e arquitetura, reviso as entregas e aprovo cada subida; mudanças destrutivas exigem plano, rollback e aprovação humana antes de executar.",
-      "Os agentes registram cada etapa em diários de execução e corrigem defeitos com teste automático; a conclusão de um chamado de QA é feita por outra pessoa, não por quem corrigiu.",
-    ],
+    ai: [],
   },
 
   architecture: {

@@ -54,7 +54,7 @@ export const policia190: CaseStudy = {
     team: [
       "Desenvolvimento dos aplicativos e do painel pela equipe da Rio Tech, de cinco pessoas.",
     ],
-    ai: ["Não se aplica: projeto de 2014 e 2015, anterior às ferramentas de IA generativa."],
+    ai: [],
   },
 
   architecture: {

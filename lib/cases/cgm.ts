@@ -59,9 +59,7 @@ export const cgm: CaseStudy = {
       "Configurei a publicação em servidor próprio com nginx como proxy reverso e certificado Let's Encrypt.",
     ],
     team: [],
-    ai: [
-      "O site foi desenvolvido por um agente de IA de codificação sob minha direção; eu defini o escopo, revisei e validei as entregas.",
-    ],
+    ai: [],
   },
 
   architecture: {

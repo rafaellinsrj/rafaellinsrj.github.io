@@ -7,7 +7,7 @@ export const bioo: CaseStudy = {
   category: "Plataforma para criadores · Node.js, PostgreSQL e Next.js",
   summary:
     "Plataforma de página única para criadores e pequenos negócios que reúne links, loja, agenda, cursos, gorjetas, contatos e automações, com pagamentos a criadores, comissão por plano e isolamento de dados no banco.",
-  role: "Produto próprio: direção de produto, arquitetura e desenvolvimento com agentes de IA",
+  role: "Produto próprio: direção de produto, arquitetura e desenvolvimento",
   period: "Setembro a outubro de 2026",
   stage: "Em desenvolvimento",
   stageNote: "",
@@ -65,11 +65,7 @@ export const bioo: CaseStudy = {
       "Revisei e validei as entregas de cada fase por meio das baterias de testes e das avaliações das telas em desktop e celular.",
     ],
     team: [],
-    ai: [
-      "O código foi produzido com agentes de IA sob minha direção: os commits registram a coautoria dos agentes, e eu reviso e valido cada entrega.",
-      "Os agentes seguem regras escritas no próprio projeto: backup antes de mudanças, migrações imutáveis, atualização do documento único de pendências e evidência de teste para marcar uma etapa como concluída.",
-      "Eu defino escopo, decisões e critérios de aceite; a conclusão de uma etapa depende de evidência registrada e o aceite final é meu.",
-    ],
+    ai: [],
   },
 
   architecture: {

@@ -51,7 +51,7 @@ export const easyspa: CaseStudy = {
     team: [
       "Design e desenvolvimento pela equipe da Rio Tech; diretoria comercial responsável pela rede de afiliados.",
     ],
-    ai: ["Não se aplica: projeto de 2015, anterior às ferramentas de IA generativa."],
+    ai: [],
   },
 
   architecture: {

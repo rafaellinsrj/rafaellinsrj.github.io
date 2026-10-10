@@ -18,7 +18,7 @@ export default function AboutSection({page = false}: {page?: boolean}) {
       <div className="skills-grid">
         <div><span className="skill-number">01 / BACKEND E DADOS</span><h3>A estrutura do produto</h3><p>Python, FastAPI, Pydantic, SQLAlchemy, Node.js, PHP/Laravel, PostgreSQL, MySQL, Redis e Celery.</p></div>
         <div><span className="skill-number">02 / FRONTEND E INTEGRAÇÕES</span><h3>A experiência em uso</h3><p>React, Next.js, TypeScript, TanStack Query, Tailwind CSS, APIs REST, OAuth2, webhooks e APIs de IA.</p></div>
-        <div><span className="skill-number">03 / QUALIDADE E OPERAÇÃO</span><h3>Da mudança à entrega</h3><p>pytest, Playwright, Vitest, Git, GitHub Actions, Docker, Linux e AWS. Desenvolvimento com apoio de Codex e Claude Code.</p></div>
+        <div><span className="skill-number">03 / QUALIDADE E OPERAÇÃO</span><h3>Da mudança à entrega</h3><p>pytest, Playwright, Vitest, Git, GitHub Actions, Docker, Linux e AWS.</p></div>
       </div>
       <div className="education-grid">
         <div><p className="eyebrow">Formação acadêmica</p><h3>Inteligência Artificial</h3><p>Unifeso · 2º período · On-line<br/><span className="education-status">Em andamento</span></p></div>

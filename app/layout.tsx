@@ -12,7 +12,8 @@ export const metadata: Metadata = {
   title: {default:"Rafael Lins Gaspar | Chief Technology Officer", template:"%s | Rafael Lins Gaspar"},
   description:"Rafael Lins Gaspar, Chief Technology Officer: liderança em tecnologia, arquitetura de software, inteligência artificial e criação de produtos digitais.",
   icons:{icon:asset("/favicon.svg")},
-  openGraph: {type:"website", locale:"pt_BR", siteName:"Rafael Lins Gaspar"},
+  openGraph: {type:"website", locale:"pt_BR", siteName:"Rafael Lins Gaspar", url:"https://rafaellinsrj.github.io/", title:"Rafael Lins Gaspar | Chief Technology Officer", description:"Liderança em tecnologia, arquitetura de software e criação de produtos digitais.", images:[{url:"/og.png", width:1200, height:630, alt:"Rafael Lins Gaspar, Chief Technology Officer"}]},
+  twitter: {card:"summary_large_image", images:["/og.png"]},
   robots:{index:true,follow:true}
 };
 

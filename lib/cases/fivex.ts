@@ -62,9 +62,7 @@ export const fivex: CaseStudy = {
       "A página do grupo informa que cada projeto passa pelos cinco integrantes antes da entrega e que a divisão de tarefas muda a cada disciplina.",
       "A contribuição específica de cada colega no conteúdo deste trabalho não está registrada nos arquivos disponíveis.",
     ],
-    ai: [
-      "A publicação e o registro de implantação no servidor foram feitos por um agente de IA operado por mim, a partir do pacote que entreguei.",
-    ],
+    ai: [],
   },
 
   architecture: {
