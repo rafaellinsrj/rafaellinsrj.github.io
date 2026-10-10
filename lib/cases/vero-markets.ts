@@ -69,7 +69,7 @@ export const veroMarkets: CaseStudy = {
       "Priorizei segurança e conformidade: escopo de tokens por aplicação, direitos de dados da LGPD, verificação de identidade, aprovação dupla de saques grandes e chaves de carteira cifradas por KMS.",
     ],
     direct: [
-      "Estruturei e implementei, com agentes de IA sob minha direção, o backend em Laravel: ordens, casamento, posições, carteira, resolução, rotinas agendadas, notificações e a API para formadores de mercado.",
+      "Estruturei e implementei o backend em Laravel: ordens, casamento, posições, carteira, resolução, rotinas agendadas, notificações e a API para formadores de mercado.",
       "Construí os fluxos financeiros: depósito e saque por PIX com conferência de titularidade por CPF, depósito em USDC sem custo de gás para o usuário e saque em cripto via contrato de custódia.",
       "Conduzi o diagnóstico e a correção de vazamentos de valor no motor de casamento, criando a invariante de conservação, o alerta e a auditoria diária.",
       "Configurei a operação: nginx, Supervisor com filas e processos permanentes, rotinas agendadas, backups diários, monitoramento de processos, Sentry e esteira de testes e implantação no GitHub Actions.",
@@ -78,12 +78,7 @@ export const veroMarkets: CaseStudy = {
     team: [
       "Sócios e parceiros da operação, com nomes preservados, participaram das decisões de produto e da segunda assinatura exigida para saques acima do limite.",
     ],
-    ai: [
-      "Cerca de um terço dos commits do repositório foi feito por um agente de IA operado por mim em servidor próprio; o restante foi assinado por mim.",
-      "O repositório mantém um documento de contexto dedicado aos agentes de IA de codificação, com arquitetura, regras de conservação e procedimentos de implantação.",
-      "Diagnósticos e relatórios de implementação gerados por agentes (por exemplo, a migração para o livro único) passaram por minha revisão antes de qualquer subida; decisões de arquitetura, de risco e de produção foram minhas.",
-      "Dentro do produto, a IA é usada em pontos delimitados: tradução de mercados e notícias para 20 idiomas e apoio à resolução de mercados não esportivos, sempre com validação por fontes.",
-    ],
+    ai: [],
   },
 
   architecture: {

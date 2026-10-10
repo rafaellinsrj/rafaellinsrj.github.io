@@ -48,10 +48,7 @@ export const zappop: CaseStudy = {
     team: [
       "Aplicação de atendimento, módulo da API oficial e instalador: desenvolvidos e mantidos pelo fornecedor do Atendechat.",
     ],
-    ai: [
-      "O site de apresentação foi produzido por um agente de IA operado por mim em servidor próprio, com as decisões de conteúdo, preço e marca sob minha responsabilidade; o repositório traz instruções formais para os agentes.",
-      "O mesmo agente executou a correção de DNS, a criação do repositório e a rotina de backup, sob minha supervisão.",
-    ],
+    ai: [],
   },
 
   architecture: {

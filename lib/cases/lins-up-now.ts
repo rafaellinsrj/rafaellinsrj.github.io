@@ -55,11 +55,7 @@ export const linsUpNow: CaseStudy = {
       "Desenhei o gráfico de resultado simulado em SVG próprio, sem biblioteca, com remoção de patamares repetidos.",
     ],
     team: [],
-    ai: [
-      "A análise da base histórica, o motor de simulação, os relatórios diários e o monitoramento foram executados por um agente de IA que opero em servidor próprio, com subagentes para as análises mais longas. A reformulação do painel em 09/07/2026 e a correção da contabilidade também passaram pelo agente.",
-      "As leituras de resultado, as correções de contabilidade e as decisões sobre a estratégia foram tomadas por mim a partir desses relatórios.",
-      "O repositório do painel traz instruções formais para os agentes de IA.",
-    ],
+    ai: [],
   },
 
   architecture: {

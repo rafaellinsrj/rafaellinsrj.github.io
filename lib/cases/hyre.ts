@@ -57,7 +57,7 @@ export const hyre: CaseStudy = {
     problem:
       "Atendimento comercial, cobrança e pós-venda dependiam de pessoas respondendo manualmente, fora do horário e sem histórico unificado. A primeira versão resolveu isso com agentes especializados por função. Em setembro de 2026, a auditoria do código mostrou que cerca de metade do backend existia só para esses agentes e que faltavam peças centrais para um modelo de crédito pré-pago, o que levou à decisão de reorganizar o produto.",
     constraints:
-      "Equipe enxuta, com desenvolvimento apoiado por agentes de IA. Credenciais de clientes e de provedores precisam ficar fora do alcance dos modelos. Cobrança em dinheiro real exige consistência contábil em cada lançamento.",
+      "Equipe enxuta. Credenciais de clientes e de provedores precisam ficar fora do alcance dos modelos. Cobrança em dinheiro real exige consistência contábil em cada lançamento.",
     milestones: [
       {when: "mar/2026", what: "Início do repositório com o nome LinsOS: backend FastAPI, painéis owner e tenant em Next.js e primeiros agentes de WhatsApp (570 commits no mês)."},
       {when: "ago/2026", what: "Mudança de marca de LinsOS para Hyre e publicação do site hyre.global com cadastro, planos e catálogo de agentes."},
@@ -84,11 +84,7 @@ export const hyre: CaseStudy = {
       "Equipe de desenvolvimento sob minha coordenação, com nomes preservados.",
       "Parceiro de tecnologia responsável por grande parte da implementação da versão 1, seguindo a direção de produto e arquitetura que eu defini.",
     ],
-    ai: [
-      "O desenvolvimento usa agentes de IA de codificação; eu defino o escopo, reviso as entregas e decido o que avança.",
-      "A auditoria de setembro de 2026, os planos por fase e as rodadas da versão 2 foram executados com agentes de IA; eu defini o escopo de cada rodada, revisei os relatórios de verificação e decidi o que avançava.",
-      "Cada rodada da versão 2 registra explicitamente o que foi testado e com qual cobertura, para que a verificação acompanhe o código entregue.",
-    ],
+    ai: [],
   },
 
   architecture: {

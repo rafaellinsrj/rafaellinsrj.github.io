@@ -78,11 +78,7 @@ export const moneta: CaseStudy = {
     team: [
       "Equipe de apoio sob minha coordenação, com nomes preservados.",
     ],
-    ai: [
-      "Desenvolvi a plataforma com agentes de IA de codificação sob minha direção: o repositório traz instruções formais ao agente executor, com ordem de trabalho, regras invioláveis e definição de pronto por tarefa.",
-      "Eu defino arquitetura e prioridades, reviso as entregas e aprovo cada etapa; mudanças em produção passam por backup e confirmação minha.",
-      "No produto, a IA atua em etapas delimitadas (extração, síntese, verificação, revisão, roteiro, narração) com saída estruturada, auditoria de cada decisão de modelo e portões determinísticos que não dependem do modelo.",
-    ],
+    ai: [],
   },
 
   architecture: {

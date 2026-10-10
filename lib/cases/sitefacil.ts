@@ -68,9 +68,7 @@ export const sitefacil: CaseStudy = {
       "Configurei a publicação em servidor próprio com nginx, HTTPS e cabeçalhos de segurança (HSTS, nosniff, X-Frame-Options, Referrer-Policy).",
     ],
     team: [],
-    ai: [
-      "O desenvolvimento seguiu o fluxo de trabalho com agentes de IA que eu dirijo, reviso e valido, com instruções formais para os agentes no repositório.",
-    ],
+    ai: [],
   },
 
   architecture: {

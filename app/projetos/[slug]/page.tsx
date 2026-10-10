@@ -51,7 +51,6 @@ export default async function CasePage({params}: Props) {
     ["Liderança e direção", r.leadership],
     ["Execução técnica direta", r.direct],
     ["Trabalho da equipe", r.team],
-    ["Apoio de IA", r.ai],
   ] as const).filter(([, list]) => list.length > 0);
   const toc: [string, string][] = [
     ["historia", "História e problema"],

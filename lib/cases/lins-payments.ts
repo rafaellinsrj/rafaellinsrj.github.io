@@ -50,9 +50,7 @@ export const linsPayments: CaseStudy = {
       "Organizei a navegação responsiva com menu móvel e animações com Framer Motion e NumberFlow.",
     ],
     team: [],
-    ai: [
-      "Site produzido com apoio de agente de IA de codificação, sob minha direção e revisão.",
-    ],
+    ai: [],
   },
 
   architecture: {

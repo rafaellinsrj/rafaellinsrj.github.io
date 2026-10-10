@@ -61,9 +61,7 @@ export const caio: CaseStudy = {
       "Publiquei a versão estática em servidor próprio com nginx, HTTPS e cache de longa duração para arquivos estáticos.",
     ],
     team: [],
-    ai: [
-      "Os commits foram feitos diretamente no servidor, no fluxo de trabalho com agentes de IA que eu dirijo, reviso e valido.",
-    ],
+    ai: [],
   },
 
   architecture: {

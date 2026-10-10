@@ -43,9 +43,7 @@ export const viamanzoni: CaseStudy = {
       "Configurei o proxy reverso no nginx para o domínio da marca.",
     ],
     team: [],
-    ai: [
-      "O desenvolvimento seguiu o fluxo de trabalho com agentes de IA que eu dirijo, reviso e valido, com instruções formais para os agentes no repositório.",
-    ],
+    ai: [],
   },
 
   architecture: {

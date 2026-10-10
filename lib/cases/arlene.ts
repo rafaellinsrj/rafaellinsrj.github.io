@@ -51,9 +51,7 @@ export const arlene: CaseStudy = {
       "Publiquei o site em servidor próprio com nginx como proxy reverso e HTTPS.",
     ],
     team: [],
-    ai: [
-      "O desenvolvimento seguiu o fluxo de trabalho com agentes de IA que eu dirijo, reviso e valido, com instruções formais para os agentes no repositório.",
-    ],
+    ai: [],
   },
 
   architecture: {
