@@ -2,7 +2,7 @@
 export type Role = {company: string; role: string; period: string; current?: boolean; summary: string; confidential?: boolean; link?: string; cases?: string[]; main?: boolean};
 
 export const roles: Role[] = [
-  {company: "Lins Capital Group LLC", main: true, role: "Fundador", period: "jun 2026 – atual", current: true, cases: ["hyre", "moneta", "certame"], summary: "Holding que reúne os projetos de inteligência artificial, automação e blockchain: Hyre, The Moneta Post e a participação na Certame."},
+  {company: "Lins Capital Group LLC · Lins Partners", main: true, role: "Fundador e CTO", period: "jun 2026 – atual", current: true, cases: ["hyre", "moneta", "certame"], summary: "Holding que reúne os projetos de inteligência artificial, automação e blockchain: Hyre, The Moneta Post e a participação na Certame."},
   {company: "Certame", role: "CTO e sócio", period: "jun 2026 – atual", current: true, link: "certame", summary: "Plataforma de prêmios com causa, com regras, números e resultados acessíveis a qualquer pessoa. Arquitetura do sistema e da infraestrutura, condução do time técnico e do roadmap."},
   {company: "The Moneta Post", role: "Fundador", period: "mai 2026 – atual", current: true, link: "moneta", summary: "Portal de notícias financeiras em português, espanhol e inglês produzido com IA. Concepção e desenvolvimento do site, do painel de gestão e do pipeline editorial automatizado."},
   {company: "Vero Markets", role: "CTO", period: "abr 2026 – atual", current: true, link: "vero-markets", cases: ["vero-markets", "lmm"], summary: "Plataforma de mercados de previsão. Responsável pela tecnologia: arquitetura, desenvolvimento do produto e integração de mercados e dados."},

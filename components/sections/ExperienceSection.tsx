@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import LegalCase from "@/components/sections/LegalCase";
+import MainCompany from "@/components/sections/MainCompany";
 import {caseBySlug} from "@/lib/cases";
 import {roles} from "@/lib/experience";
 export default function ExperienceSection({page = false}: {page?: boolean}) {
@@ -8,6 +9,7 @@ export default function ExperienceSection({page = false}: {page?: boolean}) {
   return <>
     <section id="experiencia" className="section container">
       <div className="section-heading"><div><p className="eyebrow">Experiência executiva</p>{page ? <h1 className="section-h1">Pessoas, arquitetura<br/>e <span>entrega.</span></h1> : <h2>Pessoas, arquitetura<br/>e <span>entrega.</span></h2>}</div><p>Desde 2012 entre fundação de empresas, direção técnica e operação. Cargos e períodos conforme o histórico profissional publicado no LinkedIn.</p></div>
+      <MainCompany level={page ? 2 : 3}/>
       <LegalCase level={page ? 2 : 3}/>
       <ol className="timeline">{roles.map(r=>
         <li key={r.company} className={[r.current ? "is-current" : "", r.main ? "is-main" : ""].join(" ").trim() || undefined}>

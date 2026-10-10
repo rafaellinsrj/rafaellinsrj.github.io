@@ -481,3 +481,15 @@ nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-under
 .role-strip li.is-main{border-color:#6a6a6a;background:var(--color-tile-gray)}
 @media(max-width:900px){.timeline li.is-main{grid-template-columns:1fr;padding:22px}}
 @media(max-width:760px){.timeline li.is-main .timeline-name{font-size:23px}}
+/* Lins Partners em destaque */
+.main-company{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;padding:40px;margin-bottom:32px;border:1px solid #6a6a6a;border-radius:16px;background:linear-gradient(160deg,#1f1f1f,#161616)}
+.main-company-title{font-size:44px;line-height:1.1;letter-spacing:-.03em;margin:8px 0 6px}
+.main-company-parent{font:400 13px/1.5 var(--font-code);color:var(--muted);margin-bottom:20px}
+.main-company-copy>p:not(.eyebrow):not(.main-company-parent){font-size:17px;color:var(--muted);margin-bottom:14px}
+.main-company-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.main-company-links a{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--line);border-radius:2px;font-size:14px}
+.main-company-links a:hover{background:#292929}
+.main-company-services{list-style:none;margin:0;padding:0;display:grid;gap:10px;align-content:center}
+.main-company-services li{display:flex;align-items:center;gap:10px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--color-paper);font-size:15px}
+@media(max-width:900px){.main-company{grid-template-columns:1fr;gap:24px;padding:28px}}
+@media(max-width:760px){.main-company{padding:22px;border-radius:12px}.main-company-title{font-size:34px}.main-company-copy>p:not(.eyebrow):not(.main-company-parent){font-size:16px}}

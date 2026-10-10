@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Icon from "@/components/Icon";
 import CaseCard from "@/components/case/CaseCard";
 import LegalCase from "@/components/sections/LegalCase";
+import MainCompany from "@/components/sections/MainCompany";
 import ContactSection from "@/components/sections/ContactSection";
 import {caseBySlug, cases} from "@/lib/cases";
 import {roles} from "@/lib/experience";
@@ -34,6 +35,7 @@ export default function Home() {
     <div className="stack-band container"><p>Tecnologias que conectam as etapas.</p><div className="technology-tiles">{["Python", "FastAPI", "React", "TypeScript", "PostgreSQL"].map(tech=><div key={tech}>{tech}</div>)}</div></div>
     <section className="section container">
       <div className="section-heading"><div><p className="eyebrow">Experiência executiva</p><h2>Pessoas, arquitetura<br/>e <span>entrega.</span></h2></div><p>Desde 2012 entre fundação de empresas, direção técnica e operação.</p></div>
+      <MainCompany/>
       <LegalCase/>
       <ul className="role-strip">{roles.filter(r => r.current).map(r =>
         <li key={r.company} className={r.main ? "is-main" : undefined}><strong>{r.company}</strong><span>{r.role}{r.main ? " · empresa principal" : ""}</span></li>)}</ul>
