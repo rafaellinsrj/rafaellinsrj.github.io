@@ -36,7 +36,7 @@ export default function Home() {
       <div className="section-heading"><div><p className="eyebrow">Experiência executiva</p><h2>Pessoas, arquitetura<br/>e <span>entrega.</span></h2></div><p>Desde 2012 entre fundação de empresas, direção técnica e operação.</p></div>
       <LegalCase/>
       <ul className="role-strip">{roles.filter(r => r.current).map(r =>
-        <li key={r.company}><strong>{r.company}</strong><span>{r.role}</span></li>)}</ul>
+        <li key={r.company} className={r.main ? "is-main" : undefined}><strong>{r.company}</strong><span>{r.role}{r.main ? " · empresa principal" : ""}</span></li>)}</ul>
       <div className="section-more"><Link className="button secondary" href="/experiencia/">Ver a trajetória completa <Icon name="arrow-right"/></Link></div>
     </section>
     <section className="section container">

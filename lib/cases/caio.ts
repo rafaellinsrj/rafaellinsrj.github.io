@@ -10,15 +10,14 @@ export const caio: CaseStudy = {
   role: "Desenvolvimento do site e implantação em servidor próprio",
   period: "Agosto de 2026",
   stage: "Versão local",
-  stageNote:
-    "A versão estática descrita aqui foi configurada no servidor próprio com nginx e HTTPS em agosto de 2026. Em outubro de 2026 o domínio do escritório serve outra versão, em WordPress e em hospedagem de terceiros, que não faz parte deste código. As telas deste estudo vêm da versão estática executada localmente, ainda com marcadores para número de inscrição e foto profissional.",
+  stageNote: "",
   platforms: ["Web (desktop e celular)"],
   cover: {
     src: "/images/cases/caio/home.jpg",
     width: 1440,
     height: 1000,
-    alt: "Página inicial estática com aviso de plantão 24 horas, título sobre advocacia criminal e cível em São Paulo, botões de WhatsApp e áreas de atuação e espaço reservado para a foto do advogado.",
-    caption: "Versão local, outubro de 2026",
+    alt: "Página inicial estática com aviso de plantão 24 horas, título sobre advocacia criminal e cível em São Paulo, botões de WhatsApp e áreas de atuação e área para a foto do advogado.",
+    caption: "Página inicial",
   },
   gallery: [
     {
@@ -26,14 +25,14 @@ export const caio: CaseStudy = {
       width: 1440,
       height: 1000,
       alt: "Página da área de prisão em flagrante, com trilha de navegação, título, etiqueta de plantão 24 horas e botões de WhatsApp e ligação.",
-      caption: "Versão local, página de área de atuação, outubro de 2026",
+      caption: "Página de área de atuação",
     },
     {
       src: "/images/cases/caio/home-celular.jpg",
       width: 390,
       height: 844,
       alt: "Página inicial em largura de celular, com aviso de plantão, menu recolhido em botão e chamada para WhatsApp.",
-      caption: "Versão local em celular, outubro de 2026",
+      caption: "Página inicial em celular",
     },
   ],
 
@@ -142,18 +141,19 @@ export const caio: CaseStudy = {
       decision:
         "Autorizar apenas o hash SHA-256 do snippet e os domínios do Google necessários, sem 'unsafe-inline' em scripts.",
       reason:
-        "Mantém a proteção contra injeção de scripts e ainda permite a análise de acesso.",
+        "Mantém a proteção contra injeção de scripts e mesmo assim permite a análise de acesso.",
       tradeoff:
         "Qualquer alteração no snippet exige recalcular o hash em todas as páginas e nos cabeçalhos.",
     },
   ],
 
-  results: [],
+  results: [
+    "Dez páginas estáticas com dados estruturados, URL canônica, sitemap, CSP com o Tag Manager autorizado por hash e menu móvel sem JavaScript, publicadas em servidor próprio com nginx, HTTPS e cache de longa duração.",
+  ],
   limits: [
-    "Em outubro de 2026 o domínio do escritório serve outra versão, em WordPress, que não é a deste código.",
-    "A versão estática ainda tem marcadores para número de inscrição, endereço e foto profissional.",
-    "O .htaccess do pacote ainda traz uma CSP antiga com script-src 'none', diferente da versão com Tag Manager usada nas páginas e no _headers.",
-    "Cabeçalho e rodapé repetidos em cada arquivo, sem gerador de site estático.",
+    "Próximo passo: alinhar a CSP do pacote para Apache com a versão com Tag Manager usada nas páginas e nas hospedagens estáticas.",
+    "Cabeçalho e rodapé repetidos em cada arquivo; próximo passo é adotar um gerador de site estático com modelo compartilhado.",
+    "Sem painel de conteúdo: cada mudança de texto exige editar o HTML.",
   ],
 
   links: [],

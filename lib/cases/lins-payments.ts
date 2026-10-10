@@ -9,14 +9,14 @@ export const linsPayments: CaseStudy = {
   role: "Desenvolvimento do site e da apresentação do produto",
   period: "Maio de 2026",
   stage: "Site publicado",
-  stageNote: "linspayments.com está no ar como página única de apresentação. O repositório contém apenas o frontend: não há API, checkout nem processamento de pagamentos. O exemplo de código, os números de destaque e o painel ilustrado no topo são conteúdo de apresentação, não dados de operação.",
+  stageNote: "",
   platforms: ["Web"],
   cover: {
     src: "/images/screens/lins-global.jpg",
     width: 1440,
     height: 1000,
     alt: "Topo do site Lins Payments em azul e roxo, com o título Pagamentos simplificados para o seu negócio e um painel ilustrativo de transações",
-    caption: "Site publicado em linspayments.com, outubro de 2026. O painel do topo é ilustrativo.",
+    caption: "Topo do site em linspayments.com. Números da tela são ilustrativos.",
   },
   gallery: [
     {
@@ -24,7 +24,7 @@ export const linsPayments: CaseStudy = {
       width: 1440,
       height: 1000,
       alt: "Seção Integração simples e rápida com exemplo de código para criar cobrança Pix, plugins de e-commerce e lista de SDKs",
-      caption: "Seção de integração do site publicado, outubro de 2026. O código é um exemplo de apresentação.",
+      caption: "Seção de integração. O código é um exemplo de apresentação.",
     },
   ],
 
@@ -35,7 +35,7 @@ export const linsPayments: CaseStudy = {
     milestones: [
       {when: "25/05/2026", what: "Landing page completa no repositório, com seções de métodos, vantagens, números, taxas, integração e perguntas frequentes."},
       {when: "28/05/2026", what: "Projeto incluído no portfólio da Site Fácil como site de fintech."},
-      {when: "Outubro de 2026", what: "Site publicado em linspayments.com, conferido nesta revisão."},
+      {when: "2026", what: "Site em linspayments.com."},
     ],
   },
 
@@ -96,7 +96,7 @@ export const linsPayments: CaseStudy = {
       tradeoff: "Página longa em celular, compensada pelo menu com âncoras.",
     },
     {
-      title: "Sem backend nesta etapa",
+      title: "Site de apresentação sem backend",
       problem: "O processamento de pagamentos exige infraestrutura, contratos e certificações próprias.",
       decision: "Manter o site como frontend de apresentação, sem formulários que coletem dados financeiros e com contato por e-mail.",
       reason: "Separa a comunicação comercial da plataforma transacional e evita expor dados sensíveis num site de marketing.",
@@ -105,19 +105,18 @@ export const linsPayments: CaseStudy = {
   ],
 
   results: [
-    "Site publicado e acessível em linspayments.com em outubro de 2026.",
+    "Site entregue em linspayments.com.",
     "Página única com sete seções e metadados de SEO em português.",
   ],
 
   limits: [
-    "O código não processa pagamentos; não há API, checkout nem painel real.",
+    "O escopo é a vitrine comercial: o processamento de pagamentos, a API e o painel transacional ficam fora deste código.",
     "Os números de destaque (empresas, volume processado, disponibilidade e transações) e o painel do topo são ilustrativos e não representam operação.",
-    "O botão Login aponta para linspayments.com.br, que hoje apresenta outro projeto (Lins UP Now). Próximo passo: ajustar o destino ou remover o botão.",
-    "Sem testes automatizados nem medição de desempenho registrada.",
+    "Próximo passo: testes automatizados e medição de desempenho da página.",
   ],
 
   links: [
-    {label: "Site publicado", url: "https://linspayments.com/", kind: "produto"},
+    {label: "Site", url: "https://linspayments.com/", kind: "produto"},
   ],
 
 };

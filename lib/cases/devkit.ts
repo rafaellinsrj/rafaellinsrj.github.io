@@ -10,15 +10,14 @@ export const devkit: CaseStudy = {
   role: "Produto próprio: concepção, arquitetura e desenvolvimento",
   period: "Julho de 2026",
   stage: "Versão local",
-  stageNote:
-    "Site estático gerado e validado localmente em julho de 2026 (24 páginas em três idiomas). A implantação em Cloudflare Pages está descrita no projeto, mas não foi feita; domínio, AdSense e publicação ficaram para a etapa final do portfólio de sites. Os espaços de anúncio nas telas são marcadores de layout, não anúncios ativos.",
+  stageNote: "",
   platforms: ["Web (desktop e celular)"],
   cover: {
     src: "/images/screens/local-devkit.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial do Devkit em tema escuro, com os cartões das sete ferramentas e espaços reservados para anúncios na lateral.",
-    caption: "Versão local, outubro de 2026",
+    caption: "Página inicial, outubro de 2026",
   },
   gallery: [
     {
@@ -26,14 +25,14 @@ export const devkit: CaseStudy = {
       width: 1440,
       height: 953,
       alt: "Formatador de JSON com o exemplo carregado: entrada compacta à esquerda e saída indentada com realce de sintaxe à direita, com o status JSON válido.",
-      caption: "Versão local, captura de julho de 2026",
+      caption: "Formatador de JSON, julho de 2026",
     },
     {
       src: "/images/cases/devkit/mobile.jpg",
       width: 780,
       height: 1688,
       alt: "Página inicial do Devkit em largura de celular, com as ferramentas empilhadas em uma coluna.",
-      caption: "Versão local em celular, captura de julho de 2026",
+      caption: "Página inicial em celular, julho de 2026",
     },
   ],
 
@@ -47,7 +46,6 @@ export const devkit: CaseStudy = {
     milestones: [
       {when: "19/07/2026", what: "Especificação e arquitetura: sete ferramentas, três idiomas, visual de editor de código."},
       {when: "28/07/2026", what: "Versão v3 com auditoria: correção de XSS na prévia de Markdown, cabeçalhos de segurança, revisão de acentuação e animações com respeito a movimento reduzido."},
-      {when: "Etapa futura", what: "Implantação em Cloudflare Pages, domínio e monetização, previstas para o fim do portfólio de sites."},
     ],
   },
 
@@ -67,7 +65,7 @@ export const devkit: CaseStudy = {
 
   architecture: {
     intro:
-      "Site estático sem backend de processamento e sem dependências de terceiros para as ferramentas. Cada página é gerada em build com o exemplo inicial, FAQ e dados estruturados. No navegador, um script único implementa as sete ferramentas; o texto colado é processado em memória e nunca é enviado. A detecção de país na borda da Cloudflare, prevista para idioma e fuso, é a única função de servidor.",
+      "Site estático sem backend de processamento e sem dependências de terceiros para as ferramentas. Cada página é gerada em build com o exemplo inicial, FAQ e dados estruturados. No navegador, um script único implementa as sete ferramentas; o texto colado é processado em memória e nunca é enviado. A detecção de país na borda da Cloudflare, usada para idioma e fuso, é a única função de servidor.",
     diagram: {
       title: "Arquitetura do Devkit",
       tiers: [
@@ -160,11 +158,10 @@ export const devkit: CaseStudy = {
     "Julho de 2026: monitoramento de rede não registrou requisições com o texto colado pelo usuário.",
   ],
   limits: [
-    "O parser de Markdown não cobre tabelas, citações aninhadas nem HTML embutido.",
+    "O parser de Markdown não cobre tabelas, citações aninhadas nem HTML embutido, por decisão de segurança.",
     "O decodificador de JWT não verifica assinatura.",
-    "A CSP mantém 'unsafe-inline' em scripts por causa do AdSense previsto.",
-    "Base64 de arquivos e diff de JSON ficaram para uma fase seguinte.",
-    "Próximos passos registrados como intenção: diff de JSON e texto, conversão XML e YAML, hash, gerador de UUID, testador de regex e conversor de cores.",
+    "A CSP mantém 'unsafe-inline' em scripts para acomodar os espaços de anúncio do layout.",
+    "Próximo passo: Base64 de arquivos, diff de JSON e texto, conversão XML e YAML, hash, gerador de UUID, testador de regex e conversor de cores.",
   ],
 
   links: [],

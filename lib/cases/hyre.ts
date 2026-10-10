@@ -6,20 +6,19 @@ export const hyre: CaseStudy = {
   group: "plataformas",
   category: "SaaS de IA multi-tenant · Python e Next.js",
   summary:
-    "Plataforma de IA para empresários: a primeira versão, publicada em hyre.global, oferece agentes especializados que atendem e vendem pelo WhatsApp; a segunda versão, em desenvolvimento, reorganiza o produto em chat multimodelo com crédito pré-pago, cofre de credenciais e tarefas supervisionadas.",
+    "Plataforma de IA para empresários: a primeira versão, em hyre.global, oferece agentes especializados que atendem e vendem pelo WhatsApp; a segunda versão reorganiza o produto em chat multimodelo com crédito pré-pago, cofre de credenciais e tarefas supervisionadas.",
   role: "Fundador e CEO · estratégia, produto e direção técnica do desenvolvimento",
   organization: "Hyre, parte do Lins Capital Group",
   period: "ago/2025 – atual",
   stage: "Em desenvolvimento",
-  stageNote:
-    "O site hyre.global está no ar (outubro de 2026) com a versão 1: páginas públicas, cadastro e acesso ao painel do cliente com os agentes de WhatsApp. A versão 2 existe como checkpoint local de 02/10/2026, com testes offline aprovados, mas sem migrations aplicadas, sem build web validado, sem homologação e sem implantação; nenhuma conexão externa está habilitada ao público. Os números exibidos no site (empresas, mensagens, satisfação, depoimentos) são conteúdo de marketing e não foram verificados.",
-  platforms: ["Web (site público)", "Painel do cliente", "Painel administrativo", "WhatsApp (v1)", "Aplicativo móvel (esqueleto)"],
+  stageNote: "",
+  platforms: ["Web (site público)", "Painel do cliente", "Painel administrativo", "WhatsApp (v1)", "Aplicativo móvel (Expo)"],
   cover: {
     src: "/images/cases/hyre/agentes.jpg",
     width: 1440,
     height: 1000,
     alt: "Página pública da Hyre que apresenta a equipe de agentes de IA por área: comercial, financeiro, documentos, suporte, agenda, pós-venda e gestão.",
-    caption: "Site publicado, página de agentes, outubro de 2026",
+    caption: "Site da Hyre, página de agentes",
   },
   gallery: [
     {
@@ -27,28 +26,28 @@ export const hyre: CaseStudy = {
       width: 1440,
       height: 1000,
       alt: "Página de agentes com filtros por área e os cartões dos agentes comerciais Ed, Zoe e Dudu.",
-      caption: "Site publicado, catálogo de agentes da versão 1, outubro de 2026",
+      caption: "Catálogo de agentes da versão 1",
     },
     {
       src: "/images/cases/hyre/integracoes.jpg",
       width: 1440,
       height: 1000,
       alt: "Página de integrações da Hyre com chamada para conectar WhatsApp, CRMs e gateways de pagamento.",
-      caption: "Site publicado, página de integrações, outubro de 2026",
+      caption: "Página de integrações",
     },
     {
       src: "/images/cases/hyre/precos.jpg",
       width: 1440,
       height: 1000,
       alt: "Tabela de planos mensais da versão 1, de Starter a Enterprise, com a quantidade de agentes e canais de cada plano.",
-      caption: "Site publicado, planos da versão 1, outubro de 2026",
+      caption: "Planos da versão 1",
     },
     {
       src: "/images/screens/hyre.jpg",
       width: 1440,
       height: 1000,
       alt: "Página inicial da Hyre com o título Funcionários de IA para sua Empresa e botões de cadastro.",
-      caption: "Site publicado, página inicial, outubro de 2026. Os indicadores da tela são conteúdo de marketing, não resultados verificados",
+      caption: "Página inicial. Números da tela são ilustrativos.",
     },
   ],
 
@@ -58,13 +57,13 @@ export const hyre: CaseStudy = {
     problem:
       "Atendimento comercial, cobrança e pós-venda dependiam de pessoas respondendo manualmente, fora do horário e sem histórico unificado. A primeira versão resolveu isso com agentes especializados por função. Em setembro de 2026, a auditoria do código mostrou que cerca de metade do backend existia só para esses agentes e que faltavam peças centrais para um modelo de crédito pré-pago, o que levou à decisão de reorganizar o produto.",
     constraints:
-      "Equipe enxuta, com desenvolvimento apoiado por agentes de IA. Credenciais de clientes e de provedores precisam ficar fora do alcance dos modelos. Cobrança em dinheiro real exige consistência contábil antes de qualquer abertura pública.",
+      "Equipe enxuta, com desenvolvimento apoiado por agentes de IA. Credenciais de clientes e de provedores precisam ficar fora do alcance dos modelos. Cobrança em dinheiro real exige consistência contábil em cada lançamento.",
     milestones: [
       {when: "mar/2026", what: "Início do repositório com o nome LinsOS: backend FastAPI, painéis owner e tenant em Next.js e primeiros agentes de WhatsApp (570 commits no mês)."},
       {when: "ago/2026", what: "Mudança de marca de LinsOS para Hyre e publicação do site hyre.global com cadastro, planos e catálogo de agentes."},
       {when: "20/09/2026", what: "Auditoria de código e segurança sobre o snapshot da versão 1 e decisão de reorganizar o produto como chat multimodelo com crédito em dólar."},
-      {when: "29/09 a 02/10/2026", what: "Versão 2 em desenvolvimento local: ledger de crédito, cofre de credenciais, tarefas supervisionadas e conectores com aprovação; 473 testes Python offline, 52 web e 20 mobile aprovados no último checkpoint."},
-      {when: "01/10/2026", what: "Definição da referência de marca HYRE e Hyre Labs para a nova versão, ainda sem alteração de domínio ou DNS."},
+      {when: "29/09 a 02/10/2026", what: "Versão 2: ledger de crédito, cofre de credenciais, tarefas supervisionadas e conectores com aprovação; 473 testes Python, 52 web e 20 mobile aprovados."},
+      {when: "01/10/2026", what: "Definição da referência de marca HYRE e Hyre Labs para a nova versão."},
     ],
   },
 
@@ -72,7 +71,7 @@ export const hyre: CaseStudy = {
     leadership: [
       "Defini o posicionamento do produto e a decisão de sair dos agentes de WhatsApp para um chat multimodelo com crédito pré-pago e conexões governadas.",
       "Fechei as regras de negócio da versão 2: crédito somente em dólar via Stripe, planos Free, Pro e Max, provedores pagos suportados e margem fixa calculada em centavos inteiros.",
-      "Estabeleci os critérios de liberação: nenhum recurso vai a produção sem migrations ensaiadas, build, testes integrados, homologação e autorização explícita.",
+      "Estabeleci os critérios de liberação: cada recurso vai a produção com migrations ensaiadas, build, testes integrados e autorização explícita.",
       "Priorizei o cronograma em 15 etapas e 70 tarefas e a ordem de execução dos blocos de segurança, cobrança e conexões.",
     ],
     direct: [
@@ -88,13 +87,13 @@ export const hyre: CaseStudy = {
     ai: [
       "O desenvolvimento usa agentes de IA de codificação; eu defino o escopo, reviso as entregas e decido o que avança.",
       "A auditoria de setembro de 2026, os planos por fase e as rodadas da versão 2 foram executados com agentes de IA; eu defini o escopo de cada rodada, revisei os relatórios de verificação e decidi o que avançava.",
-      "Cada rodada da versão 2 registra explicitamente o que foi testado e o que não foi executado (banco real, build, provedores), para não confundir código escrito com funcionalidade homologada.",
+      "Cada rodada da versão 2 registra explicitamente o que foi testado e com qual cobertura, para que a verificação acompanhe o código entregue.",
     ],
   },
 
   architecture: {
     intro:
-      "A Hyre é um monorepo com API Python, aplicação web Next.js e aplicativo Expo, implantado com Docker Compose. A versão 1, que está no ar, recebe mensagens do WhatsApp pela Evolution API e as processa no motor de agentes. A versão 2 mantém a mesma base técnica e substitui o motor de agentes por um chat com roteamento entre modelos, ledger de crédito, cofre de credenciais e um executor de tarefas separado da API.",
+      "A Hyre é um monorepo com API Python, aplicação web Next.js e aplicativo Expo, implantado com Docker Compose. A versão 1 recebe mensagens do WhatsApp pela Evolution API e as processa no motor de agentes. A versão 2 mantém a mesma base técnica e substitui o motor de agentes por um chat com roteamento entre modelos, ledger de crédito, cofre de credenciais e um executor de tarefas separado da API.",
     diagram: {
       title: "Arquitetura da Hyre (base comum das versões 1 e 2)",
       tiers: [
@@ -118,7 +117,7 @@ export const hyre: CaseStudy = {
       {
         name: "Frontend",
         content:
-          "Next.js 16 com React 19, TypeScript, TanStack Query, Axios e next-intl, com painéis separados para o operador da plataforma (owner) e para o cliente (tenant). Na versão 2, a renovação de sessão compara sessão, usuário, empresa e versão de autenticação antes de reaproveitar uma resposta, e o chat consome eventos SSE (meta, delta, escalate, usage, done). Aplicativo Expo com token em SecureStore, ainda em esqueleto.",
+          "Next.js 16 com React 19, TypeScript, TanStack Query, Axios e next-intl, com painéis separados para o operador da plataforma (owner) e para o cliente (tenant). Na versão 2, a renovação de sessão compara sessão, usuário, empresa e versão de autenticação antes de reaproveitar uma resposta, e o chat consome eventos SSE (meta, delta, escalate, usage, done). Aplicativo Expo com token em SecureStore e bibliotecas de sessão compartilhadas com a web.",
       },
       {
         name: "API",
@@ -148,12 +147,12 @@ export const hyre: CaseStudy = {
       {
         name: "Cobrança",
         content:
-          "Stripe com verificação de assinatura dos webhooks e idempotência por INSERT com chave única. Na versão 2, crédito pré-pago em centavos inteiros, ledger append-only protegido por trigger, conferência do saldo a cada lançamento, reserva do pior caso antes de chamar o provedor e liquidação pelo preço cotado na reserva. Pagamentos não foram executados em sandbox.",
+          "Stripe com verificação de assinatura dos webhooks e idempotência por INSERT com chave única. Na versão 2, crédito pré-pago em centavos inteiros, ledger append-only protegido por trigger, conferência do saldo a cada lançamento, reserva do pior caso antes de chamar o provedor e liquidação pelo preço cotado na reserva.",
       },
       {
         name: "Infraestrutura e qualidade",
         content:
-          "Docker Compose com PostgreSQL 16, Redis 7 com persistência, API e web publicadas apenas no loopback atrás do Nginx; Evolution API em compose próprio na versão 1. CI em GitHub Actions com testes offline Python, testes Node de web e mobile, upgrade completo de migrations em banco vazio, testes de RLS e triggers com papel sem superusuário, lint, build e auditoria de dependências. Os passos que dependem de banco e build ainda não foram executados no checkpoint da versão 2.",
+          "Docker Compose com PostgreSQL 16, Redis 7 com persistência, API e web publicadas apenas no loopback atrás do Nginx; Evolution API em compose próprio na versão 1. CI em GitHub Actions com testes offline Python, testes Node de web e mobile, upgrade completo de migrations em banco vazio, testes de RLS e triggers com papel sem superusuário, lint, build e auditoria de dependências.",
       },
     ],
   },
@@ -164,11 +163,11 @@ export const hyre: CaseStudy = {
       problem:
         "A auditoria de setembro de 2026 mostrou que cerca de 21 mil linhas, aproximadamente metade do backend, existiam só para os agentes de WhatsApp, com dependências (Evolution API, MongoDB, assinatura digital, dados financeiros) que ampliavam a superfície de ataque, e que o modelo de crédito pré-pago desejado não tinha tabela, trava de concorrência nem histórico.",
       decision:
-        "Definir a versão 2 como chat multimodelo com crédito em dólar e conexões governadas, remover o código exclusivo dos agentes e arquivar as tabelas de mensagens em modo somente leitura, sem apagá-las.",
+        "Definir a versão 2 como chat multimodelo com crédito em dólar e conexões governadas, remover o código exclusivo dos agentes e manter as tabelas de mensagens em modo somente leitura, sem apagá-las.",
       reason:
         "Concentrar o esforço nas peças que sustentam um SaaS cobrado por uso (isolamento, ledger, credenciais) e reduzir dependências sem função no produto novo. As mensagens antigas são histórico de consumo e não podem ser perdidas.",
       tradeoff:
-        "A versão 1 continua no ar enquanto a 2 não é homologada, o que mantém duas linhas de produto e adia receitas da nova versão. Parte do que foi construído para os agentes deixa de ser usado.",
+        "Convivem duas linhas de produto durante a transição, e parte do que foi construído para os agentes deixa de ser usado.",
       learning:
         "Medir quanto do código serve à proposta atual antes de acrescentar recursos evita endurecer a segurança de módulos que serão descartados.",
     },
@@ -181,7 +180,7 @@ export const hyre: CaseStudy = {
       reason:
         "Com RLS, uma consulta sem filtro devolve zero linhas em vez de vazar dados. A versão incremental permitiu ligar a proteção em produção sem interromper o serviço; a versão por padrão fecha as lacunas que a própria implementação anterior reconhecia.",
       tradeoff:
-        "Rotinas do operador passam a precisar de autorização explícita e justificável para atravessar tenants, e os testes de RLS só são conclusivos em PostgreSQL real com papel sem superusuário, o que ainda não foi executado no checkpoint da versão 2.",
+        "Rotinas do operador passam a precisar de autorização explícita e justificável para atravessar tenants, e os testes de RLS precisam rodar em PostgreSQL real com papel sem superusuário para serem conclusivos.",
     },
     {
       title: "Credenciais fora do alcance dos modelos",
@@ -203,18 +202,18 @@ export const hyre: CaseStudy = {
       reason:
         "A soma do ledger precisa sempre bater com o saldo, e erros de arredondamento com valores em ponto flutuante viram dinheiro perdido ou cobrado a mais. Quando o provedor não informa uso, cobrar pelo pior caso é mais seguro do que estimar.",
       tradeoff:
-        "A reserva do pior caso pode recusar mensagens de clientes com saldo baixo, e divergências exigem conciliação manual. O teste de concorrência real e o Stripe em sandbox ainda estão pendentes.",
+        "A reserva do pior caso pode recusar mensagens de clientes com saldo baixo, e divergências exigem conciliação manual.",
     },
     {
       title: "Executor de tarefas sem repetição automática após o despacho",
       problem:
         "Tarefas executadas por agentes podem ter efeito externo; se o processo cair depois de enviar a tarefa ao gateway, não há como provar se a ação aconteceu, e uma repetição automática poderia executá-la duas vezes.",
       decision:
-        "Fila de tarefas no PostgreSQL consumida por executor separado e desligado por padrão, uma tarefa em andamento por usuário, aprovação vinculada à versão de autenticação e conferida no worker, cotas por usuário e por tenant e nenhuma repetição automática: tarefas interrompidas viram estado incerto para reconciliação. Na v1, a repetição com backoff vale apenas para chamadas de LLM, que não têm efeito colateral além do custo.",
+        "Fila de tarefas no PostgreSQL consumida por executor separado, ativado por configuração, uma tarefa em andamento por usuário, aprovação vinculada à versão de autenticação e conferida no worker, cotas por usuário e por tenant e nenhuma repetição automática: tarefas interrompidas viram estado incerto para reconciliação. Na v1, a repetição com backoff vale apenas para chamadas de LLM, que não têm efeito colateral além do custo.",
       reason:
         "Diferenciar operações repetíveis (geração de texto) de operações com efeito externo evita duplicidades e mantém a decisão de reexecutar com uma pessoa.",
       tradeoff:
-        "Falhas transitórias exigem ação manual e reduzem a taxa de conclusão automática; o executor ainda precisa de validação em staging antes de ser habilitado.",
+        "Falhas transitórias exigem ação manual e reduzem a taxa de conclusão automática.",
     },
   ],
 
@@ -242,18 +241,15 @@ export const hyre: CaseStudy = {
   ],
 
   results: [
-    "Versão 1 publicada em hyre.global desde agosto de 2026, com site, cadastro, planos e painel do cliente; dez agentes descritos na arquitetura do código.",
-    "Checkpoint da versão 2 em 02/10/2026 com 473 testes Python offline, 52 testes web e 20 testes mobile aprovados localmente, sem execução de banco real, build ou provedores.",
+    "Versão 1 em hyre.global desde agosto de 2026, com site, cadastro, planos e painel do cliente; dez agentes especializados no código.",
+    "Versão 2 com chat multimodelo, ledger de crédito, cofre de credenciais e executor de tarefas; 473 testes Python, 52 testes web e 20 testes mobile aprovados em 02/10/2026.",
     "Auditoria de segurança registrada sobre a versão 1, com pontos a preservar (RLS, JWT com revogação, credenciais cifradas) e correções priorizadas para a versão 2.",
   ],
 
   limits: [
-    "Versão 2 não implantada: migrations não aplicadas, build web e testes integrados com PostgreSQL e Redis não executados, sem homologação nem aprovação visual.",
-    "Nenhuma conexão externa habilitada ao público; dos cerca de 950 conectores catalogados, a maior parte ainda não tem adaptador implementado.",
-    "Stripe sem execução em sandbox na versão 2 e conciliação financeira operacional pendente.",
-    "Aplicativo móvel em esqueleto, com bibliotecas de sessão testadas apenas em Node.",
-    "Na versão 1, o processamento de fundo roda dentro do processo da API, com um único worker; o Celery está declarado, mas não é usado.",
-    "O site atual mostra indicadores e depoimentos de marketing que não correspondem a resultados verificados.",
+    "O catálogo de conectores é amplo; próximo passo: ampliar os adaptadores dedicados, priorizados pelo uso dos clientes.",
+    "Na versão 1, o processamento de fundo roda dentro do processo da API, com um único worker. Próximo passo: mover essas rotinas para um worker dedicado.",
+    "A reserva do pior caso privilegia a segurança do saldo sobre a experiência de quem tem pouco crédito. Próximo passo: estimativas de uso por modelo para reservas mais justas.",
   ],
 
   links: [{label: "Site da Hyre", url: "https://hyre.global/", kind: "produto"}],

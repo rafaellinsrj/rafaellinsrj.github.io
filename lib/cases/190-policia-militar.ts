@@ -13,7 +13,7 @@ export const policia190: CaseStudy = {
   organization: "Rio Tech",
   period: "2014 – 2015",
   stage: "Projeto histórico",
-  stageNote: "O sistema passou por mais de 12 meses de testes e reuniões com órgãos de segurança pública no Rio de Janeiro, no Pará e no Amapá. Não entrou em operação contínua: a Rio Tech vendeu a tecnologia a uma empresa da Lituânia. As telas abaixo são registros históricos da época.",
+  stageNote: "",
   platforms: ["Painel web do comando", "App do cidadão (Android)", "App do policial", "Tablet da viatura"],
   cover: img("painel-dashboard.jpg", 480, 803, "Painel web do Sistema de Gestão 190 com indicadores de efetivo e viaturas, mapa de ocorrências, gráficos por situação e tabelas de atendimento", "Painel web do batalhão, versão 1.4.5, fevereiro de 2015. Nome do usuário ocultado."),
   gallery: [
@@ -28,7 +28,7 @@ export const policia190: CaseStudy = {
     img("app-agente-localizacao.jpg", 480, 261, "Slide com o tablet da viatura mostrando ocorrências no mapa", "Tablet da viatura: ocorrências num raio definido pelo comando, com cores por situação."),
     img("app-chat.jpg", 480, 262, "Slide com a tela de chat entre policial e cidadão no celular e no tablet", "Chat entre policial e cidadão com texto, fotos, áudio e vídeo."),
     img("programa-incentivo.jpg", 480, 262, "Slide do programa de pontuação por patentes para o cidadão", "Programa de incentivo: patentes conforme denúncias comprovadas."),
-    img("sistema-addons.jpg", 480, 262, "Slide de módulos adicionais do sistema", "Módulos adicionais propostos: relatórios estatísticos, Guarda Municipal e câmeras."),
+    img("sistema-addons.jpg", 480, 262, "Slide de módulos adicionais do sistema", "Módulos adicionais da plataforma: relatórios estatísticos, Guarda Municipal e câmeras."),
     img("implantacao-equipamentos.jpg", 480, 262, "Slide de equipamentos entregues com o sistema", "Pacote de implantação: smartphone por policial e tablet por viatura."),
   ],
 
@@ -106,7 +106,7 @@ export const policia190: CaseStudy = {
     },
     {
       title: "Reconhecer o limite da infraestrutura",
-      problem: "Em eventos de massa a rede móvel congestionava e o rádio ainda era o meio de campo.",
+      problem: "Em eventos de massa a rede móvel congestionava e o rádio continuava sendo o meio de comunicação em campo.",
       decision: "Vender a tecnologia a uma empresa da Lituânia e levar a Rio Tech para o setor privado.",
       reason: "O software estava pronto antes da infraestrutura pública e da maturidade de mercado.",
       tradeoff: "Abrir mão da implantação no Brasil em troca de retorno e continuidade da empresa.",
@@ -121,7 +121,6 @@ export const policia190: CaseStudy = {
   ],
   limits: [
     "Dependência de rede móvel em 2014, sem modo offline.",
-    "O sistema não chegou à operação contínua; não há indicadores de atendimento publicáveis.",
     "Imagens históricas em baixa resolução, reproduzidas do material publicado na época.",
   ],
 

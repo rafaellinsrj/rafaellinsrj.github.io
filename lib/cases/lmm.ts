@@ -5,41 +5,40 @@ export const lmm: CaseStudy = {
   name: "LMM Capital",
   group: "fintech",
   category: "Formador de mercado automatizado · Node.js",
-  summary: "Robô formador de mercado multi-conta para o mercado de previsões Vero Markets, com preço ancorado na Polymarket, controles de risco por patrimônio e painel de operação. Operou de maio a outubro de 2026 e foi desligado junto com a Vero.",
+  summary: "Robô formador de mercado multi-conta para o mercado de previsões Vero Markets, com preço ancorado na Polymarket, controles de risco por patrimônio e painel de operação.",
   role: "Arquitetura, desenvolvimento e operação",
   period: "Maio a outubro de 2026",
   stage: "Projeto histórico",
-  stageNote: "O robô rodou em servidor próprio de 13/05/2026 até 07/10/2026, quando a Vero Markets, única plataforma em que operava, foi tirada do ar por decisão minha. O código, o painel compilado e uma cópia consistente do banco foram arquivados com roteiro de reinstalação. O domínio lmm.capital não responde mais. A imagem abaixo é da página institucional executada localmente a partir desses arquivos; os números dela não são resultados.",
+  stageNote: "",
   platforms: ["Serviço Node.js (robô e API)", "Painel administrativo web", "Página institucional"],
   cover: {
     src: "/images/screens/local-lmm.jpg",
     width: 1440,
     height: 720,
     alt: "Página institucional da LMM Capital, em fundo escuro com detalhes em roxo e título sobre liquidez institucional para mercados digitais",
-    caption: "Página institucional executada localmente a partir dos arquivos arquivados, outubro de 2026.",
+    caption: "Página institucional da LMM Capital. Números da tela são ilustrativos.",
   },
   gallery: [],
 
   history: {
     audience: "A própria Vero Markets, mercado de previsões no estilo Polymarket: o LMM fornecia ofertas de compra e venda para que os mercados tivessem livro e preço de referência desde a abertura.",
     problem: "Mercado de previsões recém-aberto tem livro vazio: sem ofertas dos dois lados, o preço exibido não reflete a probabilidade do evento e quem chega não consegue negociar. Era preciso manter ofertas contínuas em dezenas de mercados, com preço coerente com uma referência externa e sem deixar o formador de mercado acumular risco sem controle.",
-    constraints: "Toda a operação passava pela API REST da Vero, com limites de requisição por conta (lotes de até 50 ordens e cancelamento em massa limitado por minuto). Preços em centavos inteiros de 1 a 99, com SIM e NÃO complementares. Servidor único de 2 vCPU e 2 GB. Sem a Vero no ar, o robô não tem onde operar.",
+    constraints: "Toda a operação passava pela API REST da Vero, com limites de requisição por conta (lotes de até 50 ordens e cancelamento em massa limitado por minuto). Preços em centavos inteiros de 1 a 99, com SIM e NÃO complementares. Servidor único de 2 vCPU e 2 GB.",
     milestones: [
       {when: "13/05/2026", what: "Versão 1.0: robô de formação de mercado e painel, com kill switch por resultado."},
       {when: "16/05/2026", what: "Endurecimento do painel: limite de tentativas de login e CORS restrito."},
       {when: "11 e 12/06/2026", what: "Orquestrador multi-conta, painel de contas e configuração, âncora de preço na Polymarket e kill switch por patrimônio."},
       {when: "18 a 25/06/2026", what: "Versão 1.1: defesa em mercado suspenso, validade (TTL) das ordens, tratamento de limite de requisições e registro de patrimônio por ciclo."},
       {when: "01/07/2026", what: "Versão 1.2: ofertas de venda a partir das posições acumuladas e patrimônio medido por valor de liquidação, sem dupla contagem."},
-      {when: "07/10/2026", what: "Desligamento junto com a Vero Markets e arquivamento do código, do banco e do roteiro de reinstalação."},
     ],
   },
 
   responsibility: {
     leadership: [
       "Defini o papel do LMM como formador de mercado da Vero e o desenho em três frentes: ofertas nos dois lados, preço ancorado em referência externa e risco limitado.",
-      "Decidi as regras de contenção: robô parado por padrão, kill switch por patrimônio e pausa por conta ou de todas as contas pelo painel.",
+      "Decidi as regras de contenção: robô em espera por padrão, kill switch por patrimônio e pausa por conta ou de todas as contas pelo painel.",
       "Identifiquei, pelo raciocínio de soma zero de um conjunto fechado de contas, que o patrimônio agregado não podia subir, o que levou à correção da contabilidade e a uma regra de conservação na própria Vero.",
-      "Conduzi o desligamento: carteiras esvaziadas, servidores encerrados e cópia arquivada com instruções de reinstalação.",
+      "Documentei o roteiro de instalação, com código, painel compilado e cópia consistente do banco.",
     ],
     direct: [
       "Implementei o serviço em Node.js com Express: estratégia de preço, orquestrador multi-conta, gestor de risco e cliente da API da Vero com novas tentativas.",
@@ -57,7 +56,7 @@ export const lmm: CaseStudy = {
   },
 
   architecture: {
-    intro: "Um único processo Node.js reunia o robô e a API do painel. A cada ciclo, o orquestrador lia o livro de cada mercado habilitado na API da Vero, calculava o preço-alvo com a referência da Polymarket, aplicava os limites de risco e enviava ordens em lotes por conta. O painel, servido pelo mesmo processo atrás do nginx, permitia ligar e desligar o robô, ajustar parâmetros por mercado e acompanhar patrimônio, ordens e logs.",
+    intro: "Um único processo Node.js reunia o robô e a API do painel. A cada ciclo, o orquestrador lia o livro de cada mercado habilitado na API da Vero, calculava o preço-alvo com a referência da Polymarket, aplicava os limites de risco e enviava ordens em lotes por conta. O painel, servido pelo mesmo processo atrás do nginx, permitia ligar e pausar o robô, ajustar parâmetros por mercado e acompanhar patrimônio, ordens e logs.",
     diagram: {
       title: "Arquitetura do LMM",
       tiers: [
@@ -110,11 +109,11 @@ export const lmm: CaseStudy = {
       tradeoff: "Ciclos mais longos e menor frequência de atualização das ofertas.",
     },
     {
-      title: "Desligado por padrão",
+      title: "Em espera por padrão",
       problem: "Um reinício do processo não podia colocar o robô para enviar ordens sem decisão explícita.",
-      decision: "O estado ligado ou desligado fica gravado no banco; sem estado ligado, o serviço sobe em espera. O segredo do token é obrigatório e o processo não inicia sem ele.",
+      decision: "O estado ligado ou em espera fica gravado no banco; sem estado ligado, o serviço sobe em espera. O segredo do token é obrigatório e o processo não inicia sem ele.",
       reason: "Em sistema que movimenta saldo, falhar fechado é mais seguro que retomar sozinho.",
-      tradeoff: "Exige ação manual após manutenção, registrada também no roteiro de reinstalação.",
+      tradeoff: "Exige ação manual após manutenção, registrada também no roteiro de instalação.",
     },
   ],
 
@@ -139,14 +138,14 @@ export const lmm: CaseStudy = {
   ],
 
   results: [
-    "Robô em operação de 13/05/2026 a 07/10/2026, com versões 1.0, 1.1 e 1.2 registradas no histórico do repositório.",
+    "Robô formador de mercado multi-conta entregue em três versões (1.0, 1.1 e 1.2), registradas no histórico do repositório entre maio e julho de 2026.",
     "Correção da medida de patrimônio (versão 1.2.0, julho de 2026) e regra de conservação incorporada à Vero a partir do diagnóstico feito sobre o LMM.",
-    "Desligamento controlado em outubro de 2026, com código, banco e roteiro de reinstalação arquivados.",
+    "Roteiro de instalação documentado, com código, painel compilado e cópia consistente do banco.",
   ],
 
   limits: [
-    "Projeto encerrado: o robô dependia exclusivamente da API da Vero Markets, que saiu do ar em 07/10/2026.",
-    "Sem testes automatizados no repositório; a validação foi feita em operação, com logs e registro de patrimônio por ciclo.",
+    "O robô foi desenhado para a API de uma única plataforma. Próximo passo: separar o cliente de corretora em adaptadores para operar em outros mercados.",
+    "A validação foi feita em operação, com logs e registro de patrimônio por ciclo. Próximo passo: testes automatizados da estratégia e do gestor de risco.",
     "Os números da página institucional são de apresentação e não são métricas deste portfólio.",
   ],
 

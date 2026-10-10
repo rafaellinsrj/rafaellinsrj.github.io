@@ -473,3 +473,11 @@ nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-under
 .timeline-cases span{font:400 12px/1.5 var(--font-code);color:var(--muted)}
 .timeline-cases a{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line);border-radius:2px;color:var(--ink)}
 .timeline-cases a:hover{background:#292929}
+/* Lins Capital Group em destaque */
+.timeline li.is-main{grid-template-columns:200px minmax(0,1fr);margin:24px 0;padding:28px;border:1px solid #5a5a5a;border-radius:16px;background:var(--color-tile-gray)}
+.timeline li.is-main .timeline-name{font-size:28px}
+.timeline li.is-main p:last-child{color:var(--ink)}
+.timeline-tag-main{color:var(--ink);border-color:#777}
+.role-strip li.is-main{border-color:#6a6a6a;background:var(--color-tile-gray)}
+@media(max-width:900px){.timeline li.is-main{grid-template-columns:1fr;padding:22px}}
+@media(max-width:760px){.timeline li.is-main .timeline-name{font-size:23px}}

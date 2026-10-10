@@ -7,7 +7,7 @@ export default function ProjectsSection({page = false}: {page?: boolean}) {
   const H = page ? "h2" : "h3";
   return <>
     <section id="projetos" className="section container">
-      <div className="section-heading"><div><p className="eyebrow">Estudos de caso</p>{page ? <h1 className="section-h1">Produto, arquitetura<br/>e <span>decisões.</span></h1> : <h2>Produto, arquitetura<br/>e <span>decisões.</span></h2>}</div><p>Cada projeto tem uma página com contexto, minha participação, arquitetura documentada, decisões técnicas, estágio real e evidências.</p></div>
+      <div className="section-heading"><div><p className="eyebrow">Estudos de caso</p>{page ? <h1 className="section-h1">Produto, arquitetura<br/>e <span>decisões.</span></h1> : <h2>Produto, arquitetura<br/>e <span>decisões.</span></h2>}</div><p>Cada projeto tem uma página com contexto, minha participação, arquitetura documentada, decisões técnicas e evidências.</p></div>
       {groupOrder.map(g => {
         const items = ordered(g.group);
         if (!items.length) return null;

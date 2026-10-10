@@ -15,7 +15,7 @@ export default function CaseCard({item, compact = false}: {item: CaseStudy; comp
         <h3>{item.name}<span className="card-arrow"><Icon name="arrow-up-right"/></span></h3>
         <p>{item.summary}</p>
         <p className="card-role">{item.role}{item.period ? " · " + item.period : ""}</p>
-        <div className="project-card-bottom"><span className="status">{item.stage}</span><span className="case-label">Ler estudo de caso</span></div>
+        <div className="project-card-bottom"><span className="case-label">Ler estudo de caso</span></div>
       </div>
     </Link>
   </article>;

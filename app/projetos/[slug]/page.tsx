@@ -59,7 +59,7 @@ export default async function CasePage({params}: Props) {
     ["arquitetura", "Arquitetura"],
     ["decisoes", "Decisões técnicas"],
     ...(item.journey || item.dataModel ? [["fluxo", "Fluxo e modelo"] as [string, string]] : []),
-    ["resultados", "Resultados e limites"],
+    ["resultados", "Resultados e próximos passos"],
     ...(item.proposal ? [["proposta", item.proposal.title] as [string, string]] : []),
     ...(item.gallery.length ? [["galeria", "Galeria"] as [string, string]] : []),
   ];
@@ -76,7 +76,6 @@ export default async function CasePage({params}: Props) {
       <dl className="case-meta">
         <div><dt>Papel</dt><dd>{item.role}</dd></div>
         {(item.organization || item.period) && <div><dt>Organização e período</dt><dd>{[item.organization, item.period].filter(Boolean).join(" · ")}</dd></div>}
-        <div><dt>Estágio</dt><dd><span className="status">{item.stage}</span></dd></div>
         <div><dt>Plataformas</dt><dd>{item.platforms.join(" · ")}</dd></div>
       </dl>
       {item.links.length > 0 && <div className="case-actions">{item.links.map(l =>
@@ -99,8 +98,6 @@ export default async function CasePage({params}: Props) {
         </nav>
       </aside>
       <div className="case-main">
-        <section className="stage-note" aria-label="Situação do projeto"><p className="eyebrow">Situação do projeto</p><p>{item.stageNote}</p></section>
-
         <section id="historia"><p className="eyebrow">{n("historia")} / Contexto</p><h2>História e problema</h2>
           <dl className="layer-list">
             <div><dt>Para quem</dt><dd>{item.history.audience}</dd></div>
@@ -132,10 +129,10 @@ export default async function CasePage({params}: Props) {
           {item.dataModel && <><h3 className="sub-title">Modelo lógico simplificado</h3><dl className="layer-list">{item.dataModel.map(d => <div key={d.entity}><dt>{d.entity}</dt><dd>{d.fields}</dd></div>)}</dl></>}
         </section>}
 
-        <section id="resultados"><p className="eyebrow">{n("resultados")} / Evidências</p><h2>Resultados e limites</h2>
+        <section id="resultados"><p className="eyebrow">{n("resultados")} / Evidências</p><h2>Resultados e próximos passos</h2>
           <div className="results-grid">
             <div><h3>Resultados e evidências</h3><ul>{item.results.map(x => <li key={x}>{x}</li>)}</ul></div>
-            <div><h3>Limites e próximos passos</h3><ul>{item.limits.map(x => <li key={x}>{x}</li>)}</ul></div>
+            <div><h3>Próximos passos</h3><ul>{item.limits.map(x => <li key={x}>{x}</li>)}</ul></div>
           </div>
         </section>
 

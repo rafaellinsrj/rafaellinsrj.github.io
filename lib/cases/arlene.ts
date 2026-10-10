@@ -10,15 +10,14 @@ export const arlene: CaseStudy = {
   role: "Desenvolvimento do site e implantação em servidor próprio",
   period: "Março a agosto de 2026",
   stage: "Site publicado",
-  stageNote:
-    "No ar em psicanalista.arlenezerbini.com em outubro de 2026, servido por Next.js atrás de nginx com HTTPS. A versão atual usa fotos hospedadas no próprio projeto, depois que o site anterior da profissional, em WordPress, saiu do ar.",
+  stageNote: "",
   platforms: ["Web (desktop e celular)"],
   cover: {
     src: "/images/screens/arlene.jpg",
     width: 1440,
     height: 1000,
     alt: "Página inicial do site de Arlene Zerbini com o título sobre o poder de se compreender pela psicanálise, botão de agendamento e foto da profissional.",
-    caption: "Site publicado, outubro de 2026",
+    caption: "Página inicial",
   },
   gallery: [
     {
@@ -26,7 +25,7 @@ export const arlene: CaseStudy = {
       width: 390,
       height: 844,
       alt: "Página inicial em largura de celular, com menu recolhido, título em fonte serifada, botões de agendamento e números de apresentação.",
-      caption: "Site publicado em celular, outubro de 2026",
+      caption: "Página inicial em celular",
     },
   ],
 
@@ -43,7 +42,7 @@ export const arlene: CaseStudy = {
 
   responsibility: {
     leadership: [
-      "Decidi eliminar a dependência do domínio do site antigo, trazendo as fotos para o projeto quando o WordPress saiu do ar.",
+      "Decidi eliminar a dependência do domínio do site antigo, trazendo as fotos para o próprio projeto.",
       "Defini o WhatsApp como canal de agendamento, com botão flutuante presente em toda a página.",
     ],
     direct: [
@@ -103,7 +102,7 @@ export const arlene: CaseStudy = {
     {
       title: "Fotos hospedadas no próprio projeto",
       problem:
-        "A primeira versão exibia fotos a partir do site antigo da profissional. Quando o WordPress saiu do ar, as imagens deixaram de carregar.",
+        "A primeira versão exibia fotos a partir do site antigo da profissional, o que deixava as imagens sujeitas a um domínio fora do controle do projeto.",
       decision:
         "Copiar as fotos para public/images, escolher uma imagem por função (hero, retrato principal, contexto de trabalho) e usar URL pública própria na imagem de compartilhamento.",
       reason:
@@ -127,15 +126,15 @@ export const arlene: CaseStudy = {
   ],
 
   results: [
-    "Outubro de 2026: site acessível em psicanalista.arlenezerbini.com por HTTPS, servido pré-renderizado.",
+    "Site de página única entregue em domínio próprio por HTTPS, servido pré-renderizado, com agendamento pelo WhatsApp em três pontos da página.",
   ],
   limits: [
-    "Sem sitemap, robots.txt e dados estruturados de profissional.",
-    "Fotos sem conversão para formatos modernos nem tamanhos responsivos.",
+    "Próximo passo: gerar sitemap, robots.txt e dados estruturados de profissional.",
+    "Fotos servidas no tamanho original; próximo passo é convertê-las para formatos modernos com tamanhos responsivos.",
     "Fontes carregadas por importação no CSS, que atrasa a primeira renderização em comparação com next/font.",
-    "Não há ferramenta de análise de acesso.",
+    "Próximo passo: adicionar análise de acesso para medir os cliques no agendamento.",
   ],
 
-  links: [{label: "Site publicado", url: "https://psicanalista.arlenezerbini.com/", kind: "produto"}],
+  links: [{label: "Visitar site", url: "https://psicanalista.arlenezerbini.com/", kind: "produto"}],
 
 };
