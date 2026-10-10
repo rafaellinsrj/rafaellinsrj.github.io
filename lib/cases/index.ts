@@ -17,11 +17,11 @@ import {lmm} from "./lmm";
 import {moneta} from "./moneta";
 import {prestoPdf} from "./presto-pdf";
 import {sitefacil} from "./sitefacil";
+import {veroMarkets} from "./vero-markets";
 import {viamanzoni} from "./viamanzoni";
-import {vitoria} from "./vitoria";
 import {zappop} from "./zappop";
 
-export const cases: CaseStudy[] = [policia190, arlene, autistasocial, bioo, caio, certame, cgm, devkit, easyspa, fivex, hyre, linsPayments, linsUpNow, lmm, moneta, prestoPdf, sitefacil, viamanzoni, vitoria, zappop];
+export const cases: CaseStudy[] = [policia190, arlene, autistasocial, bioo, caio, certame, cgm, devkit, easyspa, fivex, hyre, linsPayments, linsUpNow, lmm, moneta, prestoPdf, sitefacil, veroMarkets, viamanzoni, zappop];
 export const caseBySlug = (slug: string) => cases.find(c => c.slug === slug);
 
 // Ordem de apresentação (especificação V2, seção 8): histórico Rio Tech, plataformas complexas, plataformas e fintech, ferramentas, sites.
