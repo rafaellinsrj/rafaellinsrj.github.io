@@ -99,9 +99,9 @@ export const devkit: CaseStudy = {
           "Escape de HTML incluindo aspas, função urlSegura que aceita só http, https, mailto, tel, caminhos relativos e data de imagem; links gerados com rel noopener noreferrer nofollow. CSP com object-src 'none' e frame-ancestors 'none', HSTS, nosniff, X-Frame-Options, Referrer-Policy, Permissions-Policy, COOP e CORP.",
       },
       {
-        name: "Implantação prevista",
+        name: "Implantação",
         content:
-          "Cloudflare Pages com saída em dist e uma Pages Function para detecção de país. Ainda não implantado.",
+          "Cloudflare Pages com saída em dist e uma Pages Function para detecção de país.",
       },
     ],
   },

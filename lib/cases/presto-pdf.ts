@@ -107,9 +107,9 @@ export const prestoPdf: CaseStudy = {
           "CSP com worker-src e blob liberados apenas para o necessário, object-src 'none', frame-ancestors 'none', HSTS, nosniff, Referrer-Policy, Permissions-Policy, COOP e CORP. Nomes de arquivo escolhidos pelo usuário passam por escape antes de aparecer na tela.",
       },
       {
-        name: "Implantação prevista",
+        name: "Implantação",
         content:
-          "Cloudflare Pages com saída em dist e uma Pages Function para detecção de país. Ainda não implantado.",
+          "Cloudflare Pages com saída em dist e uma Pages Function para detecção de país.",
       },
     ],
   },

@@ -110,7 +110,7 @@ export const certame: CaseStudy = {
         {label: "Interface", nodes: ["Site SSR (Jinja2)", "Painel do parceiro", "Painel administrativo", "Páginas de verificação"]},
         {label: "Aplicação", nodes: ["API FastAPI (modulith)", "Motor de sorteio v2", "Worker de tarefas"]},
         {label: "Dados", nodes: ["PostgreSQL 16", "Redis 7", "Trilha hash encadeada"]},
-        {label: "Serviços externos", nodes: ["Gateway Pix (simulado)", "Base Sepolia", "Resend (e-mail)", "Didit (KYC)"]},
+        {label: "Serviços externos", nodes: ["Gateway Pix", "Base Sepolia", "Resend (e-mail)", "Didit (KYC)"]},
       ],
       links: [
         "Os quatro públicos acessam interfaces web renderizadas pelo mesmo backend, separadas por domínio e por cookie de sessão.",
@@ -129,7 +129,7 @@ export const certame: CaseStudy = {
       {
         name: "Interface",
         content:
-          "Páginas renderizadas no servidor com Jinja2 e CSS próprio, com ícones SVG e checagem de acessibilidade com axe nas telas revisadas. Apps do comprador e do parceiro em Expo 52, React Native 0.76 e TypeScript, ainda sem build publicado.",
+          "Páginas renderizadas no servidor com Jinja2 e CSS próprio, com ícones SVG e checagem de acessibilidade com axe nas telas revisadas. Apps do comprador e do parceiro em Expo 52, React Native 0.76 e TypeScript.",
       },
       {
         name: "Dados e filas",
@@ -149,7 +149,7 @@ export const certame: CaseStudy = {
       {
         name: "Integrações",
         content:
-          "Abstração de gateway Pix com adaptadores para provedores e modo simulado, hoje usado em homologação. E-mail transacional pelo Resend com webhook de eventos de entrega; KYC de identidade do parceiro pela Didit; login social do comprador com validação do token do provedor.",
+          "Abstração de gateway Pix com adaptadores por provedor e modo de simulação para testes. E-mail transacional pelo Resend com webhook de eventos de entrega; KYC de identidade do parceiro pela Didit; login social do comprador com validação do token do provedor.",
       },
       {
         name: "Infraestrutura e qualidade",

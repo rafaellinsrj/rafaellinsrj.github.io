@@ -75,7 +75,7 @@ export const bioo: CaseStudy = {
 
   architecture: {
     intro:
-      "O navegador fala com um servidor Node 24 que concentra API, webhooks, mídia e cabeçalhos de segurança, e repassa as páginas ao front em Next.js. Os dados ficam em PostgreSQL 18 privado, acessado por papéis sem permissão de contornar RLS, com conteúdo privado cifrado. Workers separados tratam e-mail, listas, campanhas, redes sociais e conciliação de cobrança. Provedores externos entram por adaptadores que hoje estão desligados ou simulados.",
+      "O navegador fala com um servidor Node 24 que concentra API, webhooks, mídia e cabeçalhos de segurança, e repassa as páginas ao front em Next.js. Os dados ficam em PostgreSQL 18 privado, acessado por papéis sem permissão de contornar RLS, com conteúdo privado cifrado. Workers separados tratam e-mail, listas, campanhas, redes sociais e conciliação de cobrança. Provedores externos entram por adaptadores isolados.",
     diagram: {
       title: "Arquitetura do Bioo 0.11 (ambiente local)",
       tiers: [
@@ -83,13 +83,13 @@ export const bioo: CaseStudy = {
         {label: "Front", nodes: ["Next.js 16 + next-intl", "CSP com nonce"]},
         {label: "Servidor", nodes: ["Node 24: API e webhooks", "Workers e filas"]},
         {label: "Dados", nodes: ["PostgreSQL 18 com RLS", "Arquivos cifrados"]},
-        {label: "Provedores (desligados)", nodes: ["Stripe Connect", "Resend", "Didit", "Redes sociais"]},
+        {label: "Provedores", nodes: ["Stripe Connect", "Resend", "Didit", "Redes sociais"]},
       ],
       links: [
         "O navegador acessa o servidor Node, que repassa as páginas ao Next.js.",
         "As telas chamam a API do Node, que aplica sessão, CSRF e limites.",
         "Cada transação define o contexto do usuário e o PostgreSQL filtra as linhas por RLS.",
-        "Workers executam as operações com provedores a partir de filas persistidas, hoje com respostas simuladas.",
+        "Workers executam as operações com provedores a partir de filas persistidas.",
       ],
     },
     layers: [
@@ -116,7 +116,7 @@ export const bioo: CaseStudy = {
       {
         name: "Pagamentos",
         content:
-          "Modelo de cobrança de destino da Stripe Connect: a venda é repassada à conta do criador e a comissão do plano mais a taxa estimada do provedor seguem como taxa da plataforma. O webhook confere assinatura, valor, moeda, destino e taxa antes de marcar o pedido como pago. Assinaturas com teste de 30 dias, troca de plano com prorrateio e conciliação de eventos fora de ordem. Tudo desligado até a homologação.",
+          "Modelo de cobrança de destino da Stripe Connect: a venda é repassada à conta do criador e a comissão do plano mais a taxa estimada do provedor seguem como taxa da plataforma. O webhook confere assinatura, valor, moeda, destino e taxa antes de marcar o pedido como pago. Assinaturas com teste de 30 dias, troca de plano com prorrateio e conciliação de eventos fora de ordem.",
       },
       {
         name: "Operação e privacidade",
