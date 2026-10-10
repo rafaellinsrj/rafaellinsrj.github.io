@@ -138,7 +138,7 @@ export const hyre: CaseStudy = {
       {
         name: "Processamento assíncrono",
         content:
-          "Na versão 1, as rotinas periódicas (atualização de CRM, follow-up, alertas e mensagens agendadas) rodam como tarefas assíncronas dentro do processo da API, e a memória do contato é atualizada em background. O Celery com Redis está declarado no código, mas suas tarefas ainda são esqueletos. Na versão 2, tarefas longas vão para uma fila no PostgreSQL consumida por um executor separado com SELECT FOR UPDATE SKIP LOCKED, uma tarefa por vez por usuário, cotas por hora e por dia e sem nova tentativa automática após o despacho.",
+          "Na versão 1, as rotinas periódicas (atualização de CRM, follow-up, alertas e mensagens agendadas) rodam como tarefas assíncronas dentro do processo da API, e a memória do contato é atualizada em background. Na versão 2, tarefas longas vão para uma fila no PostgreSQL consumida por um executor separado com SELECT FOR UPDATE SKIP LOCKED, uma tarefa por vez por usuário, cotas por hora e por dia e sem nova tentativa automática após o despacho.",
       },
       {
         name: "Modelos de IA",
