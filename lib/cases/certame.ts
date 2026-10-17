@@ -9,7 +9,7 @@ export const certame: CaseStudy = {
     "Plataforma de campanhas com prêmios vinculadas a causas sociais, em que regra, sorteio e resultado podem ser conferidos por qualquer pessoa. Reúne marketplace, checkout Pix, painéis de parceiro e de operação, motor de sorteio com compromisso prévio e registro de provas em blockchain.",
   role: "CTO e sócio",
   organization: "Certame",
-  period: "jun/2026 – atual",
+  period: "jun/2026 – out/2026",
   stage: "Site publicado",
   stageNote: "",
   platforms: [

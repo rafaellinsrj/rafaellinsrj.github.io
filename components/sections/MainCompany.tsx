@@ -10,11 +10,10 @@ export default function MainCompany({level = 3}: {level?: 2 | 3}) {
       <H id="empresa-principal" className="main-company-title">Lins Partners</H>
       <p className="main-company-parent">Uma empresa da Lins Capital Group LLC</p>
       <p>Consultoria de tecnologia que reúne auditoria de software e segurança, due diligence técnica, CTO e arquitetura sob demanda, desenvolvimento de produtos com IA, nuvem e DevOps, e equipes dedicadas de profissionais de TI.</p>
-      <p>É também a casa dos produtos que construí: Hyre, The Moneta Post e a participação na Certame.</p>
+      <p>É também a casa dos produtos que construí: Hyre e The Moneta Post.</p>
       <div className="main-company-links">
         <Link href="/projetos/hyre/">Hyre <Icon name="arrow-up-right" size={14}/></Link>
         <Link href="/projetos/moneta/">The Moneta Post <Icon name="arrow-up-right" size={14}/></Link>
-        <Link href="/projetos/certame/">Certame <Icon name="arrow-up-right" size={14}/></Link>
       </div>
     </div>
     <ul className="main-company-services">
