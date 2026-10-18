@@ -493,3 +493,39 @@ nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-under
 .main-company-services li{display:flex;align-items:center;gap:10px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--color-paper);font-size:15px}
 @media(max-width:900px){.main-company{grid-template-columns:1fr;gap:24px;padding:28px}}
 @media(max-width:760px){.main-company{padding:22px;border-radius:12px}.main-company-title{font-size:34px}.main-company-copy>p:not(.eyebrow):not(.main-company-parent){font-size:16px}}
+/* Certificações */
+.cert-group{margin-top:72px}
+.section-heading+.cert-group{margin-top:0}
+.cert-group-head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px 24px;padding-bottom:20px;margin-bottom:28px;border-bottom:1px solid var(--line)}
+.cert-group-head h2{font-size:32px;line-height:1.2;letter-spacing:-.03em}
+.cert-group-head p{grid-column:1;font-size:15px;color:var(--muted)}
+.cert-count{grid-column:2;grid-row:1/span 2;font:400 14px/1 var(--font-code);color:var(--muted);border:1px solid var(--line);border-radius:2px;padding:8px 10px}
+.cert-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.cert-card{display:flex;flex-direction:column;background:var(--color-tile-gray);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.cert-thumb{position:relative;display:block;width:100%;aspect-ratio:1.414;padding:0;border:0;border-bottom:1px solid var(--line);background:#f4f4f2;cursor:zoom-in;overflow:hidden}
+.cert-thumb img{width:100%;height:100%;object-fit:contain;transition:transform .25s}
+.cert-thumb.is-badge{background:#fff}
+.cert-thumb.is-badge img{padding:16px}
+.cert-thumb:hover img{transform:scale(1.03)}
+.cert-body{display:flex;flex-direction:column;gap:12px;flex:1;padding:20px}
+.cert-issuer{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.cert-logo{display:inline-flex;align-items:center;height:32px;padding:6px 10px;background:#fff;border-radius:6px;flex-shrink:0}
+.cert-logo img{height:20px;width:auto;max-width:120px;object-fit:contain}
+.cert-body h3{font-size:19px;line-height:1.3;letter-spacing:-.02em}
+.cert-meta{display:flex;flex-wrap:wrap;gap:4px 12px;font:400 13px/1.5 var(--font-code);color:var(--muted)}
+.cert-meta time{color:var(--accent)}
+.cert-detail{font:400 12px/1.5 var(--font-code);color:#8f8f8f}
+.cert-verify{margin-top:auto;align-self:flex-start;font-size:14px}
+.cert-noverify{margin-top:auto;font-size:13px;color:#8f8f8f}
+.cert-note{margin-top:48px;font-size:14px;color:var(--muted);max-width:720px}
+.cert-lightbox-badge{background:#fff;border-radius:8px;padding:24px}
+.lightbox-nav .button{font-size:14px}
+@media(max-width:760px){
+  .cert-group{margin-top:52px}
+  .cert-group-head h2{font-size:24px}
+  .cert-grid{grid-template-columns:minmax(0,1fr);gap:16px}
+  .cert-body{padding:16px}
+  .cert-body h3{font-size:18px}
+  .mobile-nav{gap:4px 18px}
+}
+@media(max-width:375px){.mobile-nav{gap:2px 12px}.mobile-nav a{font-size:13px}}

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import {asset} from "@/lib/paths";
 
-type Section = "experiencia" | "projetos" | "sobre" | "contato";
-const items: [Section, string][] = [["experiencia", "Experiência"], ["projetos", "Projetos"], ["sobre", "Sobre"]];
+type Section = "experiencia" | "projetos" | "certificacoes" | "sobre" | "contato";
+const items: [Section, string][] = [["experiencia", "Experiência"], ["projetos", "Projetos"], ["certificacoes", "Certificações"], ["sobre", "Sobre"]];
 
 export default function Header({current}: {current?: Section}) {
   const nav = items.map(([id, label]) =>
