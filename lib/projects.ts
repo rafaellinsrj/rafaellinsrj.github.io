@@ -44,5 +44,35 @@ export const experiments = [
     "name": "Lotta",
     "text": "Consulta e comparação de informações de loterias.",
     "image": "/images/screens/local-lotta.jpg"
+  },
+  {
+    "name": "Converto",
+    "text": "Conversor de unidades em dez categorias e 20 idiomas, sem cadastro.",
+    "image": "/images/screens/local-converto.jpg"
+  },
+  {
+    "name": "My Download",
+    "text": "Download de vídeos públicos das redes a partir do link, sem app e sem conta.",
+    "image": "/images/screens/local-mydownload.jpg"
+  },
+  {
+    "name": "Feria",
+    "text": "Feriados de 206 países, com o próximo feriado e o planejador de emendas.",
+    "image": "/images/screens/local-feria.jpg"
+  },
+  {
+    "name": "Zodia",
+    "text": "Mapa astral calculado no navegador com astronomia real e mapa do céu.",
+    "image": "/images/screens/local-zodia.jpg"
+  },
+  {
+    "name": "Velocidade da internet",
+    "text": "Teste de download, upload, latência e latência sob carga (bufferbloat).",
+    "image": "/images/screens/local-velocidade.jpg"
+  },
+  {
+    "name": "Dicionário dos sonhos",
+    "text": "Dicionário de sonhos em vários idiomas, incluindo árabe da direita para a esquerda.",
+    "image": "/images/screens/local-sonhos.jpg"
   }
 ];

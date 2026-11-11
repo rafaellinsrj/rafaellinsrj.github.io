@@ -8,6 +8,7 @@ import {certame} from "./certame";
 import {cgm} from "./cgm";
 import {devkit} from "./devkit";
 import {easyspa} from "./easyspa";
+import {escolhiBrasil} from "./escolhi-brasil";
 import {fivex} from "./fivex";
 import {hyre} from "./hyre";
 import {linsPayments} from "./lins-payments";
@@ -20,7 +21,7 @@ import {veroMarkets} from "./vero-markets";
 import {viamanzoni} from "./viamanzoni";
 import {zappop} from "./zappop";
 
-export const cases: CaseStudy[] = [policia190, arlene, autistasocial, caio, certame, cgm, devkit, easyspa, fivex, hyre, linsPayments, linsUpNow, lmm, moneta, prestoPdf, sitefacil, veroMarkets, viamanzoni, zappop];
+export const cases: CaseStudy[] = [policia190, arlene, autistasocial, caio, certame, cgm, devkit, easyspa, escolhiBrasil, fivex, hyre, linsPayments, linsUpNow, lmm, moneta, prestoPdf, sitefacil, veroMarkets, viamanzoni, zappop];
 export const caseBySlug = (slug: string) => cases.find(c => c.slug === slug);
 
 // Ordem de apresentação (especificação V2, seção 8): histórico Rio Tech, plataformas complexas, plataformas e fintech, ferramentas, sites.
@@ -31,7 +32,7 @@ export const groupOrder: {group: Group; title: string; text: string}[] = [
   {group: "ferramentas", title: "Ferramentas e pesquisa", text: "Aplicações de navegador e trabalho acadêmico em equipe."},
   {group: "sites", title: "Sites profissionais", text: "Engenharia web para profissionais e empresas: desempenho, SEO, acessibilidade e implantação."},
 ];
-const priority = ["190-policia-militar", "easyspa", "certame", "vero-markets", "moneta", "hyre", "zappop", "lmm", "lins-payments", "lins-up-now", "presto-pdf", "devkit", "fivex"];
+const priority = ["hyre", "escolhi-brasil", "190-policia-militar", "easyspa", "certame", "vero-markets", "moneta", "zappop", "lmm", "lins-payments", "lins-up-now", "presto-pdf", "devkit", "fivex"];
 export const ordered = (group: Group) => cases.filter(c => c.group === group).sort((a, b) => {
   const ia = priority.indexOf(a.slug), ib = priority.indexOf(b.slug);
   return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.name.localeCompare(b.name, "pt-BR");

@@ -24,7 +24,7 @@ export const groupOrder: {group: Group; title: string; text: string}[] = [
   {group: "ferramentas", title: "Ferramentas e pesquisa", text: "Aplicações de navegador e trabalho acadêmico em equipe."},
   {group: "sites", title: "Sites profissionais", text: "Engenharia web para profissionais e empresas: desempenho, SEO, acessibilidade e implantação."},
 ];
-const priority = ["190-policia-militar", "easyspa", "certame", "vero-markets", "moneta", "hyre", "zappop", "lmm", "lins-payments", "lins-up-now", "presto-pdf", "devkit", "fivex"];
+const priority = ["hyre", "escolhi-brasil", "190-policia-militar", "easyspa", "certame", "vero-markets", "moneta", "zappop", "lmm", "lins-payments", "lins-up-now", "presto-pdf", "devkit", "fivex"];
 export const ordered = (group: Group) => cases.filter(c => c.group === group).sort((a, b) => {
   const ia = priority.indexOf(a.slug), ib = priority.indexOf(b.slug);
   return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.name.localeCompare(b.name, "pt-BR");

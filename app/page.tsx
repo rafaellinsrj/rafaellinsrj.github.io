@@ -10,7 +10,7 @@ import {caseBySlug, cases} from "@/lib/cases";
 import {roles} from "@/lib/experience";
 import {asset} from "@/lib/paths";
 
-const featured = ["190-policia-militar", "certame", "moneta", "hyre"].map(s => caseBySlug(s)!).filter(Boolean);
+const featured = ["hyre", "escolhi-brasil", "moneta", "190-policia-militar"].map(s => caseBySlug(s)!).filter(Boolean);
 
 export default function Home() {
   return <><Header/><main id="conteudo">
@@ -26,10 +26,10 @@ export default function Home() {
           <a className="button secondary" href={asset("/contato/")}>Entrar em contato <Icon name="mail"/></a>
         </div>
       </div>
-      <Link href="/projetos/certame/" className="hero-workspace" aria-label="Explorar o projeto Certame">
-        <div className="workspace-bar"><span><span className="signal-dot"/>Projeto em destaque</span><span>Certame <Icon name="arrow-up-right"/></span></div>
-        <div className="workspace-screen"><img src={asset("/images/screens/certame.jpg")} alt="Página pública da Certame, projeto de campanhas beneficentes" width="1440" height="1000"/></div>
-        <div className="workspace-footer"><span>Da interface às regras de negócio.</span><span className="code-label">Python / FastAPI / React</span></div>
+      <Link href="/projetos/hyre/" className="hero-workspace" aria-label="Explorar o projeto Hyre">
+        <div className="workspace-bar"><span><span className="signal-dot"/>Projeto em destaque</span><span>Hyre <Icon name="arrow-up-right"/></span></div>
+        <div className="workspace-screen"><img src={asset("/images/screens/hyre.jpg")} alt="Página inicial da Hyre: página na bio, DMs automáticas e planejador de posts" width="1440" height="1000"/></div>
+        <div className="workspace-footer"><span>Da interface às regras de negócio.</span><span className="code-label">Node.js / PostgreSQL / Next.js</span></div>
       </Link>
     </section>
     <div className="stack-band container"><p>Tecnologias que conectam as etapas.</p><div className="technology-tiles">{["Python", "FastAPI", "React", "TypeScript", "PostgreSQL"].map(tech=><div key={tech}>{tech}</div>)}</div></div>

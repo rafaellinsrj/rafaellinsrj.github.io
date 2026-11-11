@@ -4,250 +4,192 @@ export const hyre: CaseStudy = {
   slug: "hyre",
   name: "Hyre",
   group: "plataformas",
-  category: "SaaS de IA multi-tenant · Python e Next.js",
+  category: "SaaS para perfis e pequenos negócios · Node.js, PostgreSQL e Next.js",
   summary:
-    "Plataforma de IA para empresários: a primeira versão, em hyre.global, oferece agentes especializados que atendem e vendem pelo WhatsApp; a segunda versão reorganiza o produto em chat multimodelo com crédito pré-pago, cofre de credenciais e tarefas supervisionadas.",
-  role: "Fundador e CEO · estratégia, produto e direção técnica do desenvolvimento",
+    "Plataforma que junta página na bio, DMs automáticas e planejador de posts: quem comenta uma palavra no post recebe o link no direct, no Instagram e no Facebook, e os posts só saem com o ok do dono do perfil.",
+  role: "Fundador e CEO · produto, arquitetura e direção do desenvolvimento",
   organization: "Hyre, parte do Lins Capital Group",
-  period: "ago/2025 – atual",
-  stage: "Em desenvolvimento",
-  stageNote: "",
-  platforms: ["Web (site público)", "Painel do cliente", "Painel administrativo", "WhatsApp (v1)", "Aplicativo móvel (Expo)"],
+  period: "set/2026 – atual",
+  stage: "Em produção",
+  stageNote: "Site, planos e cadastro no ar em hyre.global desde novembro de 2026.",
+  platforms: ["Web responsiva (desktop e celular)", "Página pública do perfil", "Painel do cliente", "Painel administrativo"],
   cover: {
-    src: "/images/cases/hyre/agentes.jpg",
+    src: "/images/cases/hyre/home.jpg",
     width: 1440,
     height: 1000,
-    alt: "Página pública da Hyre que apresenta a equipe de agentes de IA por área: comercial, financeiro, documentos, suporte, agenda, pós-venda e gestão.",
-    caption: "Site da Hyre, página de agentes",
+    alt: "Página inicial da Hyre em fundo escuro com o título Tudo que seu perfil precisa, os botões Criar minha página e Ver um exemplo e um perfil ilustrativo em moldura de celular.",
+    caption: "Página inicial em hyre.global, novembro de 2026",
   },
   gallery: [
     {
-      src: "/images/cases/hyre/agentes.jpg",
+      src: "/images/cases/hyre/planos.jpg",
       width: 1440,
       height: 1000,
-      alt: "Página de agentes com filtros por área e os cartões dos agentes comerciais Ed, Zoe e Dudu.",
-      caption: "Catálogo de agentes da versão 1",
+      alt: "Página de planos com os cartões Gratuito (US$ 0), Pro (US$ 4,99 por mês, com 30 dias grátis) e Premium (US$ 9,99 por mês), com páginas, DMs automáticas, métricas e equipe de cada plano.",
+      caption: "Planos em hyre.global, novembro de 2026",
     },
     {
-      src: "/images/cases/hyre/integracoes.jpg",
+      src: "/images/cases/hyre/exemplo.jpg",
       width: 1440,
       height: 1000,
-      alt: "Página de integrações da Hyre com chamada para conectar WhatsApp, CRMs e gateways de pagamento.",
-      caption: "Página de integrações",
-    },
-    {
-      src: "/images/cases/hyre/precos.jpg",
-      width: 1440,
-      height: 1000,
-      alt: "Tabela de planos mensais da versão 1, de Starter a Enterprise, com a quantidade de agentes e canais de cada plano.",
-      caption: "Planos da versão 1",
-    },
-    {
-      src: "/images/screens/hyre.jpg",
-      width: 1440,
-      height: 1000,
-      alt: "Página inicial da Hyre com o título Funcionários de IA para sua Empresa e botões de cadastro.",
-      caption: "Página inicial. Números da tela são ilustrativos.",
+      alt: "Página na bio de exemplo, de um perfil ilustrativo, com foto, descrição, ícones de redes e três botões de link.",
+      caption: "Página na bio de exemplo. Perfil ilustrativo.",
     },
   ],
 
   history: {
     audience:
-      "Empresários e pequenas e médias empresas que atendem clientes pelo WhatsApp e querem automatizar atendimento, vendas, cobrança e rotinas administrativas sem montar uma equipe de tecnologia.",
+      "Pequenos negócios e perfis profissionais que vendem pelas redes (confeitarias, salões, clínicas, lojas, personal trainers, agências) e precisam de uma página com todos os links, de resposta rápida a quem comenta e de constância nos posts, sem equipe de marketing.",
     problem:
-      "Atendimento comercial, cobrança e pós-venda dependiam de pessoas respondendo manualmente, fora do horário e sem histórico unificado. A primeira versão resolveu isso com agentes especializados por função. Em setembro de 2026, a auditoria do código mostrou que cerca de metade do backend existia só para esses agentes e que faltavam peças centrais para um modelo de crédito pré-pago, o que levou à decisão de reorganizar o produto.",
+      "Quem vende pelo Instagram perde clientes nos comentários: a pessoa pergunta o preço ou pede o link e a resposta chega horas depois, ou não chega. Páginas de links, respostas automáticas e agendamento de posts costumam ser três ferramentas pagas separadas. O produto nasceu como Bioo, uma página de links com loja, agenda e cursos; o foco foi fechado em três funções e o produto passou a se chamar Hyre.",
     constraints:
-      "Equipe enxuta. Credenciais de clientes e de provedores precisam ficar fora do alcance dos modelos. Cobrança em dinheiro real exige consistência contábil em cada lançamento.",
+      "Equipe enxuta. Confirmação de conta só por e-mail. Moeda única em dólar. Nada é publicado em nome do cliente sem a aprovação da versão exata do post. Provedores externos ficam atrás de adaptadores, e os testes usam dados sintéticos.",
     milestones: [
-      {when: "mar/2026", what: "Início do repositório com o nome LinsOS: backend FastAPI, painéis owner e tenant em Next.js e primeiros agentes de WhatsApp (570 commits no mês)."},
-      {when: "ago/2026", what: "Mudança de marca de LinsOS para Hyre e publicação do site hyre.global com cadastro, planos e catálogo de agentes."},
-      {when: "20/09/2026", what: "Auditoria de código e segurança sobre o snapshot da versão 1 e decisão de reorganizar o produto como chat multimodelo com crédito em dólar."},
-      {when: "29/09 a 02/10/2026", what: "Versão 2: ledger de crédito, cofre de credenciais, tarefas supervisionadas e conectores com aprovação; 473 testes Python, 52 web e 20 mobile aprovados."},
-      {when: "01/10/2026", what: "Definição da referência de marca HYRE e Hyre Labs para a nova versão."},
+      {when: "set/2026", what: "Primeira base (Bioo 0.5): editor de página em Cloudflare Pages com D1/SQLite."},
+      {when: "out/2026", what: "Migração para Node.js e PostgreSQL com RLS, front refeito em Next.js 16, planos, idiomas, consentimento de cookies e retenção de dados."},
+      {when: "out/2026", what: "Escopo de lançamento fechado em página na bio, DMs automáticas e planejador; vendas, cursos, gorjetas, listas e mídia kit saíram da primeira versão."},
+      {when: "07/11/2026", what: "Troca de Bioo para Hyre em todo o código, serviços e documentos, com o layout novo aprovado."},
+      {when: "nov/2026", what: "Site, planos e cadastro publicados em hyre.global, com vigia externo a cada 30 minutos."},
     ],
   },
 
   responsibility: {
     leadership: [
-      "Defini o posicionamento do produto e a decisão de sair dos agentes de WhatsApp para um chat multimodelo com crédito pré-pago e conexões governadas.",
-      "Fechei as regras de negócio da versão 2: crédito somente em dólar via Stripe, planos Free, Pro e Max, provedores pagos suportados e margem fixa calculada em centavos inteiros.",
-      "Estabeleci os critérios de liberação: cada recurso vai a produção com migrations ensaiadas, build, testes integrados e autorização explícita.",
-      "Priorizei o cronograma em 15 etapas e 70 tarefas e a ordem de execução dos blocos de segurança, cobrança e conexões.",
+      "Defini o foco do produto (página na bio, DMs automáticas e planejador) e o que ficou fora da primeira versão.",
+      "Fechei a matriz de planos: Gratuito, Pro a US$ 4,99 e Premium a US$ 9,99 por mês, com 30 dias grátis no Pro e desconto no plano anual.",
+      "Aprovei a migração da base Cloudflare D1 para Node.js e PostgreSQL com RLS a partir do modelo de ameaças e decidi refazer o front em Next.js.",
+      "Estabeleci as regras de segurança do produto: post só sai com aprovação da versão exata, cada provedor por um adaptador próprio e evidência de teste para cada entrega.",
     ],
     direct: [
-      "Dirigi a arquitetura do backend em FastAPI com SQLAlchemy assíncrono, PostgreSQL e Redis, e dos painéis owner e tenant em Next.js.",
-      "Validei a integração com o WhatsApp via Evolution API na versão 1, com uma instância por agente e por cliente.",
-      "Revisei e aprovei as políticas de isolamento por tenant (RLS no PostgreSQL), cifragem de credenciais e idempotência de webhooks.",
-      "Fiz commits próprios de ajustes de marca e build na mudança de LinsOS para Hyre (27 commits com meu nome no histórico da versão 1).",
+      "Conduzi a construção do servidor Node (API, webhooks, filas e workers), das migrações PostgreSQL e do front Next.js com next-intl.",
+      "Revisei as entregas de cada etapa pelas baterias de testes e pela avaliação das telas em desktop e celular, e aprovei o layout novo.",
     ],
-    team: [
-      "Equipe de desenvolvimento sob minha coordenação, com nomes preservados.",
-      "Parceiro de tecnologia responsável por grande parte da implementação da versão 1, seguindo a direção de produto e arquitetura que eu defini.",
-    ],
+    team: [],
     ai: [],
   },
 
   architecture: {
     intro:
-      "A Hyre é um monorepo com API Python, aplicação web Next.js e aplicativo Expo, implantado com Docker Compose. A versão 1 recebe mensagens do WhatsApp pela Evolution API e as processa no motor de agentes. A versão 2 mantém a mesma base técnica e substitui o motor de agentes por um chat com roteamento entre modelos, ledger de crédito, cofre de credenciais e um executor de tarefas separado da API.",
+      "O navegador fala com um servidor Node que concentra API, webhooks e cabeçalhos de segurança e repassa as páginas ao front em Next.js. Os dados ficam em PostgreSQL privado, acessado por papéis sem permissão de contornar RLS. Workers separados tratam e-mail, respostas no direct, posts agendados e cobrança, a partir de filas persistidas no banco.",
     diagram: {
-      title: "Arquitetura da Hyre (base comum das versões 1 e 2)",
+      title: "Arquitetura da Hyre",
       tiers: [
-        {label: "Clientes", nodes: ["Site e painel Next.js", "App Expo (esqueleto)", "WhatsApp (v1)"]},
-        {label: "Entrada", nodes: ["Nginx", "Evolution API (v1)", "Webhooks Stripe"]},
-        {label: "API", nodes: ["FastAPI assíncrono", "Chat com streaming (v2)", "Motor de agentes (v1)"]},
-        {label: "Processamento", nodes: ["Rotinas em background", "Executor de tarefas (v2)"]},
-        {label: "Dados", nodes: ["PostgreSQL 16 com RLS", "Redis 7", "Cofre cifrado (v2)"]},
-        {label: "Provedores de IA", nodes: ["OpenAI · Anthropic", "Google · xAI · Groq"]},
+        {label: "Navegador", nodes: ["Site e página na bio", "Painel do cliente"]},
+        {label: "Front", nodes: ["Next.js 16 + next-intl", "CSP com nonce"]},
+        {label: "Servidor", nodes: ["Node: API e webhooks", "Workers e filas"]},
+        {label: "Dados", nodes: ["PostgreSQL com RLS", "Conteúdo privado cifrado"]},
+        {label: "Provedores", nodes: ["Instagram e Facebook", "Stripe", "Resend"]},
       ],
       links: [
-        "O site e o painel chamam a API por HTTPS através do Nginx.",
-        "Na versão 1, mensagens do WhatsApp chegam pela Evolution API e passam pelo motor de agentes.",
-        "Webhooks do Stripe são autenticados e registrados uma única vez antes de alterar saldo.",
-        "A API grava no PostgreSQL com o tenant fixado na transação e usa o Redis para revogação de tokens e limites.",
-        "O executor de tarefas da versão 2 lê a fila no PostgreSQL e só recebe credenciais por transporte privado.",
-        "As chamadas aos provedores de IA saem da API por adaptadores com timeout e repetição limitada.",
+        "O navegador acessa o servidor Node, que repassa as páginas ao Next.js.",
+        "As telas chamam a API, que aplica sessão, CSRF e limites por plano.",
+        "Cada transação define o contexto do cliente e o PostgreSQL filtra as linhas por RLS.",
+        "Os comentários chegam por webhook e viram tarefas na fila; os workers respondem no direct e publicam os posts aprovados.",
       ],
     },
     layers: [
       {
-        name: "Frontend",
+        name: "Front",
         content:
-          "Next.js 16 com React 19, TypeScript, TanStack Query, Axios e next-intl, com painéis separados para o operador da plataforma (owner) e para o cliente (tenant). Na versão 2, a renovação de sessão compara sessão, usuário, empresa e versão de autenticação antes de reaproveitar uma resposta, e o chat consome eventos SSE (meta, delta, escalate, usage, done). Aplicativo Expo com token em SecureStore e bibliotecas de sessão compartilhadas com a web.",
+          "Next.js 16, React 19 e TypeScript, com telas do site público, conta, editor da página, página pública do perfil, planejador em grade do mês e painel administrativo. Uma camada de proxy gera um nonce por requisição para a CSP e trata o idioma e o endereço hyre.global/seunome.",
       },
       {
-        name: "API",
+        name: "Servidor",
         content:
-          "FastAPI com SQLAlchemy 2 assíncrono e asyncpg, migrations Alembic, autenticação JWT com PyJWT (identificador por token e revogação no Redis), hash bcrypt na autenticação, limitação de taxa com slowapi, middleware de auditoria e Sentry. Na versão 1, o motor de agentes aplica limites do plano, horário de atendimento, temas bloqueados, detecção de irritação com transferência para humano e uma hierarquia de prioridade entre agentes para o mesmo contato.",
+          "Node com módulos por domínio (autenticação, páginas, conexões sociais, respostas automáticas, planejador, planos e cobrança). Sessões opacas em cookie HttpOnly, MFA obrigatório para administradores, conferência de host, limites de requisição, CSRF e cabeçalhos de segurança, com poucas dependências diretas.",
       },
       {
-        name: "Isolamento por cliente",
+        name: "Dados",
         content:
-          "Row Level Security no PostgreSQL com o cliente (tenant) fixado no contexto de cada transação, para não vazar contexto entre requisições que reutilizam a conexão do pool. Na versão 1 a proteção era incremental (a sessão nascia com bypass ligado e só os endpoints de tenant o desligavam). Na versão 2 o bypass nasce desligado em toda transação, as tabelas novas usam FORCE ROW LEVEL SECURITY e a travessia entre tenants exige chamada explícita após autorizar o operador.",
+          "PostgreSQL acessível só pela rede local do servidor, com migrações imutáveis, RLS habilitada e forçada nas tabelas de cada cliente e papéis de aplicação sem BYPASSRLS. O contexto do cliente é definido dentro de cada transação para não vazar entre conexões do pool. Conteúdo privado cifrado com AES-256-GCM e senhas com Argon2id.",
       },
       {
-        name: "Credenciais",
+        name: "DMs automáticas",
         content:
-          "Versão 1: chaves de provedores, WhatsApp e pagamentos cifradas em repouso com Fernet na fronteira do ORM, com chave mestra separada do banco. Versão 2: cofre com AES-GCM, chaves versionadas por identificador e dados associados que amarram cada segredo a tenant, usuário, registro e versão; sem fallback para texto puro. Um filtro de redação remove credenciais conhecidas e padrões comuns de chaves de entradas, saídas de modelo e logs.",
+          "A pessoa comenta a palavra escolhida no post e recebe o link no direct, no Instagram e no Facebook. Cada resposta respeita a palavra-chave, os limites do plano, um intervalo mínimo por pessoa e a pausa do cliente, e fica registrada antes do envio para não sair duas vezes.",
       },
       {
-        name: "Processamento assíncrono",
+        name: "Planejador",
         content:
-          "Na versão 1, as rotinas periódicas (atualização de CRM, follow-up, alertas e mensagens agendadas) rodam como tarefas assíncronas dentro do processo da API, e a memória do contato é atualizada em background. Na versão 2, tarefas longas vão para uma fila no PostgreSQL consumida por um executor separado com SELECT FOR UPDATE SKIP LOCKED, uma tarefa por vez por usuário, cotas por hora e por dia e sem nova tentativa automática após o despacho.",
+          "No plano Premium, o cliente monta o post, escolhe dia e hora e acompanha a situação na grade do mês (Rascunho, Agendado, Publicado, Não publicou). O post só é publicado com aprovação da versão exata; qualquer mudança no texto ou na mídia invalida a aprovação anterior.",
       },
       {
-        name: "Modelos de IA",
+        name: "Operação e privacidade",
         content:
-          "Versão 1: modelo configurável por agente e por tarefa, com cadeia de fallback e provedores OpenAI, Anthropic, Google e Groq, transcrição de áudio e repetição com backoff exponencial para 429 e 5xx. Versão 2: cliente de streaming próprio, sem SDK, com três dialetos (compatível com OpenAI, Anthropic e Google) cobrindo OpenAI, xAI, Anthropic, Gemini e modelos próprios hospedados em endpoint compatível; roteamento híbrido decide o modelo antes da resposta quando a confiança é alta e reavalia depois quando é média.",
-      },
-      {
-        name: "Cobrança",
-        content:
-          "Stripe com verificação de assinatura dos webhooks e idempotência por INSERT com chave única. Na versão 2, crédito pré-pago em centavos inteiros, ledger append-only protegido por trigger, conferência do saldo a cada lançamento, reserva do pior caso antes de chamar o provedor e liquidação pelo preço cotado na reserva.",
-      },
-      {
-        name: "Infraestrutura e qualidade",
-        content:
-          "Docker Compose com PostgreSQL 16, Redis 7 com persistência, API e web publicadas apenas no loopback atrás do Nginx; Evolution API em compose próprio na versão 1. CI em GitHub Actions com testes offline Python, testes Node de web e mobile, upgrade completo de migrations em banco vazio, testes de RLS e triggers com papel sem superusuário, lint, build e auditoria de dependências.",
+          "Workers de e-mail, respostas e publicações, conciliação de cobrança, limpeza com prazos de retenção definidos, backup cifrado com restauração testada, interruptores de emergência por provedor e vigia externo a cada 30 minutos. Consentimento de cookies que bloqueia medição e marketing até a escolha do visitante.",
       },
     ],
   },
 
   decisions: [
     {
-      title: "Reorganizar o produto e retirar o motor de agentes do núcleo",
+      title: "Fechar o produto em três funções",
       problem:
-        "A auditoria de setembro de 2026 mostrou que cerca de 21 mil linhas, aproximadamente metade do backend, existiam só para os agentes de WhatsApp, com dependências (Evolution API, MongoDB, assinatura digital, dados financeiros) que ampliavam a superfície de ataque, e que o modelo de crédito pré-pago desejado não tinha tabela, trava de concorrência nem histórico.",
+        "A base anterior acumulava loja, agenda, cursos, gorjetas, listas de contatos e mídia kit. Cada função trazia regras de dinheiro, dados pessoais e integrações que atrasavam o lançamento.",
       decision:
-        "Definir a versão 2 como chat multimodelo com crédito em dólar e conexões governadas, remover o código exclusivo dos agentes e manter as tabelas de mensagens em modo somente leitura, sem apagá-las.",
+        "Lançar só com página na bio, DMs automáticas e planejador. As áreas retiradas respondem como recurso encerrado, e os registros antigos ficam guardados com os mesmos controles de acesso e retenção.",
       reason:
-        "Concentrar o esforço nas peças que sustentam um SaaS cobrado por uso (isolamento, ledger, credenciais) e reduzir dependências sem função no produto novo. As mensagens antigas são histórico de consumo e não podem ser perdidas.",
+        "As três funções resolvem o problema principal de quem vende pelas redes e cabem em planos simples, de US$ 0 a US$ 9,99 por mês.",
       tradeoff:
-        "Convivem duas linhas de produto durante a transição, e parte do que foi construído para os agentes deixa de ser usado.",
-      learning:
-        "Medir quanto do código serve à proposta atual antes de acrescentar recursos evita endurecer a segurança de módulos que serão descartados.",
+        "Parte do que foi construído deixa de ser usada na primeira versão e só volta se o uso pedir.",
     },
     {
-      title: "RLS no PostgreSQL, primeiro incremental e depois por padrão",
+      title: "Isolamento de dados no banco, não só na aplicação",
       problem:
-        "A versão 1 dependia de centenas de filtros manuais por tenant nas consultas; um filtro esquecido poderia expor dados de outro cliente.",
+        "Na base anterior, a autorização existia apenas no código. Com equipes, conexões sociais e mensagens de terceiros, um erro de consulta poderia expor dados de outro cliente.",
       decision:
-        "Adotar Row Level Security com o tenant fixado por transação. Na versão 1, a adoção foi incremental, com bypass ligado por padrão para não quebrar painel owner, webhooks e rotinas de fundo. Na versão 2, o contexto é restaurado em toda transação com bypass desligado, e a travessia entre tenants exige chamada explícita.",
+        "PostgreSQL com RLS habilitada e forçada nas tabelas de cada cliente, papéis sem BYPASSRLS e contexto definido por transação, além da autorização na aplicação.",
       reason:
-        "Com RLS, uma consulta sem filtro devolve zero linhas em vez de vazar dados. A versão incremental permitiu ligar a proteção em produção sem interromper o serviço; a versão por padrão fecha as lacunas que a própria implementação anterior reconhecia.",
+        "Duas camadas independentes reduzem o impacto de uma consulta errada; o D1/SQLite não oferecia esse controle.",
       tradeoff:
-        "Rotinas do operador passam a precisar de autorização explícita e justificável para atravessar tenants, e os testes de RLS precisam rodar em PostgreSQL real com papel sem superusuário para serem conclusivos.",
+        "Mais trabalho em migrações e testes, que precisam cobrir operações sem contexto e tentativas entre clientes. RLS não protege contra o comprometimento total do servidor.",
     },
     {
-      title: "Credenciais fora do alcance dos modelos",
+      title: "Envio e publicação tratados como incertos",
       problem:
-        "Na primeira versão, chaves de provedores, de WhatsApp e de pagamento chegaram a ficar em texto puro em colunas JSON; com tarefas executadas por modelos e conexões a serviços de terceiros, um segredo exposto no contexto do modelo poderia ser repetido em uma resposta.",
+        "Numa resposta no direct ou num post agendado, a resposta da rede pode se perder depois que a ação já aconteceu. Repetir às cegas manda a mesma DM ou publica o mesmo post duas vezes.",
       decision:
-        "Cifrar credenciais em repouso (Fernet na v1, cofre AES-GCM com chaves versionadas e dados associados ao tenant e ao usuário na v2), entregar a chave apenas ao transporte privado que faz a chamada HTTP e redigir segredos conhecidos e padrões de chave em entradas, saídas e logs. Respostas com credencial ficam retidas em buffer antes de chegar ao usuário.",
+        "Gravar a intenção e a chave de idempotência antes de chamar a rede, controlar a execução por lease com prazo e marcar como desconhecido o resultado sem confirmação, com conferência antes de um novo envio.",
       reason:
-        "Separar o segredo do banco muda o impacto de um vazamento de dump, e vincular o texto cifrado ao dono impede que um registro copiado para outro tenant seja decifrado. Manter a chave fora do prompt elimina a classe de vazamento pelo próprio modelo.",
+        "Separar erro definitivo, erro recuperável e resultado desconhecido evita mensagens e posts duplicados na conta do cliente.",
       tradeoff:
-        "O cofre fica indisponível se a configuração de chaves faltar, por decisão de falhar fechado; o buffer de proteção atrasa a exibição da resposta, e o filtro de padrões é defesa adicional, não detector universal.",
+        "Mais estados para a interface e para a operação; alguns casos pedem conferência antes de tentar de novo.",
     },
     {
-      title: "Crédito com reserva do pior caso e ledger append-only",
+      title: "CSP estrita com nonce e terceiros só após consentimento",
       problem:
-        "Cobrar por token em um chat com streaming exige debitar um valor que só é conhecido ao final da resposta, sob concorrência, sem deixar saldo negativo nem cobrar duas vezes um webhook reenviado.",
+        "Páginas na bio costumam usar pixels de medição e players incorporados, o que leva a políticas de segurança permissivas.",
       decision:
-        "Valores em centavos inteiros, margem arredondada para cima, reserva do custo máximo antes de chamar o provedor, liquidação pelo preço cotado e gravado na reserva, ledger append-only protegido por trigger, conferência do saldo a cada lançamento e trava por carteira com SELECT FOR UPDATE. Custo acima da reserva bloqueia a carteira até conciliação, em vez de ajustar o saldo automaticamente.",
+        "CSP com nonce por requisição e strict-dynamic; o site da Hyre não carrega terceiros, e medição e players só entram nas páginas que os usam, depois da permissão do visitante.",
       reason:
-        "A soma do ledger precisa sempre bater com o saldo, e erros de arredondamento com valores em ponto flutuante viram dinheiro perdido ou cobrado a mais. Quando o provedor não informa uso, cobrar pelo pior caso é mais seguro do que estimar.",
+        "Mantém pequena a superfície de XSS e faz a escolha de cookies corresponder ao que de fato é carregado.",
       tradeoff:
-        "A reserva do pior caso pode recusar mensagens de clientes com saldo baixo, e divergências exigem conciliação manual.",
-    },
-    {
-      title: "Executor de tarefas sem repetição automática após o despacho",
-      problem:
-        "Tarefas executadas por agentes podem ter efeito externo; se o processo cair depois de enviar a tarefa ao gateway, não há como provar se a ação aconteceu, e uma repetição automática poderia executá-la duas vezes.",
-      decision:
-        "Fila de tarefas no PostgreSQL consumida por executor separado, ativado por configuração, uma tarefa em andamento por usuário, aprovação vinculada à versão de autenticação e conferida no worker, cotas por usuário e por tenant e nenhuma repetição automática: tarefas interrompidas viram estado incerto para reconciliação. Na v1, a repetição com backoff vale apenas para chamadas de LLM, que não têm efeito colateral além do custo.",
-      reason:
-        "Diferenciar operações repetíveis (geração de texto) de operações com efeito externo evita duplicidades e mantém a decisão de reexecutar com uma pessoa.",
-      tradeoff:
-        "Falhas transitórias exigem ação manual e reduzem a taxa de conclusão automática.",
+        "Cada integração nova exige ajuste explícito da política e teste no navegador.",
     },
   ],
 
   journey: {
-    title: "Mensagem paga no chat da versão 2 (dados sintéticos)",
+    title: "Comentário que vira DM (exemplo com dados sintéticos)",
     steps: [
-      "Usuária do tenant Exemplo Ltda., plano Pro, envia uma pergunta na conversa.",
-      "A API confere plano e limite diário e grava a mensagem com o tenant fixado na transação.",
-      "O roteador escolhe o modelo; com confiança alta, decide antes de gerar a resposta.",
-      "O serviço de crédito reserva o custo máximo da resposta na carteira, com trava.",
-      "O provedor responde em streaming; a saída passa pelo filtro de credenciais antes de ser exibida.",
-      "O uso real é liquidado pelo preço cotado na reserva e lançado no ledger; o evento usage informa o novo saldo.",
-      "Se o modelo básico respondeu e o plano permite, o roteador reavalia e pode emitir uma segunda resposta de um modelo maior na mesma stream.",
+      "Uma confeitaria no plano Pro publica o cardápio de Natal e escolhe a palavra \"quero\".",
+      "Uma seguidora comenta \"quero\" no post.",
+      "O webhook do Instagram chega, a Hyre confere a palavra, o limite do plano e o intervalo por pessoa e grava a resposta na fila.",
+      "O worker envia o link da página no direct e registra o envio; uma repetição do mesmo evento não gera outra mensagem.",
+      "O painel mostra quantas DMs saíram no mês dentro do limite de 1.000 do plano.",
     ],
   },
 
-  dataModel: [
-    {entity: "tenant", fields: "id, nome, plano, ativo, suspenso"},
-    {entity: "Carteira de crédito", fields: "cliente, saldo em centavos"},
-    {entity: "Lançamento de crédito", fields: "cliente, valor em centavos, saldo após o lançamento, origem, referência (somente inserção)"},
-    {entity: "Reserva de crédito", fields: "cliente, teto em centavos, provedor, modelo, preços cotados, situação"},
-    {entity: "Conversa e mensagem", fields: "cliente, usuário, papel, modelo, tokens de entrada e saída"},
-    {entity: "Execução de tarefa", fields: "cliente, usuário, situação, versão, prazo de aprovação, erro"},
-    {entity: "Segredo do cofre", fields: "cliente, usuário, versão, envelope cifrado"},
-  ],
-
   results: [
-    "Versão 1 em hyre.global desde agosto de 2026, com site, cadastro, planos e painel do cliente; dez agentes especializados no código.",
-    "Versão 2 com chat multimodelo, ledger de crédito, cofre de credenciais e executor de tarefas; 473 testes Python, 52 testes web e 20 testes mobile aprovados em 02/10/2026.",
-    "Auditoria de segurança registrada sobre a versão 1, com pontos a preservar (RLS, JWT com revogação, credenciais cifradas) e correções priorizadas para a versão 2.",
+    "Site, planos e cadastro publicados em hyre.global em novembro de 2026, com vigia externo a cada 30 minutos.",
+    "30/10/2026: 784 testes automatizados aprovados (Node e PostgreSQL real em bancos descartáveis), sem falhas, com dados sintéticos.",
   ],
-
   limits: [
-    "O catálogo de conectores é amplo; próximo passo: ampliar os adaptadores dedicados, priorizados pelo uso dos clientes.",
-    "Na versão 1, o processamento de fundo roda dentro do processo da API, com um único worker. Próximo passo: mover essas rotinas para um worker dedicado.",
-    "A reserva do pior caso privilegia a segurança do saldo sobre a experiência de quem tem pouco crédito. Próximo passo: estimativas de uso por modelo para reservas mais justas.",
+    "Os números de testes vêm de baterias automatizadas com dados sintéticos e não representam uso real.",
+    "RLS complementa, mas não substitui, a segurança da aplicação e da infraestrutura.",
+    "Próximo passo: medir em campo as metas de desempenho (LCP até 2,5 s, INP até 200 ms, CLS até 0,1).",
+    "Próximo passo: revisão humana das traduções e dos textos legais.",
   ],
 
-  links: [{label: "Site da Hyre", url: "https://hyre.global/", kind: "produto"}],
+  links: [{label: "hyre.global", url: "https://hyre.global/", kind: "produto"}],
 
 };
