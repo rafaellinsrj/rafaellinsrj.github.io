@@ -22,11 +22,10 @@ export default function CertificationsSection() {
   const total = all.length, links = all.filter(c => c.verifyUrl).length;
 
   return <section id="certificacoes" className="section container">
-    <div className="section-heading"><div><p className="eyebrow">Certificações</p><h1 className="section-h1">Aprendizado<br/><span>contínuo.</span></h1></div>
+    <div className="v2-page-head"><h1>Certificações</h1>
       <p>{total} certificados e credenciais, com nuvem, dados e IA em primeiro lugar. Clique na imagem para ampliar; quando houver, o botão Verificar abre a página oficial do emissor.</p></div>
-    {certificationGroups.map(g => <div key={g.id} className="cert-group" id={g.id}>
-      <div className="cert-group-head"><h2>{g.title}</h2><p>{g.description}</p><span className="cert-count">{g.items.length}</span></div>
-      <ul className="cert-grid">{g.items.map(c => {
+    {certificationGroups.map((g, gi) => {
+      const grid = <ul className="cert-grid">{g.items.map(c => {
         const issuer = issuers[c.issuer];
         return <li key={c.id} className="cert-card">
           <button type="button" className={"cert-thumb" + (c.image.badge ? " is-badge" : "")} onClick={() => open(c)} aria-label={"Ampliar certificado: " + c.name}>
@@ -43,8 +42,12 @@ export default function CertificationsSection() {
               : <p className="cert-noverify">Certificado em arquivo</p>}
           </div>
         </li>;
-      })}</ul>
-    </div>)}
+      })}</ul>;
+      // Layout v2: só as certificações técnicas ficam abertas; cursos gerais e treinamentos ficam recolhidos.
+      return gi === 0
+        ? <div key={g.id} className="cert-group" id={g.id}><div className="cert-group-head"><h2>{g.title}</h2><p>{g.description}</p><span className="cert-count">{g.items.length}</span></div>{grid}</div>
+        : <details key={g.id} className="cert-group lab-details" id={g.id}><summary><span>{g.title} ({g.items.length})<span className="summary-subtitle">{g.description}</span></span><span className="details-plus"><Icon name="plus" size={28}/></span></summary><div className="lab-body">{grid}</div></details>;
+    })}
     <dialog ref={ref} className="lightbox" aria-label="Certificado ampliado" onClick={e => { if (e.target === ref.current) ref.current?.close(); }}>
       {current && <div className="lightbox-inner">
         <div className="lightbox-bar">

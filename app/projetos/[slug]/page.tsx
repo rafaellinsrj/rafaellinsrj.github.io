@@ -9,6 +9,7 @@ import Gallery from "@/components/case/Gallery";
 import type {Decision, Layer} from "@/lib/case-types";
 import {cases, caseBySlug} from "@/lib/cases";
 import {asset} from "@/lib/paths";
+import StatusTag from "@/components/case/StatusTag";
 
 type Props = {params: Promise<{slug: string}>};
 export const dynamicParams = false;
@@ -18,6 +19,9 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   const item = caseBySlug(slug);
   return item ? {title: item.name, description: item.summary} : {};
 }
+
+// Primeira frase de um texto, para o resumo do topo.
+const firstSentence = (t: string) => { const m = t.match(/^.*?[.!?](?=\s+[A-ZÁÉÍÓÚÂÊÔÃÕÇ]|$)/); return m ? m[0] : t; };
 
 function Layers({layers}: {layers: Layer[]}) {
   return <dl className="layer-list">{layers.map(l => <div key={l.name}><dt>{l.name}</dt><dd>{l.content}</dd></div>)}</dl>;
@@ -71,7 +75,17 @@ export default async function CasePage({params}: Props) {
       </nav>
       <p className="eyebrow">{item.category}</p>
       <h1>{item.name}</h1>
+      <p className="case-status"><StatusTag slug={item.slug}/></p>
       <p className="case-intro">{item.summary}</p>
+      <section className="v2-tldr" aria-labelledby="resumo">
+        <h2 id="resumo">Resumo em 30 segundos</h2>
+        <dl>
+          <div><dt>Problema</dt><dd>{firstSentence(item.history.problem)}</dd></div>
+          <div><dt>O que eu fiz</dt><dd>{item.role}</dd></div>
+          {item.results[0] && <div><dt>Resultado</dt><dd>{item.results[0]}</dd></div>}
+          {item.category.includes(" · ") && <div><dt>Tecnologias</dt><dd>{item.category.split(" · ").slice(1).join(" · ")}</dd></div>}
+        </dl>
+      </section>
       <dl className="case-meta">
         <div><dt>Papel</dt><dd>{item.role}</dd></div>
         {(item.organization || item.period) && <div><dt>Organização e período</dt><dd>{[item.organization, item.period].filter(Boolean).join(" · ")}</dd></div>}

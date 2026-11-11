@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 
-export const metadata: Metadata = {title: "Experiência", description: "Trajetória executiva de Rafael Lins Gaspar: CTO, fundador e liderança de engenharia, com linha do tempo e caso do setor jurídico."};
+export const metadata: Metadata = {title: "Trajetória", description: "Trajetória de Rafael Lins Gaspar: CTO e fundador, linha do tempo, caso do setor jurídico, formação e base técnica."};
 
 export default function Page() {
   return <><Header current="experiencia"/><main id="conteudo" className="section-page">
