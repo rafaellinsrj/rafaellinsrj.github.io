@@ -17,7 +17,7 @@ export const hyre: CaseStudy = {
     src: "/images/cases/hyre/home.jpg",
     width: 1440,
     height: 1000,
-    alt: "Página inicial da Hyre em fundo escuro com o título Tudo que seu perfil precisa, os botões Criar minha página e Ver um exemplo e um perfil ilustrativo em moldura de celular.",
+    alt: "Página inicial da Hyre com o título Quem comenta, recebe o link na hora, o botão Criar minha página grátis e a foto de uma mulher com fones de ouvido ao lado de três avisos: comentário no Instagram, resposta automática na DM e pagamento confirmado.",
     caption: "Página inicial em hyre.global, novembro de 2026",
   },
   gallery: [
@@ -25,15 +25,22 @@ export const hyre: CaseStudy = {
       src: "/images/cases/hyre/planos.jpg",
       width: 1440,
       height: 1000,
-      alt: "Página de planos com os cartões Gratuito (US$ 0), Pro (US$ 4,99 por mês, com 30 dias grátis) e Premium (US$ 9,99 por mês), com páginas, DMs automáticas, métricas e equipe de cada plano.",
+      alt: "Página de planos com o preço de lançamento de 1/4 do valor: Gratuito (US$ 0), Pro (US$ 4,99 por mês, de US$ 19,90) e Premium (US$ 9,99 por mês, de US$ 39,90), com páginas, DMs automáticas, métricas e equipe de cada plano.",
       caption: "Planos em hyre.global, novembro de 2026",
     },
     {
       src: "/images/cases/hyre/exemplo.jpg",
       width: 1440,
       height: 1000,
-      alt: "Página na bio de exemplo, de um perfil ilustrativo, com foto, descrição, ícones de redes e três botões de link.",
+      alt: "Seção Seu cartão de visitas nas redes, com a página na bio de um perfil ilustrativo em moldura de celular e a escolha de outros perfis de exemplo embaixo.",
       caption: "Página na bio de exemplo. Perfil ilustrativo.",
+    },
+    {
+      src: "/images/cases/hyre/dm.jpg",
+      width: 1440,
+      height: 1000,
+      alt: "Seção A DM sai na hora, com o link certo: celular com a conversa em que a pessoa comenta QUERO o guia e recebe o link na hora pela Hyre.",
+      caption: "DM automática em hyre.global, novembro de 2026",
     },
   ],
 

@@ -36,7 +36,7 @@ export default function Home() {
       </div>
       <Link href="/projetos/hyre/" className="v2-hero-shot" aria-label="Abrir o estudo de caso da Hyre">
         <div className="browser-strip" aria-hidden="true"><span/><span/><span/></div>
-        <img src={asset("/images/cases/hyre/home.jpg")} alt="Página inicial da Hyre: página na bio, DMs automáticas e planejador de posts" width="1440" height="1000"/>
+        <img src={asset("/images/cases/hyre/home.jpg")} alt="Página inicial da Hyre: quem comenta recebe o link na hora pela DM" width="1440" height="1000"/>
       </Link>
     </section>
 
